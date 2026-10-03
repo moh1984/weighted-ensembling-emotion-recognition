@@ -1,0 +1,29 @@
+# Guard against reintroducing withheld material.
+# On GitHub a file committed once stays in history even after deletion, so these
+# patterns block the formats that carried corpus text or author identifiers.
+
+# corpus text
+*.parquet
+*.jsonl
+corpus.parquet
+multilabel_reference.parquet
+
+# author identifiers
+jury_blocks.json
+**/splits/*/jury_blocks.json
+
+# git history that tracks the above
+*.bundle
+
+# model weights and tokenizers (large, and retrievable from the pinned revisions)
+*.bin
+*.safetensors
+tokenizer.json
+vocab.json
+merges.txt
+
+# scratch
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+*.tmp
