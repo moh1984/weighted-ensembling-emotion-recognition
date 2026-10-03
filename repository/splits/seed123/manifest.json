@@ -1,0 +1,109 @@
+{
+  "seed": 123,
+  "is_confirmatory_split": false,
+  "dose_k": 1,
+  "counts": {
+    "train": 24125,
+    "val": 5171,
+    "test": 5171,
+    "reserve": 449,
+    "excluded": 35,
+    "overlap_train": 24125,
+    "injected": 340,
+    "removed": 340,
+    "eligible_test": 340
+  },
+  "realized_ratios_pct": {
+    "train": 69.99,
+    "val": 15.0,
+    "test": 15.0
+  },
+  "reserve_pct_of_corpus": 1.28,
+  "overlap_pct_of_training": 1.409,
+  "n_eligible_authors": 340,
+  "eligible_class_support": {
+    "anger": 54,
+    "disgust": 4,
+    "fear": 6,
+    "joy": 192,
+    "sadness": 39,
+    "surprise": 45
+  },
+  "min_eligible_class_support": 4,
+  "substitution_match_quality": {
+    "exact_4var": 160,
+    "no_ppa": 145,
+    "no_len": 30,
+    "label_only": 5,
+    "failed": 0,
+    "authors_short_of_dose": 0
+  },
+  "exact_4var_match_pct": 47.1,
+  "label_only_pct": 1.5,
+  "eligibility": {
+    "strict_eligible": 340,
+    "loose_eligible": 366,
+    "excluded_same_thread": 35
+  },
+  "r_random_population": "r_random: analysis population (train+val+test), size-matched to R_clean; r_random_full: whole cleaned corpus, for literature comparability",
+  "jury_blocks": {
+    "examples_per_block": {
+      "A": 8043,
+      "B": 8041,
+      "C": 8041
+    },
+    "class_per_block": {
+      "A": {
+        "anger": 1338,
+        "disgust": 111,
+        "fear": 138,
+        "joy": 4641,
+        "sadness": 664,
+        "surprise": 1151
+      },
+      "B": {
+        "anger": 1338,
+        "disgust": 111,
+        "fear": 137,
+        "joy": 4640,
+        "sadness": 664,
+        "surprise": 1151
+      },
+      "C": {
+        "anger": 1338,
+        "disgust": 111,
+        "fear": 138,
+        "joy": 4640,
+        "sadness": 664,
+        "surprise": 1150
+      }
+    },
+    "max_class_share_drift": 0.0001
+  },
+  "invariant_checks": {
+    "train_size_identical": true,
+    "class_counts_identical": true,
+    "injected_all_from_reserve": true,
+    "removed_all_from_clean_train": true,
+    "no_test_target_in_overlap_train": true,
+    "uniform_author_coverage": true,
+    "injections_thread_disjoint_from_target": true
+  },
+  "hashes": {
+    "r_clean_train.txt": "d312e6d4b6c4185c077b04e5934489099a86462b695a8d8d3993cd0e93fd04ce",
+    "r_clean_val.txt": "337db25df80a29d3c509d7a0c1a78cc1bd7e2083fa4e2f92b8b0eb3099b00526",
+    "r_clean_test.txt": "4f6f8b84c9c2dd9bbe9d31dafc2a9fee1316e432d34fd96bb52b30f54af753b0",
+    "reserve.txt": "fd2d02e695bc54d61a6f64397d83d3304f8ec0596f4160538c2e17d8f1d7ac1b",
+    "excluded_same_thread.txt": "632c6bc0bd2124f2c04d5a2594124cd2de37ea712458422900e1d56657569b03",
+    "r_overlap_train.txt": "c5f49c2327451f04b4f45c27007850b342b52a0784594658d4d14796c381171e",
+    "r_overlap_injected.txt": "8a24cca238964ee7e19f139a2fb6ad71edc5c5fd058a5ad4eaf9ddde305fd68b",
+    "r_overlap_removed.txt": "a9b5fbc9f10d55ce149882e1bf33eee5eca2e1f968ef2d6b30ea5ca0d1b0e82c",
+    "eligible_test.txt": "bd4b70f251a4e527b24bfde271d50932091324ffab24802e12bdad6ff4e46ae5",
+    "r_random_train.txt": "8e91ce3de3d897a484888217100828e1e054fe505a333ebcd9602c1f55d9ffd0",
+    "r_random_val.txt": "0b8b9851ccd4bbca1fe4402bc0669928393edcff6c12898ecdc95dd10d608599",
+    "r_random_test.txt": "01c5ff04682b2d5bc4924b2bc43e36ec25f961e8a520fc60557b081e6edec905",
+    "r_random_full_train.txt": "cad1f2703ef9f69e0dd30e6162e2502265945a01ee6b59f20fdfa8d0e38e8eef",
+    "r_random_full_val.txt": "2edca39bdd649e3eff1cb08a87161b7798946f29a9dd74fdbac00d26654c28e5",
+    "r_random_full_test.txt": "38819cf62f27419fd3dc67a1f784ae185924943a28040d62970a0a78c2c06c59"
+  }
+}

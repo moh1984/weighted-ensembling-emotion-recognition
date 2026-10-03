@@ -1,0 +1,279 @@
+{
+  "H1": {
+    "analysis_unit": "paired_predictions_within_each_model_seed",
+    "confirmatory_claim_allowed": false,
+    "description": "Structural corpus diagnosis plus exploratory author-overlap stress test.",
+    "dose_k": 1,
+    "holm_family_member": false,
+    "model": "roberta",
+    "model_seeds": [
+      1,
+      2,
+      3
+    ],
+    "name": "author_overlap_stress_test",
+    "overlap_run_template": "roberta__r_overlap__split{split}__seed{seed}",
+    "population": "eligible_test_only",
+    "primary_metric": "accuracy",
+    "reference_run_template": "roberta__r_clean__split{split}__seed{seed}",
+    "report": [
+      "accuracy_r_clean",
+      "accuracy_r_overlap",
+      "delta_accuracy",
+      "paired_permutation_p_descriptive",
+      "bootstrap_95pct_CI_delta_accuracy",
+      "mcnemar_descriptive",
+      "cohen_h_descriptive"
+    ],
+    "seed_handling": "Analyze each model seed separately. Do not treat the three model seeds as independent inferential units and do not combine their p-values.",
+    "splits": [
+      42,
+      123,
+      2024
+    ],
+    "status": "exploratory"
+  },
+  "H2": {
+    "baseline_run_template": "roberta__r_clean__split{split}__seed1",
+    "confirmatory_split": 42,
+    "hard_voting": "sensitivity_only",
+    "holm_family_member": true,
+    "jury_aggregation": {
+      "method": "validation_weighted_soft_probability_average",
+      "temperature_T": 1.0,
+      "test_information_used_for_weights": false,
+      "weight_formula": "exp(validation_macro_f1 / T) / sum(exp(validation_macro_f1 / T))",
+      "weight_source": "validation_macro_f1"
+    },
+    "jury_members": [
+      "bert__complementary_J1__split{split}__seed1",
+      "bert__complementary_J2__split{split}__seed1",
+      "bert__complementary_J3__split{split}__seed1"
+    ],
+    "mandatory_reporting": [
+      "per_class_f1",
+      "per_class_support"
+    ],
+    "primary_metric": "macro_f1",
+    "primary_test": "paired_permutation_delta_macro_f1",
+    "question": "complementary_partition_jury_vs_single_strong_roberta",
+    "replication_splits": [
+      123,
+      2024
+    ],
+    "secondary_analyses": [
+      "bootstrap_95pct_CI_delta_macro_f1",
+      "mcnemar_accuracy",
+      "cohen_h_accuracy"
+    ],
+    "secondary_metrics": [
+      "weighted_f1",
+      "accuracy"
+    ],
+    "status": "confirmatory"
+  },
+  "H3": {
+    "confirmatory_split": 42,
+    "equal_system": {
+      "method": "soft_probability_average",
+      "weights": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ]
+    },
+    "holm_family_member": true,
+    "jurors": [
+      "bert__complementary_J1__split{split}__seed1",
+      "bert__complementary_J2__split{split}__seed1",
+      "bert__complementary_J3__split{split}__seed1"
+    ],
+    "mandatory_reporting": [
+      "per_class_f1",
+      "per_class_support"
+    ],
+    "primary_metric": "macro_f1",
+    "primary_test": "paired_permutation_delta_macro_f1",
+    "question": "validation_weighted_soft_voting_vs_equal_weight_soft_voting",
+    "replication_splits": [
+      123,
+      2024
+    ],
+    "same_jurors": true,
+    "same_probability_files": true,
+    "secondary_analyses": [
+      "bootstrap_95pct_CI_delta_macro_f1",
+      "mcnemar_accuracy",
+      "cohen_h_accuracy",
+      "tost_accuracy_margin_0.01"
+    ],
+    "secondary_metrics": [
+      "weighted_f1",
+      "accuracy"
+    ],
+    "status": "confirmatory",
+    "weighted_system": {
+      "method": "soft_probability_average",
+      "temperature_T": 1.0,
+      "weight_formula": "exp(validation_macro_f1 / T) / sum(exp(validation_macro_f1 / T))",
+      "weight_source": "validation_macro_f1"
+    }
+  },
+  "H4": {
+    "configurations": {
+      "bert_initialization_jury": {
+        "diversity_source": "initialization",
+        "members": [
+          "bert__r_clean__split{split}__seed1",
+          "bert__r_clean__split{split}__seed2",
+          "bert__r_clean__split{split}__seed3"
+        ],
+        "training_overlap_O": 1.0
+      },
+      "complementary_partition_jury": {
+        "diversity_source": "data_partition",
+        "members": [
+          "bert__complementary_J1__split{split}__seed1",
+          "bert__complementary_J2__split{split}__seed1",
+          "bert__complementary_J3__split{split}__seed1"
+        ],
+        "training_overlap_O": 0.5
+      },
+      "disjoint_partition_jury": {
+        "diversity_source": "data_partition",
+        "members": [
+          "bert__disjoint_A__split{split}__seed1",
+          "bert__disjoint_B__split{split}__seed1",
+          "bert__disjoint_C__split{split}__seed1"
+        ],
+        "training_overlap_O": 0.0
+      },
+      "roberta_initialization_jury": {
+        "diversity_source": "initialization_robustness_reference",
+        "members": [
+          "roberta__r_clean__split{split}__seed1",
+          "roberta__r_clean__split{split}__seed2",
+          "roberta__r_clean__split{split}__seed3"
+        ],
+        "training_overlap_O": 1.0
+      }
+    },
+    "controlled_bert_overlap_ladder": [
+      {
+        "O": 1.0,
+        "configuration": "bert_initialization_jury"
+      },
+      {
+        "O": 0.5,
+        "configuration": "complementary_partition_jury"
+      },
+      {
+        "O": 0.0,
+        "configuration": "disjoint_partition_jury"
+      }
+    ],
+    "ensemble_aggregation": "equal_weight_soft_probability_average",
+    "error_dependence_metric": "Pearson_correlation_between_binary_error_indicators",
+    "error_indicator": "1_if_member_prediction_wrong_else_0",
+    "formal_hypothesis_test": false,
+    "jury_size": 3,
+    "question": "error_dependence_vs_ensemble_gain",
+    "regression": false,
+    "report": [
+      "three_pairwise_error_correlations",
+      "mean_pairwise_error_correlation",
+      "best_member_accuracy",
+      "ensemble_accuracy",
+      "ensemble_gain_over_best_member",
+      "bootstrap_95pct_CI_gain",
+      "training_overlap_O"
+    ],
+    "splits": [
+      42,
+      123,
+      2024
+    ],
+    "status": "exploratory_descriptive",
+    "summary_dependence_metric": "mean_of_three_pairwise_error_correlations",
+    "training_size_confound": "Disjoint members see approximately one-third of training data, while complementary members see approximately two-thirds. Therefore the overlap ladder is descriptive, not causal."
+  },
+  "analysis_version": "partA-analysis-v1",
+  "bindings": {
+    "checkpoint_checksums_sha256": "64148923cf64054870ea14bd9bd041ca2e99dfee50abf4a246183d28630c2192",
+    "checkpoint_dataset": "emotion-parta-predictions-checkpoint45",
+    "checkpoint_manifest_sha256": "6463453c42bd0c310a15fd6acdedbc5012eff021e67de69e08420f3903840b05",
+    "completed_training_runs": 45,
+    "corpus_content_sha256": "05343493a0e155c7e75325e0cda79ad64e60f98564af3dcad2b84a23554b615b",
+    "dataset_manifest_sha256": "ca2955a568846fe669b0125c016ca945b2a05fc3e6241b02a7c454fa81d36341",
+    "run_experiments_sha256": "b1768c3cce420c8ef6ee5d53db6584c836fa54f0288cef0de30ae83bed9f146b",
+    "training_config_sha256": "75eee2631e1a9d2e562d07cdca122e4f76a00387da7ac58d51a1a3bc2c16456c"
+  },
+  "created_at_utc": "2026-08-31T17:11:38Z",
+  "freeze_status": "FROZEN_BEFORE_FIRST_TEST_PERFORMANCE_ANALYSIS",
+  "labels": [
+    "anger",
+    "disgust",
+    "fear",
+    "joy",
+    "sadness",
+    "surprise"
+  ],
+  "probability_columns": [
+    "p_anger",
+    "p_disgust",
+    "p_fear",
+    "p_joy",
+    "p_sadness",
+    "p_surprise"
+  ],
+  "reporting_constraints": {
+    "claim_condorcet_theorem_verified": false,
+    "claim_model_seeds_as_independent_replicates": false,
+    "combine_replication_p_values": false,
+    "interpret_H1_as_confirmatory": false,
+    "interpret_H4_causally": false,
+    "omit_zero_rare_class_f1": false,
+    "replace_macro_f1_with_weighted_f1": false,
+    "validation_scores_are_test_results": false
+  },
+  "split_roles": {
+    "combine_split_p_values": false,
+    "confirmatory_split": 42,
+    "prespecified_replication_splits": [
+      123,
+      2024
+    ],
+    "reason_no_combination": "test populations across split constructions may overlap",
+    "stouffer_combination": false
+  },
+  "statistics": {
+    "alpha": 0.05,
+    "bootstrap": {
+      "confidence_level": 0.95,
+      "method": "percentile",
+      "n_resamples": 10000,
+      "unit": "paired_test_example"
+    },
+    "cohen_h": "secondary_accuracy_effect_size",
+    "holm_family": [
+      "H2_primary_split42",
+      "H3_primary_split42"
+    ],
+    "holm_method": "Holm-Bonferroni",
+    "implementation_rng_seed": 20260831,
+    "mcnemar": "secondary_accuracy_analysis",
+    "model_seeds_are_independent_statistical_units": false,
+    "paired_permutation": {
+      "alternative": "two-sided",
+      "n_permutations": 10000,
+      "procedure": "swap paired system predictions per example and recompute delta metric",
+      "unit": "paired_test_example"
+    },
+    "tost": {
+      "absolute_accuracy_margin": 0.01,
+      "alpha": 0.05,
+      "enabled": true,
+      "use": "secondary_equivalence_analysis_where_applicable"
+    }
+  }
+}

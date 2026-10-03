@@ -1,0 +1,470 @@
+{
+  "raw_file_sha256": {
+    "goemotions_1.csv": "cac049036bad5d68d1081f72b65f2cc51e4df82af05e3e22cfa747051cac1af3",
+    "goemotions_2.csv": "f699ecc5aa425c1720c1d02475f1e41815244b680bd75b282eb770d2c76cd84d",
+    "goemotions_3.csv": "467f1e7191af00f2e76cc7f425885c2dc304bea8aff284b10e8c460d22f2e1af"
+  },
+  "ekman_map_source": "official_file_verified",
+  "ekman_map_sha256": "d6b1fea382917c1685c42e1324a0344106be9390f52a3850ce032656d103a328",
+  "label_construction": {
+    "examples_total": 58009,
+    "min_agreement": 2,
+    "single_label": 36491,
+    "multi_label": 6255,
+    "below_agreement_dropped": 15263,
+    "rater_count_distribution": {
+      "3": 37145,
+      "5": 16171,
+      "4": 3135,
+      "2": 1426,
+      "1": 132
+    },
+    "by_rater_count": {
+      "1": {
+        "items": 132,
+        "single_label": 0,
+        "multi_label": 0,
+        "below_agreement": 132
+      },
+      "2": {
+        "items": 1426,
+        "single_label": 630,
+        "multi_label": 21,
+        "below_agreement": 775
+      },
+      "3": {
+        "items": 37145,
+        "single_label": 22976,
+        "multi_label": 2437,
+        "below_agreement": 11732
+      },
+      "4": {
+        "items": 3135,
+        "single_label": 1984,
+        "multi_label": 322,
+        "below_agreement": 829
+      },
+      "5": {
+        "items": 16171,
+        "single_label": 10901,
+        "multi_label": 3475,
+        "below_agreement": 1795
+      }
+    },
+    "sensitivity_strict_majority_rule": {
+      "rule": "votes > n_raters / 2",
+      "single_label": 33591,
+      "multi_label": 2818,
+      "below_threshold": 21600
+    }
+  },
+  "deduplication": {
+    "exact_removed": 606,
+    "near_removed": 271,
+    "near_pass_run": true,
+    "algorithm": "exact match on normalised text, then connected components over a 10-nearest-neighbour cosine graph with edges above 0.85; one item retained per component. Not an exhaustive all-pairs search.",
+    "threshold": 0.85,
+    "neighbors": 10,
+    "model": "sentence-transformers/all-MiniLM-L6-v2",
+    "model_revision_requested": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+    "model_revision_resolved": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+    "model_revision_verified": true
+  },
+  "agreement": {
+    "method": "Binary Fleiss-type kappa per emotion, with a variable number of raters per item. Not classical Fleiss' kappa, which assumes a fixed rater count. Item-level agreement is averaged equally across items (Pbar), while marginal category frequencies (p_j) are estimated from the pooled ratings and therefore reflect the differing numbers of ratings per item.",
+    "binary_per_emotion": {
+      "anger": {
+        "kappa": 0.363,
+        "n_items": 57877
+      },
+      "disgust": {
+        "kappa": 0.2736,
+        "n_items": 57877
+      },
+      "fear": {
+        "kappa": 0.3829,
+        "n_items": 57877
+      },
+      "joy": {
+        "kappa": 0.5211,
+        "n_items": 57877
+      },
+      "sadness": {
+        "kappa": 0.4128,
+        "n_items": 57877
+      },
+      "surprise": {
+        "kappa": 0.3511,
+        "n_items": 57877
+      }
+    },
+    "overall_categorical_kappa": null,
+    "overall_omitted_because": "Raters may select multiple emotions, so per-item votes can exceed the rater count; categorical Fleiss' kappa is undefined under multi-label annotation. Krippendorff's alpha with MASI distance is the defined alternative if an aggregate figure is wanted.",
+    "pct_rater_annotations_multi_select": 8.67,
+    "pct_items_with_any_multi_select": 23.59
+  },
+  "corpus_content_sha256": "05343493a0e155c7e75325e0cda79ad64e60f98564af3dcad2b84a23554b615b",
+  "corpus_ids_sha256": "9801d95a33bac6ee02cd45a6137813e7a89efefbd754562f686668f0dde3e148",
+  "fingerprint_columns": [
+    "id",
+    "text",
+    "label",
+    "author",
+    "subreddit",
+    "link_id",
+    "created_utc_int",
+    "len_bucket",
+    "ppa_bucket"
+  ],
+  "table_format": "parquet",
+  "dose_k": 1,
+  "dose_source": "section0_report",
+  "h1_primary_metric": "accuracy",
+  "h1_status": "exploratory",
+  "section0_report_sha256": "3970b5188aa3f12c79315819d2cbb29050011e489355ad18b5a8821a54d40076",
+  "h1_amendment_decided_at_utc": "2026-08-30T00:41:18Z",
+  "h1_amendment_sha256": "f51745b5707ad8e4084e47e4e35bb96ee2b46ce89db22ec10c060866283533d8",
+  "freeze_quality": true,
+  "confirmatory_split_seed": 42,
+  "corpus": {
+    "n_examples": 34951,
+    "n_authors": 31618,
+    "class_distribution": {
+      "joy": 20163,
+      "anger": 5835,
+      "surprise": 4954,
+      "sadness": 2915,
+      "fear": 609,
+      "disgust": 475
+    }
+  },
+  "splits": [
+    {
+      "seed": 42,
+      "is_confirmatory_split": true,
+      "dose_k": 1,
+      "counts": {
+        "train": 24063,
+        "val": 5157,
+        "test": 5157,
+        "reserve": 533,
+        "excluded": 41,
+        "overlap_train": 24063,
+        "injected": 391,
+        "removed": 391,
+        "eligible_test": 391
+      },
+      "realized_ratios_pct": {
+        "train": 70.0,
+        "val": 15.0,
+        "test": 15.0
+      },
+      "reserve_pct_of_corpus": 1.52,
+      "overlap_pct_of_training": 1.625,
+      "n_eligible_authors": 391,
+      "eligible_class_support": {
+        "anger": 64,
+        "disgust": 5,
+        "fear": 4,
+        "joy": 220,
+        "sadness": 37,
+        "surprise": 61
+      },
+      "min_eligible_class_support": 4,
+      "substitution_match_quality": {
+        "exact_4var": 173,
+        "no_ppa": 181,
+        "no_len": 30,
+        "label_only": 7,
+        "failed": 0,
+        "authors_short_of_dose": 0
+      },
+      "exact_4var_match_pct": 44.2,
+      "label_only_pct": 1.8,
+      "eligibility": {
+        "strict_eligible": 391,
+        "loose_eligible": 419,
+        "excluded_same_thread": 41
+      },
+      "r_random_population": "r_random: analysis population (train+val+test), size-matched to R_clean; r_random_full: whole cleaned corpus, for literature comparability",
+      "jury_blocks": {
+        "examples_per_block": {
+          "A": 8020,
+          "B": 8023,
+          "C": 8020
+        },
+        "class_per_block": {
+          "A": {
+            "anger": 1339,
+            "disgust": 113,
+            "fear": 136,
+            "joy": 4625,
+            "sadness": 662,
+            "surprise": 1145
+          },
+          "B": {
+            "anger": 1339,
+            "disgust": 114,
+            "fear": 136,
+            "joy": 4626,
+            "sadness": 663,
+            "surprise": 1145
+          },
+          "C": {
+            "anger": 1339,
+            "disgust": 113,
+            "fear": 136,
+            "joy": 4625,
+            "sadness": 663,
+            "surprise": 1144
+          }
+        },
+        "max_class_share_drift": 0.0001
+      },
+      "invariant_checks": {
+        "train_size_identical": true,
+        "class_counts_identical": true,
+        "injected_all_from_reserve": true,
+        "removed_all_from_clean_train": true,
+        "no_test_target_in_overlap_train": true,
+        "uniform_author_coverage": true,
+        "injections_thread_disjoint_from_target": true
+      },
+      "hashes": {
+        "r_clean_train.txt": "e63a01a9fc3b7f1e5383b264041d1e960276a2cf26d8b3115424548cfca1ed49",
+        "r_clean_val.txt": "6a3354a734ef513bddaf2a2e7f841973bb058a28f03e9c476ad0ff4537db3be4",
+        "r_clean_test.txt": "db979779e1dd20edbd418d585d25274960c37ae52651b1796733b32b50e81a7b",
+        "reserve.txt": "56101333fb6bc834d46893beddc32e1d8dd8c7936761186a41757685f48c9adb",
+        "excluded_same_thread.txt": "5748b166a4065e274a284c43563ee04257c3b7352d1f9de0ce7cdf1950d20a7d",
+        "r_overlap_train.txt": "4ee4ac1ced27561f252ae276e3e8a1f91e667e210ae9137452ebab603007baaf",
+        "r_overlap_injected.txt": "9badd17a003d96c20338e4472e3238bb765823637b23940c93a2fc50efcfcedf",
+        "r_overlap_removed.txt": "966c2c0e9fbd46e034fe3531382d415fa4ee4924abe83229e833de337d2b34e4",
+        "eligible_test.txt": "ebf06572ac9bb8c77014c79e5dd54a9f8d022e34126ddbb7f16cbd62f9ed8791",
+        "r_random_train.txt": "ff381668723bdba7eafffaecadfe7ede0ad4bf95752ab672cffddc424a96944a",
+        "r_random_val.txt": "8d7d4ee1bd8b246baa0a7b3a685ae451d83b80acf30be99db3b72cce1d96cf3b",
+        "r_random_test.txt": "1beda79968298635596e9107c802295933839f62ce3a6e3a21deef3ad1c88531",
+        "r_random_full_train.txt": "58212a80975ee98078c4b33af47644caea322082776ae35f2528203c9d932523",
+        "r_random_full_val.txt": "3081d886510a7c683fc11a6340c45dc84189e22cc78aa46519352b407e11d133",
+        "r_random_full_test.txt": "6220682f3f2ef537ead4800239c1b012b53e09b809fab90e96b8d9319101c0d6"
+      }
+    },
+    {
+      "seed": 123,
+      "is_confirmatory_split": false,
+      "dose_k": 1,
+      "counts": {
+        "train": 24125,
+        "val": 5171,
+        "test": 5171,
+        "reserve": 449,
+        "excluded": 35,
+        "overlap_train": 24125,
+        "injected": 340,
+        "removed": 340,
+        "eligible_test": 340
+      },
+      "realized_ratios_pct": {
+        "train": 69.99,
+        "val": 15.0,
+        "test": 15.0
+      },
+      "reserve_pct_of_corpus": 1.28,
+      "overlap_pct_of_training": 1.409,
+      "n_eligible_authors": 340,
+      "eligible_class_support": {
+        "anger": 54,
+        "disgust": 4,
+        "fear": 6,
+        "joy": 192,
+        "sadness": 39,
+        "surprise": 45
+      },
+      "min_eligible_class_support": 4,
+      "substitution_match_quality": {
+        "exact_4var": 160,
+        "no_ppa": 145,
+        "no_len": 30,
+        "label_only": 5,
+        "failed": 0,
+        "authors_short_of_dose": 0
+      },
+      "exact_4var_match_pct": 47.1,
+      "label_only_pct": 1.5,
+      "eligibility": {
+        "strict_eligible": 340,
+        "loose_eligible": 366,
+        "excluded_same_thread": 35
+      },
+      "r_random_population": "r_random: analysis population (train+val+test), size-matched to R_clean; r_random_full: whole cleaned corpus, for literature comparability",
+      "jury_blocks": {
+        "examples_per_block": {
+          "A": 8043,
+          "B": 8041,
+          "C": 8041
+        },
+        "class_per_block": {
+          "A": {
+            "anger": 1338,
+            "disgust": 111,
+            "fear": 138,
+            "joy": 4641,
+            "sadness": 664,
+            "surprise": 1151
+          },
+          "B": {
+            "anger": 1338,
+            "disgust": 111,
+            "fear": 137,
+            "joy": 4640,
+            "sadness": 664,
+            "surprise": 1151
+          },
+          "C": {
+            "anger": 1338,
+            "disgust": 111,
+            "fear": 138,
+            "joy": 4640,
+            "sadness": 664,
+            "surprise": 1150
+          }
+        },
+        "max_class_share_drift": 0.0001
+      },
+      "invariant_checks": {
+        "train_size_identical": true,
+        "class_counts_identical": true,
+        "injected_all_from_reserve": true,
+        "removed_all_from_clean_train": true,
+        "no_test_target_in_overlap_train": true,
+        "uniform_author_coverage": true,
+        "injections_thread_disjoint_from_target": true
+      },
+      "hashes": {
+        "r_clean_train.txt": "d312e6d4b6c4185c077b04e5934489099a86462b695a8d8d3993cd0e93fd04ce",
+        "r_clean_val.txt": "337db25df80a29d3c509d7a0c1a78cc1bd7e2083fa4e2f92b8b0eb3099b00526",
+        "r_clean_test.txt": "4f6f8b84c9c2dd9bbe9d31dafc2a9fee1316e432d34fd96bb52b30f54af753b0",
+        "reserve.txt": "fd2d02e695bc54d61a6f64397d83d3304f8ec0596f4160538c2e17d8f1d7ac1b",
+        "excluded_same_thread.txt": "632c6bc0bd2124f2c04d5a2594124cd2de37ea712458422900e1d56657569b03",
+        "r_overlap_train.txt": "c5f49c2327451f04b4f45c27007850b342b52a0784594658d4d14796c381171e",
+        "r_overlap_injected.txt": "8a24cca238964ee7e19f139a2fb6ad71edc5c5fd058a5ad4eaf9ddde305fd68b",
+        "r_overlap_removed.txt": "a9b5fbc9f10d55ce149882e1bf33eee5eca2e1f968ef2d6b30ea5ca0d1b0e82c",
+        "eligible_test.txt": "bd4b70f251a4e527b24bfde271d50932091324ffab24802e12bdad6ff4e46ae5",
+        "r_random_train.txt": "8e91ce3de3d897a484888217100828e1e054fe505a333ebcd9602c1f55d9ffd0",
+        "r_random_val.txt": "0b8b9851ccd4bbca1fe4402bc0669928393edcff6c12898ecdc95dd10d608599",
+        "r_random_test.txt": "01c5ff04682b2d5bc4924b2bc43e36ec25f961e8a520fc60557b081e6edec905",
+        "r_random_full_train.txt": "cad1f2703ef9f69e0dd30e6162e2502265945a01ee6b59f20fdfa8d0e38e8eef",
+        "r_random_full_val.txt": "2edca39bdd649e3eff1cb08a87161b7798946f29a9dd74fdbac00d26654c28e5",
+        "r_random_full_test.txt": "38819cf62f27419fd3dc67a1f784ae185924943a28040d62970a0a78c2c06c59"
+      }
+    },
+    {
+      "seed": 2024,
+      "is_confirmatory_split": false,
+      "dose_k": 1,
+      "counts": {
+        "train": 24060,
+        "val": 5156,
+        "test": 5156,
+        "reserve": 546,
+        "excluded": 33,
+        "overlap_train": 24060,
+        "injected": 410,
+        "removed": 410,
+        "eligible_test": 410
+      },
+      "realized_ratios_pct": {
+        "train": 70.0,
+        "val": 15.0,
+        "test": 15.0
+      },
+      "reserve_pct_of_corpus": 1.56,
+      "overlap_pct_of_training": 1.704,
+      "n_eligible_authors": 410,
+      "eligible_class_support": {
+        "anger": 81,
+        "disgust": 4,
+        "fear": 9,
+        "joy": 207,
+        "sadness": 41,
+        "surprise": 68
+      },
+      "min_eligible_class_support": 4,
+      "substitution_match_quality": {
+        "exact_4var": 172,
+        "no_ppa": 200,
+        "no_len": 28,
+        "label_only": 10,
+        "failed": 0,
+        "authors_short_of_dose": 0
+      },
+      "exact_4var_match_pct": 42.0,
+      "label_only_pct": 2.4,
+      "eligibility": {
+        "strict_eligible": 410,
+        "loose_eligible": 435,
+        "excluded_same_thread": 33
+      },
+      "r_random_population": "r_random: analysis population (train+val+test), size-matched to R_clean; r_random_full: whole cleaned corpus, for literature comparability",
+      "jury_blocks": {
+        "examples_per_block": {
+          "A": 8021,
+          "B": 8020,
+          "C": 8019
+        },
+        "class_per_block": {
+          "A": {
+            "anger": 1324,
+            "disgust": 110,
+            "fear": 148,
+            "joy": 4639,
+            "sadness": 652,
+            "surprise": 1148
+          },
+          "B": {
+            "anger": 1325,
+            "disgust": 111,
+            "fear": 147,
+            "joy": 4638,
+            "sadness": 651,
+            "surprise": 1148
+          },
+          "C": {
+            "anger": 1324,
+            "disgust": 110,
+            "fear": 147,
+            "joy": 4638,
+            "sadness": 652,
+            "surprise": 1148
+          }
+        },
+        "max_class_share_drift": 0.0001
+      },
+      "invariant_checks": {
+        "train_size_identical": true,
+        "class_counts_identical": true,
+        "injected_all_from_reserve": true,
+        "removed_all_from_clean_train": true,
+        "no_test_target_in_overlap_train": true,
+        "uniform_author_coverage": true,
+        "injections_thread_disjoint_from_target": true
+      },
+      "hashes": {
+        "r_clean_train.txt": "6fc1b065178738056042f05ba00f6845724d7d85445dbf1b10d1a839fb58eefc",
+        "r_clean_val.txt": "09e88f02c3c0ee5c3ce91ec7ca99d693423acac7a04d93d88e5b2ea3ee86274e",
+        "r_clean_test.txt": "f2b2d8edbe33ed4e7f1b9d367923eb87e474cdf23d048e0fd93ee8721b051106",
+        "reserve.txt": "b7c4d6b2b66fd2fb9910f7d0515b2f09e6e41a906e32217b6e1aa09e926b7cab",
+        "excluded_same_thread.txt": "8bfed5c29685a04a5d57bbcd5810b018bbfbac72b8115347bea0e8daedc8b868",
+        "r_overlap_train.txt": "65600de50723b9799de00e51a7e2399aab75b71fcea63c9e58e334bcf0bad208",
+        "r_overlap_injected.txt": "f1fa92689baf51d1875e2a3fa9c24a0d974afbd7e9332c0053c77607729a0caa",
+        "r_overlap_removed.txt": "368fdff49e31107c906efbec3cb72194c9505528ef02a077199ac6487805a020",
+        "eligible_test.txt": "34a949543f4af1ddf5876a356fb8733308057c5ebb93f5562dcdd35fdd81bd2a",
+        "r_random_train.txt": "e0cddd3c472288af2419ba0a19572ebe1c4c2a20731da51c4fab9d4d084dbb19",
+        "r_random_val.txt": "faf560bdebec81837175daacd00fffb4ad33a5b09e7a0d4fa9f044c569503f7a",
+        "r_random_test.txt": "de046cf596bd5a53a23657d3874d209e3acc288955b14676bef75ff7911e7540",
+        "r_random_full_train.txt": "21dadcb44fea861bccf09cd7180a22988f0b46b195943374e9cfcf53cc529c4c",
+        "r_random_full_val.txt": "cba4786b6302e8b40d9edefa1f5f756c6c7b86d6083ebc38203314489d5bb76f",
+        "r_random_full_test.txt": "c8e166857bb47d0be3c6157ccae22dbcc8bff6de6988e98e2096f47db5fc5ba5"
+      }
+    }
+  ]
+}
