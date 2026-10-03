@@ -1,0 +1,44 @@
+{
+  "run_id": "bert__r_clean__split42__seed3",
+  "model": "bert",
+  "regime": "r_clean",
+  "train_file": "r_clean_train.txt",
+  "model_seed": 3,
+  "split_seed": 42,
+  "uses_author_blocks": false,
+  "validation_macro_f1": 0.7047559116764756,
+  "validation_macro_f1_display": 0.704756,
+  "n_train": 24063,
+  "n_val": 5157,
+  "n_test": 5157,
+  "prediction_file_sha256": "f3c5b569c990c212bc36c2fc21f090144bc05a844057e73b21b2983fb3c05f20",
+  "class_weighting": "none",
+  "training_config_sha256": "75eee2631e1a9d2e562d07cdca122e4f76a00387da7ac58d51a1a3bc2c16456c",
+  "training_config_version": "phase1-v1",
+  "run_experiments_sha256": "b1768c3cce420c8ef6ee5d53db6584c836fa54f0288cef0de30ae83bed9f146b",
+  "dataset_manifest_sha256": "ca2955a568846fe669b0125c016ca945b2a05fc3e6241b02a7c454fa81d36341",
+  "determinism_applied": {
+    "cudnn_benchmark": true,
+    "torch_use_deterministic_algorithms": false
+  },
+  "backbone_repo": "google-bert/bert-base-uncased",
+  "backbone_revision_requested": "86b5e0934494bd15c9632b12f734a8a67f723594",
+  "backbone_revision_resolved": "86b5e0934494bd15c9632b12f734a8a67f723594",
+  "index_file_sha256": {
+    "r_clean_train.txt": "7050a6387096e70127c76cafb0381df2958d5b1a8bec54f9e8adf25d8a45b48e",
+    "r_clean_val.txt": "be3fa920259c58d668bf68d3c643e03869ac336b31a26524710bf9a495ccf85a",
+    "r_clean_test.txt": "9f6cc3fb9ea6dc9e4608a6f7d3464aec488d81a7343284fd69d9d25d3ab1b36e",
+    "jury_blocks.json": "1d62b72b3fee975f02e7f558f76c05ff31cbf523ed9feb6c9e2540c178d43152"
+  },
+  "effective_train_ids_sha256": "e5a2f7f69cdfe5dd1ca4428e24e8aee57b0adf8dd60ba081c66d226d9aa46866",
+  "corpus_file": "corpus.parquet",
+  "corpus_content_sha256": "05343493a0e155c7e75325e0cda79ad64e60f98564af3dcad2b84a23554b615b",
+  "splits_freeze_quality": true,
+  "elapsed_seconds": 1203.3,
+  "environment": {
+    "python": "3.12.13",
+    "torch": "2.10.0+cu128",
+    "transformers": "5.0.0",
+    "device": "Tesla T4"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "run_id": "roberta__r_overlap__split2024__seed2",
+  "model": "roberta",
+  "regime": "r_overlap",
+  "train_file": "r_overlap_train.txt",
+  "model_seed": 2,
+  "split_seed": 2024,
+  "uses_author_blocks": false,
+  "validation_macro_f1": 0.7067529533195743,
+  "validation_macro_f1_display": 0.706753,
+  "n_train": 24060,
+  "n_val": 5156,
+  "n_test": 5156,
+  "prediction_file_sha256": "a087a0caa9521075b0f4cea5dd5416c45a243b757f590e219d8349cf2a2e0d8c",
+  "class_weighting": "none",
+  "training_config_sha256": "75eee2631e1a9d2e562d07cdca122e4f76a00387da7ac58d51a1a3bc2c16456c",
+  "training_config_version": "phase1-v1",
+  "run_experiments_sha256": "b1768c3cce420c8ef6ee5d53db6584c836fa54f0288cef0de30ae83bed9f146b",
+  "dataset_manifest_sha256": "ca2955a568846fe669b0125c016ca945b2a05fc3e6241b02a7c454fa81d36341",
+  "determinism_applied": {
+    "cudnn_benchmark": true,
+    "torch_use_deterministic_algorithms": false
+  },
+  "backbone_repo": "FacebookAI/roberta-base",
+  "backbone_revision_requested": "e2da8e2f811d1448a5b465c236feacd80ffbac7b",
+  "backbone_revision_resolved": "e2da8e2f811d1448a5b465c236feacd80ffbac7b",
+  "index_file_sha256": {
+    "r_overlap_train.txt": "4a24962e9d7ba979c6bb4fc8f678af1e733ab9d75fe8d5aa8e9147b0201d310c",
+    "r_clean_val.txt": "e9ccb74a3019fcc98ca97663f501e1a8f8ca796537608f71367f199dc3bc3e4e",
+    "r_clean_test.txt": "c67f3fda5a3e8d52e6c9641adea010a2bd0a34491e96b5d6079ddfa23d3ade37",
+    "jury_blocks.json": "7004a48b50c49488d8af87f1086552693150b0c7dd98eebc4f8c669a7b533823"
+  },
+  "effective_train_ids_sha256": "00087dba8f4ce65ea196eec8abd7372a5de8dc4e566ed37f81eb681f765ae86c",
+  "corpus_file": "corpus.parquet",
+  "corpus_content_sha256": "05343493a0e155c7e75325e0cda79ad64e60f98564af3dcad2b84a23554b615b",
+  "splits_freeze_quality": true,
+  "elapsed_seconds": 1213.5,
+  "environment": {
+    "python": "3.12.13",
+    "torch": "2.10.0+cu128",
+    "transformers": "5.0.0",
+    "device": "Tesla T4"
+  }
+}
