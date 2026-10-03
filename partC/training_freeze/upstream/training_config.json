@@ -1,0 +1,146 @@
+{
+  "config_version": "phase1-v1",
+  "data_provenance": {
+    "_note": [
+      "Binds this config to one specific frozen dataset. Without it a",
+      "config could be run against any splits directory that happened",
+      "to carry freeze_quality=true, and the binding would only be",
+      "discovered after the fact in the run metadata.",
+      "Fill dataset_manifest_sha256 with:",
+      "  sha256sum splits/dataset_manifest.json"
+    ],
+    "dataset_manifest_sha256": "ca2955a568846fe669b0125c016ca945b2a05fc3e6241b02a7c454fa81d36341",
+    "corpus_content_sha256": "05343493a0e155c7e75325e0cda79ad64e60f98564af3dcad2b84a23554b615b",
+    "split_seeds": [
+      42,
+      123,
+      2024
+    ]
+  },
+  "h2_single_model_baseline": {
+    "model": "roberta",
+    "regime": "r_clean",
+    "model_seed": 1,
+    "_note": [
+      "Fixed before training. Three RoBERTa seeds are trained on",
+      "R_clean, so without this the H2 baseline would be chosen after",
+      "training - even selecting on validation is a best-of-three",
+      "choice, and comparing a best-of-three single model against a",
+      "single jury configuration is asymmetric in either direction.",
+      "Seeds 2 and 3 estimate initialization variability, supply the",
+      "RoBERTa seed jury (A'), and provide replication context; they",
+      "are never candidates for the H2 baseline."
+    ]
+  },
+  "frozen": true,
+  "_note": [
+    "Frozen before the first model-training run. Every value here is fixed for",
+    "all 45 Part-A runs. run_experiments.py reads this file, records its",
+    "SHA-256 in every output, and refuses command-line overrides of any frozen",
+    "field. Changing anything after the first run invalidates Phase 1."
+  ],
+  "class_weighting": "none",
+  "_class_weighting_rationale": [
+    "Unweighted cross-entropy for every Phase-1 run. For H3 the jurors and",
+    "their saved probability vectors are identical across the weighted- and",
+    "equal-weight aggregation conditions; only the aggregation rule differs.",
+    "For H2 the same unweighted objective applies to the single-model baseline",
+    "and to every jury member, so class weighting is not introduced as an",
+    "additional experimental factor beyond the pre-specified single-model-",
+    "versus-jury design. The retained corpus is highly imbalanced (disgust",
+    "1.36%, fear 1.74%, joy 57.7%), so a rare class may receive low or zero",
+    "F1; that is reported as an empirical result and does not modify the",
+    "Phase-1 protocol. If exactly one class scores F1 = 0 and the other five",
+    "are perfect, macro-F1 is capped at 5/6 = 0.833. Balanced weighting, if",
+    "evaluated, is a separately labelled Phase-2 sensitivity analysis and does",
+    "not replace the frozen Phase-1 results."
+  ],
+  "models": {
+    "bert": {
+      "repo": "google-bert/bert-base-uncased",
+      "revision": "86b5e0934494bd15c9632b12f734a8a67f723594"
+    },
+    "roberta": {
+      "repo": "FacebookAI/roberta-base",
+      "revision": "e2da8e2f811d1448a5b465c236feacd80ffbac7b"
+    }
+  },
+  "tokenization": {
+    "max_length": 64,
+    "padding": "max_length",
+    "truncation": true,
+    "_max_length_rationale": [
+      "Measured on the frozen corpus with both pinned tokenizers before any",
+      "training. Pre-specified rule: smallest limit in [64, 128, 256] for which",
+      "at most 5% of examples exceed it under BOTH tokenizers.",
+      "BERT: P50 19, P90 31, P95 33, P99 37, max 82; 1 example (0.003%) > 64.",
+      "RoBERTa: P50 18, P90 31, P95 33, P99 36, max 186; 6 examples (0.017%) > 64."
+    ]
+  },
+  "optimization": {
+    "optimizer": "AdamW",
+    "learning_rate": 2e-05,
+    "weight_decay": 0.01,
+    "adam_epsilon": 1e-08,
+    "batch_size": 32,
+    "eval_batch_size": 128,
+    "epochs": 4,
+    "scheduler": "linear_with_warmup",
+    "warmup_ratio": 0.1,
+    "max_grad_norm": 1.0,
+    "loss": "cross_entropy"
+  },
+  "checkpoint_rule": {
+    "selection_metric": "validation_macro_f1",
+    "selection_mode": "max",
+    "evaluate_every": "epoch",
+    "early_stopping_patience": 2,
+    "restore_best_before_test": true,
+    "_note": [
+      "The checkpoint evaluated on test is the epoch with the highest",
+      "validation macro-F1, restored before test inference. Training stops",
+      "early after 2 consecutive epochs without improvement. Selection uses",
+      "validation only; the test set is touched once, after selection."
+    ]
+  },
+  "model_seeds": [
+    1,
+    2,
+    3
+  ],
+  "_model_seeds_note": [
+    "Three seeds for BERT/R_clean, RoBERTa/R_clean and RoBERTa/R_overlap.",
+    "Jury members (complementary partitions, disjoint thirds) use seed 1 only;",
+    "their diversity comes from the training partition, not initialization."
+  ],
+  "determinism": {
+    "seed_python_numpy_torch": true,
+    "torch_use_deterministic_algorithms": false,
+    "cudnn_benchmark": true,
+    "_note": [
+      "Full CUDA determinism is not enforced: it slows training substantially",
+      "and does not hold across GPU models anyway. Exact bitwise reproduction",
+      "of a run is therefore not claimed. What is reproducible is the pipeline",
+      "and the analysis, from the released per-sample predictions."
+    ]
+  },
+  "labels": [
+    "anger",
+    "disgust",
+    "fear",
+    "joy",
+    "sadness",
+    "surprise"
+  ],
+  "prediction_file_schema": [
+    "example_id",
+    "true_label",
+    "pred_label",
+    "p_anger",
+    "p_disgust",
+    "p_fear",
+    "p_joy",
+    "p_sadness",
+    "p_surprise"
+  ]
+}

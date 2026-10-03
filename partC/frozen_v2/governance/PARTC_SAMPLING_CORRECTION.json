@@ -1,0 +1,34 @@
+{
+  "corrected_sampling_keys": {
+    "C": "SHA256(\"20260901|C|\" + example_id)",
+    "R": "SHA256(\"20260901|R|\" + example_id)"
+  },
+  "correction_scope": "sampling-stream namespace only",
+  "decision_rule_after_v2_build": "The first V2 samples produced under the frozen namespace-separated keys will be accepted as-is. No resampling will be performed in response to class composition, source composition, overlap statistics, or later model performance.",
+  "frozen_at_utc": "2026-09-01T07:02:00.468616+00:00",
+  "interpretation": "This correction was triggered solely by a structural pre-training overlap audit. No Part-C model had been trained and no Part-C model-performance outcome had been observed.",
+  "original_partC_execution_freeze_sha256": "8b34a36bcde6dfc61b291a653e888dbce9d386a4e6cb5f62e62c8a87947cfbfb",
+  "status": "FROZEN_BEFORE_PART_C_DATASET_BUILD_V2_AND_BEFORE_ANY_PART_C_MODEL_TRAINING",
+  "superseded_structural_preflight_build": {
+    "bundle_sha256": "486f7caa9387bb50ede7b05c5fbefd2677bd8aba9d2ed7a0697296e0110b7847",
+    "dataset_manifest_sha256": "516fa63eb4ff610414ecba476823bb754eae59579cadc591fd944f8ce412d1f2",
+    "freeze_sha256": "15a1616c8a76ef5d14bbd310f13bcae2bc38cc374e3b36153a2b46aaf815c351",
+    "model_performance_observed": false,
+    "model_training_occurred": false,
+    "reason_not_used_for_training": "The common hash-ranking stream mechanically nested all 1760 Reddit examples selected into Platform C inside Platform R, producing R-C overlap O=0.9238845. This is a sampling implementation artifact rather than the intended corpus-diversity comparison."
+  },
+  "unchanged_decisions": {
+    "aggregation": "unchanged",
+    "checkpoint_selection": "unchanged",
+    "class_balanced": false,
+    "combined_definition": "full Reddit R_clean train union frozen Twitter train",
+    "platform_training_n": 1905,
+    "run_grid": "unchanged 12 unique runs",
+    "same_subset_reused_across_model_seeds": true,
+    "sampling_seed": 20260901,
+    "source_balanced": false,
+    "stratified": false,
+    "twitter_T": "full frozen Twitter training set",
+    "without_replacement": true
+  }
+}

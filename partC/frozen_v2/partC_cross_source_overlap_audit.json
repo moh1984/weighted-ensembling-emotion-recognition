@@ -1,0 +1,42 @@
+{
+  "pairs": {
+    "reddit_test__twitter_test": {
+      "crosses_partition_boundary": false,
+      "intersection_n": 0
+    },
+    "reddit_test__twitter_train": {
+      "crosses_partition_boundary": true,
+      "intersection_n": 0
+    },
+    "reddit_test__twitter_validation": {
+      "crosses_partition_boundary": true,
+      "intersection_n": 0
+    },
+    "reddit_train__twitter_test": {
+      "crosses_partition_boundary": true,
+      "intersection_n": 0
+    },
+    "reddit_train__twitter_train": {
+      "crosses_partition_boundary": false,
+      "intersection_n": 1
+    },
+    "reddit_train__twitter_validation": {
+      "crosses_partition_boundary": true,
+      "intersection_n": 0
+    },
+    "reddit_validation__twitter_test": {
+      "crosses_partition_boundary": true,
+      "intersection_n": 0
+    },
+    "reddit_validation__twitter_train": {
+      "crosses_partition_boundary": true,
+      "intersection_n": 0
+    },
+    "reddit_validation__twitter_validation": {
+      "crosses_partition_boundary": false,
+      "intersection_n": 0
+    }
+  },
+  "status": "PASS",
+  "unsafe_pairs": []
+}

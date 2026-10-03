@@ -1,0 +1,123 @@
+[
+  {
+    "backbone": "bert",
+    "native_validation": "twitter_validation.parquet",
+    "roles": [
+      "twitter_baseline",
+      "platform_T_seed1"
+    ],
+    "run_id": "bert__twitter_full__seed1",
+    "seed": 1,
+    "train_set": "twitter_train.parquet"
+  },
+  {
+    "backbone": "roberta",
+    "native_validation": "twitter_validation.parquet",
+    "roles": [
+      "twitter_baseline"
+    ],
+    "run_id": "roberta__twitter_full__seed1",
+    "seed": 1,
+    "train_set": "twitter_train.parquet"
+  },
+  {
+    "backbone": "bert",
+    "native_validation": "combined_validation_full.parquet",
+    "roles": [
+      "combined_baseline"
+    ],
+    "run_id": "bert__combined_full__seed1",
+    "seed": 1,
+    "train_set": "combined_train_full.parquet"
+  },
+  {
+    "backbone": "roberta",
+    "native_validation": "combined_validation_full.parquet",
+    "roles": [
+      "combined_baseline"
+    ],
+    "run_id": "roberta__combined_full__seed1",
+    "seed": 1,
+    "train_set": "combined_train_full.parquet"
+  },
+  {
+    "backbone": "bert",
+    "native_validation": "twitter_validation.parquet",
+    "roles": [
+      "platform_T_seed2"
+    ],
+    "run_id": "bert__platform_T__seed2",
+    "seed": 2,
+    "train_set": "platform_T_train.parquet"
+  },
+  {
+    "backbone": "bert",
+    "native_validation": "twitter_validation.parquet",
+    "roles": [
+      "platform_T_seed3"
+    ],
+    "run_id": "bert__platform_T__seed3",
+    "seed": 3,
+    "train_set": "platform_T_train.parquet"
+  },
+  {
+    "backbone": "bert",
+    "native_validation": "reddit_validation.parquet",
+    "roles": [
+      "platform_R_seed1"
+    ],
+    "run_id": "bert__platform_R__seed1",
+    "seed": 1,
+    "train_set": "platform_R_train.parquet"
+  },
+  {
+    "backbone": "bert",
+    "native_validation": "reddit_validation.parquet",
+    "roles": [
+      "platform_R_seed2"
+    ],
+    "run_id": "bert__platform_R__seed2",
+    "seed": 2,
+    "train_set": "platform_R_train.parquet"
+  },
+  {
+    "backbone": "bert",
+    "native_validation": "reddit_validation.parquet",
+    "roles": [
+      "platform_R_seed3"
+    ],
+    "run_id": "bert__platform_R__seed3",
+    "seed": 3,
+    "train_set": "platform_R_train.parquet"
+  },
+  {
+    "backbone": "bert",
+    "native_validation": "combined_validation_full.parquet",
+    "roles": [
+      "platform_C_seed1"
+    ],
+    "run_id": "bert__platform_C__seed1",
+    "seed": 1,
+    "train_set": "platform_C_train.parquet"
+  },
+  {
+    "backbone": "bert",
+    "native_validation": "combined_validation_full.parquet",
+    "roles": [
+      "platform_C_seed2"
+    ],
+    "run_id": "bert__platform_C__seed2",
+    "seed": 2,
+    "train_set": "platform_C_train.parquet"
+  },
+  {
+    "backbone": "bert",
+    "native_validation": "combined_validation_full.parquet",
+    "roles": [
+      "platform_C_seed3"
+    ],
+    "run_id": "bert__platform_C__seed3",
+    "seed": 3,
+    "train_set": "platform_C_train.parquet"
+  }
+]

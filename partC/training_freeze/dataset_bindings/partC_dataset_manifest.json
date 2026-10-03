@@ -1,0 +1,263 @@
+{
+  "created_at_utc": "2026-09-01T07:04:38.691197+00:00",
+  "cross_source_overlap_audit": {
+    "sha256": "0b38e3fad8f4800b7e32191fa5ddea615277ab240552ea8ae5622914a0dcd1f5",
+    "status": "PASS"
+  },
+  "datasets": {
+    "combined_test_full.parquet": {
+      "canonical_content_sha256": "9df89a64cffd1ef6cd76bfca3e5813cf9f1d5331b02c3f1f643aa5ab1c054a54",
+      "class_counts": {
+        "anger": 850,
+        "disgust": 82,
+        "fear": 145,
+        "joy": 3932,
+        "sadness": 518,
+        "surprise": 712
+      },
+      "file_sha256": "a1908514c7322530ad21325646a6d2feb6fce6f0c8e927979fa8e1be74b93839",
+      "n": 6239,
+      "source_counts": {
+        "reddit": 5157,
+        "twitter": 1082
+      }
+    },
+    "combined_train_full.parquet": {
+      "canonical_content_sha256": "24fffa4fb270d65b3114bfbf77a531188c1e7430bf05b333e5bc622f7254f8c8",
+      "class_counts": {
+        "anger": 4125,
+        "disgust": 395,
+        "fear": 583,
+        "joy": 15254,
+        "sadness": 2160,
+        "surprise": 3451
+      },
+      "file_sha256": "8c0f1d8cc3dc4e206034f5db1d9d12b578e0307d1bc077b22430963ab40f55d8",
+      "n": 25968,
+      "source_counts": {
+        "reddit": 24063,
+        "twitter": 1905
+      }
+    },
+    "combined_validation_full.parquet": {
+      "canonical_content_sha256": "0b92e97a5a69b6471685836bd9cebc83173f8f65b0f317524fbfc1bf99db8b63",
+      "class_counts": {
+        "anger": 920,
+        "disgust": 68,
+        "fear": 136,
+        "joy": 3124,
+        "sadness": 468,
+        "surprise": 729
+      },
+      "file_sha256": "c13861e9fdc782f6b91b1ba53441f0bff7e125a441045a645359e2ef4c3a4a8c",
+      "n": 5445,
+      "source_counts": {
+        "reddit": 5157,
+        "twitter": 288
+      }
+    },
+    "platform_C_train.parquet": {
+      "canonical_content_sha256": "079acc5844d9945608bafc8e876705467060c095506bbe53d7ad6ba1575b8d63",
+      "class_counts": {
+        "anger": 293,
+        "disgust": 33,
+        "fear": 40,
+        "joy": 1086,
+        "sadness": 175,
+        "surprise": 278
+      },
+      "file_sha256": "edb6b82848c234c144bcb92e149e2faf838ce34af55f9ef714b03ea65dab72b4",
+      "n": 1905,
+      "source_counts": {
+        "reddit": 1772,
+        "twitter": 133
+      }
+    },
+    "platform_R_train.parquet": {
+      "canonical_content_sha256": "50df58dcdfe160a82646002557ed80a703823d5d5c4c36217e65f6a61222fa50",
+      "class_counts": {
+        "anger": 325,
+        "disgust": 28,
+        "fear": 33,
+        "joy": 1102,
+        "sadness": 152,
+        "surprise": 265
+      },
+      "file_sha256": "4c589ff2bac9e0a7096133e88818b23d7c39961a2df33192f7fb5c64b04ada63",
+      "n": 1905,
+      "source_counts": {
+        "reddit": 1905
+      }
+    },
+    "platform_T_train.parquet": {
+      "canonical_content_sha256": "cad5f73a7c7d342657f01afb82915486c940b7eeb6aef20c09fcd232007477c7",
+      "class_counts": {
+        "anger": 108,
+        "disgust": 55,
+        "fear": 175,
+        "joy": 1378,
+        "sadness": 172,
+        "surprise": 17
+      },
+      "file_sha256": "1ca4eb99b9e800eb74bdb7d52523ea1bf0d93e6d34e125d7b5bc7b5cefdc406f",
+      "n": 1905,
+      "source_counts": {
+        "twitter": 1905
+      }
+    },
+    "reddit_test.parquet": {
+      "canonical_content_sha256": "15d07e05f5718f33f816d817c41d370353cf92c4a98a2312ce4e1e064ce2da8f",
+      "class_counts": {
+        "anger": 811,
+        "disgust": 63,
+        "fear": 83,
+        "joy": 3056,
+        "sadness": 435,
+        "surprise": 709
+      },
+      "file_sha256": "e845b48508d7530934a970a22007641108253d7cea5f4178734c1ab564f2dbb3",
+      "n": 5157,
+      "source_counts": {
+        "reddit": 5157
+      }
+    },
+    "reddit_train.parquet": {
+      "canonical_content_sha256": "faa354b7dc4ce29894285efec9d6e3685406a8f6e5c4449a3f238c8bbcafda3b",
+      "class_counts": {
+        "anger": 4017,
+        "disgust": 340,
+        "fear": 408,
+        "joy": 13876,
+        "sadness": 1988,
+        "surprise": 3434
+      },
+      "file_sha256": "77637b467a64651eb2a574ec8e99e2673c677d62cc7b839e0000fa2ec6e83db0",
+      "n": 24063,
+      "source_counts": {
+        "reddit": 24063
+      }
+    },
+    "reddit_validation.parquet": {
+      "canonical_content_sha256": "8395196d1c86926352eccc413458aa5001a61483486a157fcd9d7ad58a2e9b03",
+      "class_counts": {
+        "anger": 909,
+        "disgust": 61,
+        "fear": 109,
+        "joy": 2902,
+        "sadness": 447,
+        "surprise": 729
+      },
+      "file_sha256": "9b99a127d12ab1b69663809ab5cc3fe997b5ceeac8c6c91239085af56b317180",
+      "n": 5157,
+      "source_counts": {
+        "reddit": 5157
+      }
+    },
+    "twitter_test.parquet": {
+      "canonical_content_sha256": "b79ac6b682b83cf9aad48dda01d01428f2b22bfdbaa7b84de09d2cbfa16c7b39",
+      "class_counts": {
+        "anger": 39,
+        "disgust": 19,
+        "fear": 62,
+        "joy": 876,
+        "sadness": 83,
+        "surprise": 3
+      },
+      "file_sha256": "dd83b8e9367b6275646dcbf6038d022ef3ecf502ade15015c1fd18706e98acc3",
+      "n": 1082,
+      "source_counts": {
+        "twitter": 1082
+      }
+    },
+    "twitter_train.parquet": {
+      "canonical_content_sha256": "cad5f73a7c7d342657f01afb82915486c940b7eeb6aef20c09fcd232007477c7",
+      "class_counts": {
+        "anger": 108,
+        "disgust": 55,
+        "fear": 175,
+        "joy": 1378,
+        "sadness": 172,
+        "surprise": 17
+      },
+      "file_sha256": "1ca4eb99b9e800eb74bdb7d52523ea1bf0d93e6d34e125d7b5bc7b5cefdc406f",
+      "n": 1905,
+      "source_counts": {
+        "twitter": 1905
+      }
+    },
+    "twitter_validation.parquet": {
+      "canonical_content_sha256": "c1d8e787393fded47249404fb4f4f7de2564f711314959b27feedb169ec01eb0",
+      "class_counts": {
+        "anger": 11,
+        "disgust": 7,
+        "fear": 27,
+        "joy": 222,
+        "sadness": 21,
+        "surprise": 0
+      },
+      "file_sha256": "ce1d9a9388f814c3d3bcd87c6bd8af6fd76fc9e16ebc0d4b720a17e0c3784506",
+      "n": 288,
+      "source_counts": {
+        "twitter": 288
+      }
+    }
+  },
+  "model_performance_observed": false,
+  "model_training_occurred": false,
+  "partC_role": "exploratory_secondary",
+  "platform_training_overlap": {
+    "R_C": {
+      "intersection_n": 144,
+      "jaccard": 0.03927986906710311,
+      "overlap_O": 0.07559055118110236
+    },
+    "T_C": {
+      "intersection_n": 133,
+      "jaccard": 0.03617079140603753,
+      "overlap_O": 0.06981627296587926
+    },
+    "T_R": {
+      "intersection_n": 0,
+      "jaccard": 0.0,
+      "overlap_O": 0.0
+    }
+  },
+  "run_grid": {
+    "sha256": "d71803ddb306e08fca033dc803f3e7005dd1c4d86241bd9b23cf252e03589713",
+    "unique_runs": 12
+  },
+  "sampling": {
+    "C_key": "SHA256(\"20260901|C|\" + example_id)",
+    "R_key": "SHA256(\"20260901|R|\" + example_id)",
+    "class_balanced": false,
+    "first_v2_sample_accepted_as_is": true,
+    "resampling_after_structural_output": false,
+    "same_subset_across_model_seeds": true,
+    "seed": 20260901,
+    "source_balanced": false,
+    "stratified": false,
+    "target_n": 1905,
+    "without_replacement": true
+  },
+  "sampling_correction": {
+    "correction_freeze_sha256": "66625631ea90aa33cfc274c30ebe34dcdea7bac076e5044b37602a5166b562cc",
+    "correction_json_sha256": "a324c555b99c5d256ee0172893d11c6aa94e922cc31b363ed4b78eff01acfd4b",
+    "correction_md_sha256": "f943ca465960a1d1315fb9fa3b61756e8e1265b7d0e8004acdea6fcec26c31c2"
+  },
+  "status": "FROZEN_BEFORE_FIRST_PART_C_MODEL_TRAINING",
+  "supersedes_v1_for_training": true,
+  "upstream_hashes": {
+    "execution_freeze": "8b34a36bcde6dfc61b291a653e888dbce9d386a4e6cb5f62e62c8a87947cfbfb",
+    "partA_manifest": "ca2955a568846fe669b0125c016ca945b2a05fc3e6241b02a7c454fa81d36341",
+    "partB_manifest": "dece660f6b8550a0335fc8fd48f0a7a9da68d2625470eb695a8a5bd3f1e536b2",
+    "protocol": "d3a3f5dfe5c12ab1b3c620dffc53c77bda8cb4e7df26eb3b5516085a5e968b48",
+    "training_config": "75eee2631e1a9d2e562d07cdca122e4f76a00387da7ac58d51a1a3bc2c16456c",
+    "transfer_manifest": "d0180ac5a20b50812d8fe53c02c2b0d2b752dccb0ec03d750898f26b0e0cac82"
+  },
+  "v1_reference": {
+    "dataset_manifest_sha256": "516fa63eb4ff610414ecba476823bb754eae59579cadc591fd944f8ce412d1f2",
+    "freeze_sha256": "15a1616c8a76ef5d14bbd310f13bcae2bc38cc374e3b36153a2b46aaf815c351",
+    "reason": "common deterministic sampling stream mechanically nested C's Reddit rows in R"
+  },
+  "version": "Part-C dataset build V2"
+}

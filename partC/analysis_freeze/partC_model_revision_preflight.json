@@ -1,0 +1,21 @@
+{
+  "models": {
+    "bert": {
+      "config_resolved_revision": "86b5e0934494bd15c9632b12f734a8a67f723594",
+      "hf_resolved_revision": "86b5e0934494bd15c9632b12f734a8a67f723594",
+      "repo": "google-bert/bert-base-uncased",
+      "requested_revision": "86b5e0934494bd15c9632b12f734a8a67f723594",
+      "tokenizer_loaded": true,
+      "vocab_size": 30522
+    },
+    "roberta": {
+      "config_resolved_revision": "e2da8e2f811d1448a5b465c236feacd80ffbac7b",
+      "hf_resolved_revision": "e2da8e2f811d1448a5b465c236feacd80ffbac7b",
+      "repo": "FacebookAI/roberta-base",
+      "requested_revision": "e2da8e2f811d1448a5b465c236feacd80ffbac7b",
+      "tokenizer_loaded": true,
+      "vocab_size": 50265
+    }
+  },
+  "status": "PRE_TRAINING_MODEL_REVISION_CHECK"
+}

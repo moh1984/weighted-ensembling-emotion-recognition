@@ -1,0 +1,4 @@
+seed_triplet,observed_gain_macro_f1_over_best_member,bootstrap_replicates,bootstrap_seed,ci_method,percentile_method,ci_low_2_5,ci_high_97_5,interpretation
+1,-0.004670929909045385,1000,20260901,paired percentile 95%,NumPy linear,-0.012241566841793715,0.001767181309503855,descriptive uncertainty only; no hypothesis test
+2,0.010459588258364905,1000,20260901,paired percentile 95%,NumPy linear,0.001512452728783194,0.019505766570909626,descriptive uncertainty only; no hypothesis test
+3,0.008444944440981761,1000,20260901,paired percentile 95%,NumPy linear,0.00033747107441933934,0.017074731688578232,descriptive uncertainty only; no hypothesis test

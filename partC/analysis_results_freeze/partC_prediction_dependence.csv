@@ -1,0 +1,10 @@
+seed_triplet,member_a,member_b,run_a,run_b,domain,measure,correlation,p_value
+1,T,R,bert__twitter_full__seed1,bert__platform_R__seed1,reddit_test,Pearson correlation of paired binary correctness indicators,0.38276193014425924,
+1,T,C,bert__twitter_full__seed1,bert__platform_C__seed1,reddit_test,Pearson correlation of paired binary correctness indicators,0.42078618605680235,
+1,R,C,bert__platform_R__seed1,bert__platform_C__seed1,reddit_test,Pearson correlation of paired binary correctness indicators,0.7785507600729066,
+2,T,R,bert__platform_T__seed2,bert__platform_R__seed2,reddit_test,Pearson correlation of paired binary correctness indicators,0.3626097057093797,
+2,T,C,bert__platform_T__seed2,bert__platform_C__seed2,reddit_test,Pearson correlation of paired binary correctness indicators,0.35227731473043844,
+2,R,C,bert__platform_R__seed2,bert__platform_C__seed2,reddit_test,Pearson correlation of paired binary correctness indicators,0.8119401709771616,
+3,T,R,bert__platform_T__seed3,bert__platform_R__seed3,reddit_test,Pearson correlation of paired binary correctness indicators,0.43189520422530553,
+3,T,C,bert__platform_T__seed3,bert__platform_C__seed3,reddit_test,Pearson correlation of paired binary correctness indicators,0.4503916045072884,
+3,R,C,bert__platform_R__seed3,bert__platform_C__seed3,reddit_test,Pearson correlation of paired binary correctness indicators,0.7822430283611567,

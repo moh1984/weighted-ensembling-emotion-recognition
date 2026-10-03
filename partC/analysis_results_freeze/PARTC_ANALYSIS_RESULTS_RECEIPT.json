@@ -1,0 +1,37 @@
+{
+  "aggregation_rules": {
+    "control": "equal_soft",
+    "primary": "weighted_soft",
+    "sensitivity": [
+      "weighted_hard",
+      "plain_hard"
+    ],
+    "temperature": 1.0,
+    "weight_domain": "reddit_validation"
+  },
+  "analysis_version": "partC-analysis-v1",
+  "architecture_diversity_executed": false,
+  "bootstrap": {
+    "method": "paired percentile bootstrap",
+    "numpy_percentile_method": "linear",
+    "percentiles": [
+      2.5,
+      97.5
+    ],
+    "replicates": 1000,
+    "seed": 20260901
+  },
+  "created_at_utc": "2026-09-01T22:20:21.063648+00:00",
+  "first_partC_test_performance_analysis": true,
+  "inferential_policy": {
+    "Holm_adjustment": false,
+    "hypothesis_testing": false,
+    "p_values": false
+  },
+  "input_analysis_spec_sha256": "99c3a5af801430525eb5f90187b9877c6eb97a1b33ed8e720d91388d606a4c5a",
+  "input_final_results_freeze_sha256": "7220bd320310d3e795065e9cd73a93dde92eb663a57427856dd3267798e06215",
+  "outcome_adaptation": false,
+  "source_predictions": "immutable Part-C final-results freeze",
+  "status": "PART_C_ANALYSIS_EXECUTED_AND_RESULTS_FROZEN_UNDER_PREEXISTING_PARTC_ANALYSIS_V1",
+  "twitter_test_status": "post-Part-B exploratory descriptive transfer evaluation only"
+}

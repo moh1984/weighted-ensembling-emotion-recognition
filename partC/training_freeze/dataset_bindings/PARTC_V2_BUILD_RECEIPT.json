@@ -1,0 +1,27 @@
+{
+  "C_namespace": "C",
+  "R_namespace": "R",
+  "created_at_utc": "2026-09-01T07:04:38.691197+00:00",
+  "note": "Observed V2 composition and overlap were not used to trigger further sampling.",
+  "observed_overlap": {
+    "R_C": {
+      "intersection_n": 144,
+      "jaccard": 0.03927986906710311,
+      "overlap_O": 0.07559055118110236
+    },
+    "T_C": {
+      "intersection_n": 133,
+      "jaccard": 0.03617079140603753,
+      "overlap_O": 0.06981627296587926
+    },
+    "T_R": {
+      "intersection_n": 0,
+      "jaccard": 0.0,
+      "overlap_O": 0.0
+    }
+  },
+  "platform_C_canonical_sha256": "079acc5844d9945608bafc8e876705467060c095506bbe53d7ad6ba1575b8d63",
+  "platform_R_canonical_sha256": "50df58dcdfe160a82646002557ed80a703823d5d5c4c36217e65f6a61222fa50",
+  "sampling_seed": 20260901,
+  "status": "V2_FIRST_SAMPLE_ACCEPTED_AND_FROZEN"
+}

@@ -1,0 +1,621 @@
+{
+  "analysis_version": "partC-analysis-v1",
+  "architecture_diversity": "not executed in Part C",
+  "bootstrap": {
+    "interval": "percentile 95%",
+    "paired_resampling": true,
+    "percentile_implementation": "numpy.percentile method=linear",
+    "percentiles": [
+      2.5,
+      97.5
+    ],
+    "replicate_file": "partC_bootstrap_gain_replicates.csv",
+    "replicates": 1000,
+    "resampling_unit": "reddit_test example",
+    "seed": 20260901
+  },
+  "bootstrap_gain_summary": [
+    {
+      "bootstrap_replicates": 1000,
+      "bootstrap_seed": 20260901,
+      "ci_high_97_5": 0.001767181309503855,
+      "ci_low_2_5": -0.012241566841793715,
+      "ci_method": "paired percentile 95%",
+      "interpretation": "descriptive uncertainty only; no hypothesis test",
+      "observed_gain_macro_f1_over_best_member": -0.004670929909045385,
+      "percentile_method": "NumPy linear",
+      "seed_triplet": 1
+    },
+    {
+      "bootstrap_replicates": 1000,
+      "bootstrap_seed": 20260901,
+      "ci_high_97_5": 0.019505766570909626,
+      "ci_low_2_5": 0.001512452728783194,
+      "ci_method": "paired percentile 95%",
+      "interpretation": "descriptive uncertainty only; no hypothesis test",
+      "observed_gain_macro_f1_over_best_member": 0.010459588258364905,
+      "percentile_method": "NumPy linear",
+      "seed_triplet": 2
+    },
+    {
+      "bootstrap_replicates": 1000,
+      "bootstrap_seed": 20260901,
+      "ci_high_97_5": 0.017074731688578232,
+      "ci_low_2_5": 0.00033747107441933934,
+      "ci_method": "paired percentile 95%",
+      "interpretation": "descriptive uncertainty only; no hypothesis test",
+      "observed_gain_macro_f1_over_best_member": 0.008444944440981761,
+      "percentile_method": "NumPy linear",
+      "seed_triplet": 3
+    }
+  ],
+  "full_baselines": [
+    {
+      "accuracy": 0.6220670932712817,
+      "backbone": "bert",
+      "balanced_accuracy": 0.37183314441878657,
+      "evaluation": "reddit_test",
+      "macro_f1": 0.2654781378369658,
+      "n": 5157,
+      "run_id": "bert__twitter_full__seed1",
+      "training_domain": "Twitter",
+      "weighted_f1": 0.5626557452362332
+    },
+    {
+      "accuracy": 0.890018484288355,
+      "backbone": "bert",
+      "balanced_accuracy": 0.4493479600671515,
+      "evaluation": "twitter_test",
+      "macro_f1": 0.4658199170214104,
+      "n": 1082,
+      "run_id": "bert__twitter_full__seed1",
+      "training_domain": "Twitter",
+      "weighted_f1": 0.8764196479952934
+    },
+    {
+      "accuracy": 0.6736474694589878,
+      "backbone": "roberta",
+      "balanced_accuracy": 0.4497722699050894,
+      "evaluation": "reddit_test",
+      "macro_f1": 0.3550273459781015,
+      "n": 5157,
+      "run_id": "roberta__twitter_full__seed1",
+      "training_domain": "Twitter",
+      "weighted_f1": 0.6301900549714349
+    },
+    {
+      "accuracy": 0.8983364140480592,
+      "backbone": "roberta",
+      "balanced_accuracy": 0.483073091395688,
+      "evaluation": "twitter_test",
+      "macro_f1": 0.48706968695345293,
+      "n": 1082,
+      "run_id": "roberta__twitter_full__seed1",
+      "training_domain": "Twitter",
+      "weighted_f1": 0.8880740992119392
+    },
+    {
+      "accuracy": 0.8272251308900523,
+      "backbone": "bert",
+      "balanced_accuracy": 0.6955976883968145,
+      "evaluation": "reddit_test",
+      "macro_f1": 0.6988605198422283,
+      "n": 5157,
+      "run_id": "bert__combined_full__seed1",
+      "training_domain": "Combined",
+      "weighted_f1": 0.8277140210057251
+    },
+    {
+      "accuracy": 0.8406795960891168,
+      "backbone": "bert",
+      "balanced_accuracy": 0.6938084363602819,
+      "evaluation": "combined_test_reconstructed",
+      "macro_f1": 0.6978389446089847,
+      "n": 6239,
+      "run_id": "bert__combined_full__seed1",
+      "training_domain": "Combined",
+      "weighted_f1": 0.8408669884288464
+    },
+    {
+      "accuracy": 0.8394415357766143,
+      "backbone": "roberta",
+      "balanced_accuracy": 0.6967047010149917,
+      "evaluation": "reddit_test",
+      "macro_f1": 0.7057390986673431,
+      "n": 5157,
+      "run_id": "roberta__combined_full__seed1",
+      "training_domain": "Combined",
+      "weighted_f1": 0.8375256851243308
+    },
+    {
+      "accuracy": 0.8522199070363841,
+      "backbone": "roberta",
+      "balanced_accuracy": 0.6913226771141453,
+      "evaluation": "combined_test_reconstructed",
+      "macro_f1": 0.7089355582023602,
+      "n": 6239,
+      "run_id": "roberta__combined_full__seed1",
+      "training_domain": "Combined",
+      "weighted_f1": 0.8499013315539723
+    }
+  ],
+  "inferential_policy": {
+    "hypothesis_tested": false,
+    "included_in_H2_H3_Holm_family": false,
+    "multiple_testing_adjustment": false,
+    "p_values": false
+  },
+  "input_bindings": {
+    "analysis_bindings_sha256": "dd420796777c76be8f0abe86e09ee03f06ecc3940ec75c1bc95d7b43ee81f252",
+    "analysis_spec_sha256": "99c3a5af801430525eb5f90187b9877c6eb97a1b33ed8e720d91388d606a4c5a",
+    "final_results_freeze_sha256": "7220bd320310d3e795065e9cd73a93dde92eb663a57427856dd3267798e06215",
+    "final_results_manifest_sha256": "6c79dfab9f19fbb6ef51f0e203d2fc728c0d426567e19260543d5e493a0b8c32",
+    "final_results_receipt_sha256": "1ae3e7125e5c6d8dba5a43808cae305eb63bda523d99a574de8c7194a6ec6824"
+  },
+  "jury_aggregations_reddit_test": [
+    {
+      "accuracy": 0.7707969749854566,
+      "aggregation": "weighted_soft",
+      "balanced_accuracy": 0.43633231496781216,
+      "best_member": "R",
+      "best_member_macro_f1": 0.4503277780955816,
+      "gain_macro_f1_over_best_member": -0.004670929909045385,
+      "macro_f1": 0.4456568481865362,
+      "n": 5157,
+      "role": "primary",
+      "seed_triplet": 1,
+      "weighted_f1": 0.7541745115227452
+    },
+    {
+      "accuracy": 0.7651735505138646,
+      "aggregation": "equal_soft",
+      "balanced_accuracy": 0.430974130894628,
+      "best_member": "R",
+      "best_member_macro_f1": 0.4503277780955816,
+      "gain_macro_f1_over_best_member": null,
+      "macro_f1": 0.4435929310208672,
+      "n": 5157,
+      "role": "control",
+      "seed_triplet": 1,
+      "weighted_f1": 0.7475118634823388
+    },
+    {
+      "accuracy": 0.7744812875702928,
+      "aggregation": "weighted_hard",
+      "balanced_accuracy": 0.4457860295444986,
+      "best_member": "R",
+      "best_member_macro_f1": 0.4503277780955816,
+      "gain_macro_f1_over_best_member": null,
+      "macro_f1": 0.4501067529950264,
+      "n": 5157,
+      "role": "sensitivity",
+      "seed_triplet": 1,
+      "weighted_f1": 0.7609762414177286
+    },
+    {
+      "accuracy": 0.773899554004266,
+      "aggregation": "plain_hard",
+      "balanced_accuracy": 0.4448678773711679,
+      "best_member": "R",
+      "best_member_macro_f1": 0.4503277780955816,
+      "gain_macro_f1_over_best_member": null,
+      "macro_f1": 0.45047294128313875,
+      "n": 5157,
+      "role": "sensitivity",
+      "seed_triplet": 1,
+      "weighted_f1": 0.759714099934812
+    },
+    {
+      "accuracy": 0.7521815008726004,
+      "aggregation": "weighted_soft",
+      "balanced_accuracy": 0.40073528531104285,
+      "best_member": "C",
+      "best_member_macro_f1": 0.3960916648263013,
+      "gain_macro_f1_over_best_member": 0.010459588258364905,
+      "macro_f1": 0.4065512530846662,
+      "n": 5157,
+      "role": "primary",
+      "seed_triplet": 2,
+      "weighted_f1": 0.7278329399826755
+    },
+    {
+      "accuracy": 0.7529571456273026,
+      "aggregation": "equal_soft",
+      "balanced_accuracy": 0.4001307508745387,
+      "best_member": "C",
+      "best_member_macro_f1": 0.3960916648263013,
+      "gain_macro_f1_over_best_member": null,
+      "macro_f1": 0.40735272553982355,
+      "n": 5157,
+      "role": "control",
+      "seed_triplet": 2,
+      "weighted_f1": 0.7284277755310525
+    },
+    {
+      "accuracy": 0.7498545666084933,
+      "aggregation": "weighted_hard",
+      "balanced_accuracy": 0.39999641809601966,
+      "best_member": "C",
+      "best_member_macro_f1": 0.3960916648263013,
+      "gain_macro_f1_over_best_member": null,
+      "macro_f1": 0.39853466416003563,
+      "n": 5157,
+      "role": "sensitivity",
+      "seed_triplet": 2,
+      "weighted_f1": 0.7247495198482006
+    },
+    {
+      "accuracy": 0.7517936784952491,
+      "aggregation": "plain_hard",
+      "balanced_accuracy": 0.40118546601818345,
+      "best_member": "C",
+      "best_member_macro_f1": 0.3960916648263013,
+      "gain_macro_f1_over_best_member": null,
+      "macro_f1": 0.4043733278582115,
+      "n": 5157,
+      "role": "sensitivity",
+      "seed_triplet": 2,
+      "weighted_f1": 0.7281544897575518
+    },
+    {
+      "accuracy": 0.7661431064572426,
+      "aggregation": "weighted_soft",
+      "balanced_accuracy": 0.4228595943781561,
+      "best_member": "C",
+      "best_member_macro_f1": 0.4237217442389995,
+      "gain_macro_f1_over_best_member": 0.008444944440981761,
+      "macro_f1": 0.43216668867998126,
+      "n": 5157,
+      "role": "primary",
+      "seed_triplet": 3,
+      "weighted_f1": 0.7478336550729304
+    },
+    {
+      "accuracy": 0.7657552840798915,
+      "aggregation": "equal_soft",
+      "balanced_accuracy": 0.42207880489272825,
+      "best_member": "C",
+      "best_member_macro_f1": 0.4237217442389995,
+      "gain_macro_f1_over_best_member": null,
+      "macro_f1": 0.43193683818668016,
+      "n": 5157,
+      "role": "control",
+      "seed_triplet": 3,
+      "weighted_f1": 0.7471928788767503
+    },
+    {
+      "accuracy": 0.7601318596082994,
+      "aggregation": "weighted_hard",
+      "balanced_accuracy": 0.4205484680347149,
+      "best_member": "C",
+      "best_member_macro_f1": 0.4237217442389995,
+      "gain_macro_f1_over_best_member": null,
+      "macro_f1": 0.42451690772364586,
+      "n": 5157,
+      "role": "sensitivity",
+      "seed_triplet": 3,
+      "weighted_f1": 0.7424117122795998
+    },
+    {
+      "accuracy": 0.7628466162497576,
+      "aggregation": "plain_hard",
+      "balanced_accuracy": 0.4229913523795923,
+      "best_member": "C",
+      "best_member_macro_f1": 0.4237217442389995,
+      "gain_macro_f1_over_best_member": null,
+      "macro_f1": 0.42943977709031805,
+      "n": 5157,
+      "role": "sensitivity",
+      "seed_triplet": 3,
+      "weighted_f1": 0.7457158641872569
+    }
+  ],
+  "jury_members_reddit_test": [
+    {
+      "accuracy": 0.6220670932712817,
+      "balanced_accuracy": 0.37183314441878657,
+      "macro_f1": 0.2654781378369658,
+      "member": "T",
+      "n": 5157,
+      "run_id": "bert__twitter_full__seed1",
+      "seed_triplet": 1,
+      "weighted_f1": 0.5626557452362332
+    },
+    {
+      "accuracy": 0.7707969749854566,
+      "balanced_accuracy": 0.4494940261992198,
+      "macro_f1": 0.4503277780955816,
+      "member": "R",
+      "n": 5157,
+      "run_id": "bert__platform_R__seed1",
+      "seed_triplet": 1,
+      "weighted_f1": 0.7599609799988138
+    },
+    {
+      "accuracy": 0.7700213302307544,
+      "balanced_accuracy": 0.4448498693863658,
+      "macro_f1": 0.4453815610409521,
+      "member": "C",
+      "n": 5157,
+      "run_id": "bert__platform_C__seed1",
+      "seed_triplet": 1,
+      "weighted_f1": 0.757358328757846
+    },
+    {
+      "accuracy": 0.5955012604227264,
+      "balanced_accuracy": 0.35079825077526205,
+      "macro_f1": 0.23044091099646655,
+      "member": "T",
+      "n": 5157,
+      "run_id": "bert__platform_T__seed2",
+      "seed_triplet": 2,
+      "weighted_f1": 0.5288990133214811
+    },
+    {
+      "accuracy": 0.7415163854954431,
+      "balanced_accuracy": 0.38704527388618776,
+      "macro_f1": 0.37728593282250017,
+      "member": "R",
+      "n": 5157,
+      "run_id": "bert__platform_R__seed2",
+      "seed_triplet": 2,
+      "weighted_f1": 0.7133273691652702
+    },
+    {
+      "accuracy": 0.7479154547217375,
+      "balanced_accuracy": 0.4045355297122623,
+      "macro_f1": 0.3960916648263013,
+      "member": "C",
+      "n": 5157,
+      "run_id": "bert__platform_C__seed2",
+      "seed_triplet": 2,
+      "weighted_f1": 0.7247625787979398
+    },
+    {
+      "accuracy": 0.6300174520069808,
+      "balanced_accuracy": 0.37413272104777123,
+      "macro_f1": 0.29409492243085483,
+      "member": "T",
+      "n": 5157,
+      "run_id": "bert__platform_T__seed3",
+      "seed_triplet": 3,
+      "weighted_f1": 0.5910170721460677
+    },
+    {
+      "accuracy": 0.7498545666084933,
+      "balanced_accuracy": 0.41057661846210425,
+      "macro_f1": 0.4087923425079229,
+      "member": "R",
+      "n": 5157,
+      "run_id": "bert__platform_R__seed3",
+      "seed_triplet": 3,
+      "weighted_f1": 0.732915356483082
+    },
+    {
+      "accuracy": 0.7603257707969749,
+      "balanced_accuracy": 0.42152308946303574,
+      "macro_f1": 0.4237217442389995,
+      "member": "C",
+      "n": 5157,
+      "run_id": "bert__platform_C__seed3",
+      "seed_triplet": 3,
+      "weighted_f1": 0.7428375269719419
+    }
+  ],
+  "jury_weights": [
+    {
+      "member": "T",
+      "reddit_validation_macro_f1": 0.26702858009366076,
+      "run_id": "bert__twitter_full__seed1",
+      "seed_triplet": 1,
+      "softmax_weight": 0.29468087995683506,
+      "temperature": 1.0
+    },
+    {
+      "member": "R",
+      "reddit_validation_macro_f1": 0.4466472870813068,
+      "run_id": "bert__platform_R__seed1",
+      "seed_triplet": 1,
+      "softmax_weight": 0.35266257265059636,
+      "temperature": 1.0
+    },
+    {
+      "member": "C",
+      "reddit_validation_macro_f1": 0.44663020188438907,
+      "run_id": "bert__platform_C__seed1",
+      "seed_triplet": 1,
+      "softmax_weight": 0.3526565473925686,
+      "temperature": 1.0
+    },
+    {
+      "member": "T",
+      "reddit_validation_macro_f1": 0.23312215420709556,
+      "run_id": "bert__platform_T__seed2",
+      "seed_triplet": 2,
+      "softmax_weight": 0.30063341244932074,
+      "temperature": 1.0
+    },
+    {
+      "member": "R",
+      "reddit_validation_macro_f1": 0.3742712828302182,
+      "run_id": "bert__platform_R__seed2",
+      "seed_triplet": 2,
+      "softmax_weight": 0.34620834682645496,
+      "temperature": 1.0
+    },
+    {
+      "member": "C",
+      "reddit_validation_macro_f1": 0.39414676103401103,
+      "run_id": "bert__platform_C__seed2",
+      "seed_triplet": 2,
+      "softmax_weight": 0.3531582407242243,
+      "temperature": 1.0
+    },
+    {
+      "member": "T",
+      "reddit_validation_macro_f1": 0.3003946738686323,
+      "run_id": "bert__platform_T__seed3",
+      "seed_triplet": 3,
+      "softmax_weight": 0.306708898907443,
+      "temperature": 1.0
+    },
+    {
+      "member": "R",
+      "reddit_validation_macro_f1": 0.4185595308379286,
+      "run_id": "bert__platform_R__seed3",
+      "seed_triplet": 3,
+      "softmax_weight": 0.3451792829196553,
+      "temperature": 1.0
+    },
+    {
+      "member": "C",
+      "reddit_validation_macro_f1": 0.42701933289886873,
+      "run_id": "bert__platform_C__seed3",
+      "seed_triplet": 3,
+      "softmax_weight": 0.3481118181729017,
+      "temperature": 1.0
+    }
+  ],
+  "prediction_dependence": [
+    {
+      "correlation": 0.38276193014425924,
+      "domain": "reddit_test",
+      "measure": "Pearson correlation of paired binary correctness indicators",
+      "member_a": "T",
+      "member_b": "R",
+      "p_value": null,
+      "run_a": "bert__twitter_full__seed1",
+      "run_b": "bert__platform_R__seed1",
+      "seed_triplet": 1
+    },
+    {
+      "correlation": 0.42078618605680235,
+      "domain": "reddit_test",
+      "measure": "Pearson correlation of paired binary correctness indicators",
+      "member_a": "T",
+      "member_b": "C",
+      "p_value": null,
+      "run_a": "bert__twitter_full__seed1",
+      "run_b": "bert__platform_C__seed1",
+      "seed_triplet": 1
+    },
+    {
+      "correlation": 0.7785507600729066,
+      "domain": "reddit_test",
+      "measure": "Pearson correlation of paired binary correctness indicators",
+      "member_a": "R",
+      "member_b": "C",
+      "p_value": null,
+      "run_a": "bert__platform_R__seed1",
+      "run_b": "bert__platform_C__seed1",
+      "seed_triplet": 1
+    },
+    {
+      "correlation": 0.3626097057093797,
+      "domain": "reddit_test",
+      "measure": "Pearson correlation of paired binary correctness indicators",
+      "member_a": "T",
+      "member_b": "R",
+      "p_value": null,
+      "run_a": "bert__platform_T__seed2",
+      "run_b": "bert__platform_R__seed2",
+      "seed_triplet": 2
+    },
+    {
+      "correlation": 0.35227731473043844,
+      "domain": "reddit_test",
+      "measure": "Pearson correlation of paired binary correctness indicators",
+      "member_a": "T",
+      "member_b": "C",
+      "p_value": null,
+      "run_a": "bert__platform_T__seed2",
+      "run_b": "bert__platform_C__seed2",
+      "seed_triplet": 2
+    },
+    {
+      "correlation": 0.8119401709771616,
+      "domain": "reddit_test",
+      "measure": "Pearson correlation of paired binary correctness indicators",
+      "member_a": "R",
+      "member_b": "C",
+      "p_value": null,
+      "run_a": "bert__platform_R__seed2",
+      "run_b": "bert__platform_C__seed2",
+      "seed_triplet": 2
+    },
+    {
+      "correlation": 0.43189520422530553,
+      "domain": "reddit_test",
+      "measure": "Pearson correlation of paired binary correctness indicators",
+      "member_a": "T",
+      "member_b": "R",
+      "p_value": null,
+      "run_a": "bert__platform_T__seed3",
+      "run_b": "bert__platform_R__seed3",
+      "seed_triplet": 3
+    },
+    {
+      "correlation": 0.4503916045072884,
+      "domain": "reddit_test",
+      "measure": "Pearson correlation of paired binary correctness indicators",
+      "member_a": "T",
+      "member_b": "C",
+      "p_value": null,
+      "run_a": "bert__platform_T__seed3",
+      "run_b": "bert__platform_C__seed3",
+      "seed_triplet": 3
+    },
+    {
+      "correlation": 0.7822430283611567,
+      "domain": "reddit_test",
+      "measure": "Pearson correlation of paired binary correctness indicators",
+      "member_a": "R",
+      "member_b": "C",
+      "p_value": null,
+      "run_a": "bert__platform_R__seed3",
+      "run_b": "bert__platform_C__seed3",
+      "seed_triplet": 3
+    }
+  ],
+  "status": "PART_C_FROZEN_ANALYSIS_EXECUTED",
+  "study_status": "exploratory_secondary",
+  "training_overlap": [
+    {
+      "O_ij": 0.0,
+      "intersection": 0,
+      "jaccard": 0.0,
+      "member_a": "T",
+      "member_b": "R",
+      "size_a": 1905,
+      "size_b": 1905,
+      "source": "frozen V2 dataset manifest"
+    },
+    {
+      "O_ij": 0.06981627296587926,
+      "intersection": 133,
+      "jaccard": 0.03617079140603753,
+      "member_a": "T",
+      "member_b": "C",
+      "size_a": 1905,
+      "size_b": 1905,
+      "source": "frozen V2 dataset manifest"
+    },
+    {
+      "O_ij": 0.07559055118110236,
+      "intersection": 144,
+      "jaccard": 0.03927986906710311,
+      "member_a": "R",
+      "member_b": "C",
+      "size_a": 1905,
+      "size_b": 1905,
+      "source": "frozen V2 dataset manifest"
+    }
+  ],
+  "twitter_test_timing": {
+    "interpretation": "descriptive transfer evaluation only",
+    "per_example_gold_known_before_partC": true,
+    "status": "post-Part-B exploratory",
+    "used_for_checkpoint_selection": false,
+    "used_for_training": false
+  }
+}

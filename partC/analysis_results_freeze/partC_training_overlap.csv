@@ -1,0 +1,4 @@
+member_a,member_b,size_a,size_b,intersection,O_ij,jaccard,source
+T,R,1905,1905,0,0.0,0.0,frozen V2 dataset manifest
+T,C,1905,1905,133,0.06981627296587926,0.03617079140603753,frozen V2 dataset manifest
+R,C,1905,1905,144,0.07559055118110236,0.03927986906710311,frozen V2 dataset manifest
