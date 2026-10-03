@@ -1,0 +1,515 @@
+{
+  "files": [
+    {
+      "bytes": 4012,
+      "path": "predictions/bert__combined_full__seed1.meta.json",
+      "sha256": "4dea4980e38f36b8bd885966ffa97c18e55bcfa24ce3c52f498e1504bd433ed1"
+    },
+    {
+      "bytes": 566519,
+      "path": "predictions/bert__combined_full__seed1__native_validation.csv",
+      "sha256": "d0a5ac4954ab23deabd4f5d681e713e78d398a204383e1e26e47ed292fb22cd8"
+    },
+    {
+      "bytes": 521456,
+      "path": "predictions/bert__combined_full__seed1__reddit_test.csv",
+      "sha256": "9bac2d09b3187586e97308743b6611acfb02eda1bc65af348542728a086e3ced"
+    },
+    {
+      "bytes": 520881,
+      "path": "predictions/bert__combined_full__seed1__reddit_validation.csv",
+      "sha256": "c3039fa9555fb92f1d2725e0594e9f94a03bafdd9e15502eeca40d0c89d71978"
+    },
+    {
+      "bytes": 171813,
+      "path": "predictions/bert__combined_full__seed1__twitter_test.csv",
+      "sha256": "d971f932f63d91a80587dc90cd1c2b36f16affe873c6b5eb700f43cb54210582"
+    },
+    {
+      "bytes": 3878,
+      "path": "predictions/bert__platform_C__seed1.meta.json",
+      "sha256": "be4ece0149b6d8b7af57f343711536884ff0be6b5c3efc838dfe5c6b12927102"
+    },
+    {
+      "bytes": 540668,
+      "path": "predictions/bert__platform_C__seed1__native_validation.csv",
+      "sha256": "20434d56b2cf1c1ee2f344c6bed2c0dfbac1ee9e770758600c354f3290737146"
+    },
+    {
+      "bytes": 496234,
+      "path": "predictions/bert__platform_C__seed1__reddit_test.csv",
+      "sha256": "105cf195ffec1d45567e7bbd539eb8c1b1a046436f70b3b2fb3922564aa1a532"
+    },
+    {
+      "bytes": 496433,
+      "path": "predictions/bert__platform_C__seed1__reddit_validation.csv",
+      "sha256": "9f3c6c85b1ed6c0c0f16f8b7f8abb92d16fda0d9fd694c8908cb272f2c050979"
+    },
+    {
+      "bytes": 166296,
+      "path": "predictions/bert__platform_C__seed1__twitter_test.csv",
+      "sha256": "7f3bd2daf9398cd9c94cbadbe1a76ecc2a091c878d64b71e93c79c4a1ba29248"
+    },
+    {
+      "bytes": 3876,
+      "path": "predictions/bert__platform_C__seed2.meta.json",
+      "sha256": "46a52fddeac74ad7e8f7009dabbbc944aaf462dc09617e4fdab5e711fbe338b0"
+    },
+    {
+      "bytes": 538301,
+      "path": "predictions/bert__platform_C__seed2__native_validation.csv",
+      "sha256": "8cc541a3a79a85192d33adcab149fbb8d402f8f93af13f0f6ed31fe64f80dcd9"
+    },
+    {
+      "bytes": 494357,
+      "path": "predictions/bert__platform_C__seed2__reddit_test.csv",
+      "sha256": "81623be566c2008be11adcae8142380c1355dd6102a3cae7be2507a1671af632"
+    },
+    {
+      "bytes": 494317,
+      "path": "predictions/bert__platform_C__seed2__reddit_validation.csv",
+      "sha256": "7ebd41a49fb1746ce6ed79213687b22733148d733513cda43b8b98c4beb53b9c"
+    },
+    {
+      "bytes": 165447,
+      "path": "predictions/bert__platform_C__seed2__twitter_test.csv",
+      "sha256": "4528053a471c22253098ee33f7012308172d1df7af3b81287125e73e98683957"
+    },
+    {
+      "bytes": 3877,
+      "path": "predictions/bert__platform_C__seed3.meta.json",
+      "sha256": "bbce30184c44be0ab502036b500638890bc86faf89e956990c5a9dd1c518a917"
+    },
+    {
+      "bytes": 542125,
+      "path": "predictions/bert__platform_C__seed3__native_validation.csv",
+      "sha256": "4397c54dfc09ece94ce9e6193bd783b4655811058a79b8c0b3252c7f9477ac34"
+    },
+    {
+      "bytes": 497994,
+      "path": "predictions/bert__platform_C__seed3__reddit_test.csv",
+      "sha256": "8b132eecf6e736da42a6608f8ac424d48e34ce50dcfde06b54f86ae41d8d82d7"
+    },
+    {
+      "bytes": 497819,
+      "path": "predictions/bert__platform_C__seed3__reddit_validation.csv",
+      "sha256": "7d5fe4dc28d354c49bbf099c8b5bc56705ea90ec53f6c9da2c7997f926d9a968"
+    },
+    {
+      "bytes": 166811,
+      "path": "predictions/bert__platform_C__seed3__twitter_test.csv",
+      "sha256": "03e108d8b656dfc433174908fd3ed313a02b6c2aabbd6121ef43567b3f66b6fd"
+    },
+    {
+      "bytes": 3847,
+      "path": "predictions/bert__platform_R__seed1.meta.json",
+      "sha256": "30a51338716e0de6d234ce4a76a242f9663e74d6d7e818eebe6d8707156d7f5f"
+    },
+    {
+      "bytes": 496563,
+      "path": "predictions/bert__platform_R__seed1__native_validation.csv",
+      "sha256": "d9e2d61fbe3a70671f99eb5bf76de3b9f9095d2680c8bdce3f7d16f73a3073b0"
+    },
+    {
+      "bytes": 496246,
+      "path": "predictions/bert__platform_R__seed1__reddit_test.csv",
+      "sha256": "0582b86a1c8334acd22c6e6f1606c7c2c796b140fe8b6f2d43cc60c4e69318bb"
+    },
+    {
+      "bytes": 496563,
+      "path": "predictions/bert__platform_R__seed1__reddit_validation.csv",
+      "sha256": "d9e2d61fbe3a70671f99eb5bf76de3b9f9095d2680c8bdce3f7d16f73a3073b0"
+    },
+    {
+      "bytes": 166484,
+      "path": "predictions/bert__platform_R__seed1__twitter_test.csv",
+      "sha256": "5a5dafd390925f14681b84995f87b997cb2fe98099d903e69263f98bf6b60c87"
+    },
+    {
+      "bytes": 3856,
+      "path": "predictions/bert__platform_R__seed2.meta.json",
+      "sha256": "3e37ac86517d49abf5b811193a3691dcd33d148069f9652d194a3298f5e2d4a6"
+    },
+    {
+      "bytes": 494741,
+      "path": "predictions/bert__platform_R__seed2__native_validation.csv",
+      "sha256": "dd4979b169679c477af04d3984004edc5463d9671095bc6e92dbcd49f43852f9"
+    },
+    {
+      "bytes": 494964,
+      "path": "predictions/bert__platform_R__seed2__reddit_test.csv",
+      "sha256": "b550c93e028dd445c260bb497a08b7a299dee471c93f393b6587eac3d3b98f50"
+    },
+    {
+      "bytes": 494741,
+      "path": "predictions/bert__platform_R__seed2__reddit_validation.csv",
+      "sha256": "dd4979b169679c477af04d3984004edc5463d9671095bc6e92dbcd49f43852f9"
+    },
+    {
+      "bytes": 166010,
+      "path": "predictions/bert__platform_R__seed2__twitter_test.csv",
+      "sha256": "fc584267287c4fa935029912379cc4493273b7e2b2f42aa6184ec5000744e1fd"
+    },
+    {
+      "bytes": 3870,
+      "path": "predictions/bert__platform_R__seed3.meta.json",
+      "sha256": "eecac1d878b654f2554d14afb9647fa2c0a93bbb65d4e69a290a68d79c757f49"
+    },
+    {
+      "bytes": 498449,
+      "path": "predictions/bert__platform_R__seed3__native_validation.csv",
+      "sha256": "96057768a2bcecbe4f6042776ba4b0aaf30aaecbde590264b936c4fa2e494028"
+    },
+    {
+      "bytes": 498661,
+      "path": "predictions/bert__platform_R__seed3__reddit_test.csv",
+      "sha256": "967d0b67433c1a3ad05ddc405d44e8ceec434e8cad3c4dde1b2fbb0950bfe8ac"
+    },
+    {
+      "bytes": 498449,
+      "path": "predictions/bert__platform_R__seed3__reddit_validation.csv",
+      "sha256": "96057768a2bcecbe4f6042776ba4b0aaf30aaecbde590264b936c4fa2e494028"
+    },
+    {
+      "bytes": 166954,
+      "path": "predictions/bert__platform_R__seed3__twitter_test.csv",
+      "sha256": "718a1cb4b28d6d8699a578346bbf92f1322e4b9071be1250ee870596692dbfa1"
+    },
+    {
+      "bytes": 3798,
+      "path": "predictions/bert__platform_T__seed2.meta.json",
+      "sha256": "8ee60d7e827ce71000198b92779164daa43cd68fda7afc759a5628d38e0560cb"
+    },
+    {
+      "bytes": 44351,
+      "path": "predictions/bert__platform_T__seed2__native_validation.csv",
+      "sha256": "6f3b503c59c8e924dbe38cf5d0f84458cbb415ca0cc9a9a596cad85dc4d6f2d7"
+    },
+    {
+      "bytes": 488288,
+      "path": "predictions/bert__platform_T__seed2__reddit_test.csv",
+      "sha256": "33a8d182f315b3b970fd44b7ccdde6cbeebff5b3cb6dbb87eeafd80ae109f45a"
+    },
+    {
+      "bytes": 488357,
+      "path": "predictions/bert__platform_T__seed2__reddit_validation.csv",
+      "sha256": "d10409057e2637d9a1868f2e99e9d020d2b2cd07dd1bc711b5d8fdcc276aa22b"
+    },
+    {
+      "bytes": 166655,
+      "path": "predictions/bert__platform_T__seed2__twitter_test.csv",
+      "sha256": "75bb0feaa47d75d6f59495578652a92fd31e25c14e322e37deaec825ed827a2d"
+    },
+    {
+      "bytes": 3850,
+      "path": "predictions/bert__platform_T__seed3.meta.json",
+      "sha256": "b191205e6808987ae1208904316fe9c4bdf317681dee35825b1fdeb4dd8939ef"
+    },
+    {
+      "bytes": 44477,
+      "path": "predictions/bert__platform_T__seed3__native_validation.csv",
+      "sha256": "69626bc7ce45dda1054a46c8ae73275727e406ff8cd3a1c183ce737be0594824"
+    },
+    {
+      "bytes": 493640,
+      "path": "predictions/bert__platform_T__seed3__reddit_test.csv",
+      "sha256": "05d8adc7ff214a08fa4fa0de377a3b6b00a48d6bf58bf87f20fd737746b89db1"
+    },
+    {
+      "bytes": 493624,
+      "path": "predictions/bert__platform_T__seed3__reddit_validation.csv",
+      "sha256": "60ca6d76618499be6458198eea11f78dd278cb8b0cf256140b7f4bc7bdaf7460"
+    },
+    {
+      "bytes": 167079,
+      "path": "predictions/bert__platform_T__seed3__twitter_test.csv",
+      "sha256": "bbcc9ee68b29466b7c911b46efbdaa08053088aba0686664f82c8d28d6abf4ad"
+    },
+    {
+      "bytes": 3897,
+      "path": "predictions/bert__twitter_full__seed1.meta.json",
+      "sha256": "bcc35452fdc7b250cc0be8d090535f76c7bf3b9b8f1aafec4a90ad65daf5b1f5"
+    },
+    {
+      "bytes": 44514,
+      "path": "predictions/bert__twitter_full__seed1__native_validation.csv",
+      "sha256": "885fb080cf2d2b1d3eadda7cc443a9bfad51c923a0e9f6129b33e4c8baa25d82"
+    },
+    {
+      "bytes": 492683,
+      "path": "predictions/bert__twitter_full__seed1__reddit_test.csv",
+      "sha256": "9b81b5ac179b24418af04354b2327fa3091db5ef471bf4ed837b5971b4dc1d0b"
+    },
+    {
+      "bytes": 492619,
+      "path": "predictions/bert__twitter_full__seed1__reddit_validation.csv",
+      "sha256": "a7180c4aac40e105fc56c957b9a6e43579237e8200fec62572767c0e9644536d"
+    },
+    {
+      "bytes": 167019,
+      "path": "predictions/bert__twitter_full__seed1__twitter_test.csv",
+      "sha256": "4ada7c3cb8cffc15a5514422c2c36d3d24fa955a05251b2fd13cdb23e65ff57a"
+    },
+    {
+      "bytes": 4019,
+      "path": "predictions/roberta__combined_full__seed1.meta.json",
+      "sha256": "4e4144b8a53076e9e4ee09895d00e3f9f8be453ea60b34ceb1a7778c4febec12"
+    },
+    {
+      "bytes": 566807,
+      "path": "predictions/roberta__combined_full__seed1__native_validation.csv",
+      "sha256": "89af9600baf43b6dbf2f21d824836da769edff5714f1c6107b811f3733a64ad0"
+    },
+    {
+      "bytes": 521603,
+      "path": "predictions/roberta__combined_full__seed1__reddit_test.csv",
+      "sha256": "0db63866f957c474dd7dedd4ce2ee6bbe0cce980cdb9419e486886a7b224a6aa"
+    },
+    {
+      "bytes": 521168,
+      "path": "predictions/roberta__combined_full__seed1__reddit_validation.csv",
+      "sha256": "5b01d15a35d1f1ba3c150bee5d5840425983a69a2058c4f7379b0a90f6eeb614"
+    },
+    {
+      "bytes": 171821,
+      "path": "predictions/roberta__combined_full__seed1__twitter_test.csv",
+      "sha256": "43c824d5bbbe475bb6b81f6d47060dda8db5ec3cc8bcd854ecbe298ba4055725"
+    },
+    {
+      "bytes": 3878,
+      "path": "predictions/roberta__twitter_full__seed1.meta.json",
+      "sha256": "bb2db4e0c932b713e8a3246244ae4513e51e3eac5647ce3fc525252db39630c0"
+    },
+    {
+      "bytes": 44761,
+      "path": "predictions/roberta__twitter_full__seed1__native_validation.csv",
+      "sha256": "95fad17908153753ce867edcfb8fcdc756358e793524a1c22c48c947f3a3f4e4"
+    },
+    {
+      "bytes": 498144,
+      "path": "predictions/roberta__twitter_full__seed1__reddit_test.csv",
+      "sha256": "c83c633dbbf7c49dd6d5dcb2471ae2d5801b3c2e4dfb430c73f030eee3e83efa"
+    },
+    {
+      "bytes": 497853,
+      "path": "predictions/roberta__twitter_full__seed1__reddit_validation.csv",
+      "sha256": "8ae7536d1f2e7388b915038ca56fc1fd6ada648cf633bee4d2f14797038a4fd0"
+    },
+    {
+      "bytes": 168191,
+      "path": "predictions/roberta__twitter_full__seed1__twitter_test.csv",
+      "sha256": "c8c8068c29d525fb78e66ab9e4c17277f56c37f6db615ede6c2c4fae52e721bf"
+    }
+  ],
+  "metadata_files": 12,
+  "prediction_files": 48,
+  "result_files": 60,
+  "runs": 12,
+  "status": "FINAL_PART_C_RESULTS_FROZEN",
+  "verified_runs": [
+    {
+      "backbone": "bert",
+      "elapsed_seconds": 150.8,
+      "grid_position": 1,
+      "metadata_sha256": "bcc35452fdc7b250cc0be8d090535f76c7bf3b9b8f1aafec4a90ad65daf5b1f5",
+      "n_train": 1905,
+      "prediction_hashes": {
+        "native_validation": "885fb080cf2d2b1d3eadda7cc443a9bfad51c923a0e9f6129b33e4c8baa25d82",
+        "reddit_test": "9b81b5ac179b24418af04354b2327fa3091db5ef471bf4ed837b5971b4dc1d0b",
+        "reddit_validation": "a7180c4aac40e105fc56c957b9a6e43579237e8200fec62572767c0e9644536d",
+        "twitter_test": "4ada7c3cb8cffc15a5514422c2c36d3d24fa955a05251b2fd13cdb23e65ff57a"
+      },
+      "resolved_revision": "86b5e0934494bd15c9632b12f734a8a67f723594",
+      "run_id": "bert__twitter_full__seed1",
+      "seed": 1,
+      "validation_macro_f1": 0.4600975779445405
+    },
+    {
+      "backbone": "roberta",
+      "elapsed_seconds": 134.8,
+      "grid_position": 2,
+      "metadata_sha256": "bb2db4e0c932b713e8a3246244ae4513e51e3eac5647ce3fc525252db39630c0",
+      "n_train": 1905,
+      "prediction_hashes": {
+        "native_validation": "95fad17908153753ce867edcfb8fcdc756358e793524a1c22c48c947f3a3f4e4",
+        "reddit_test": "c83c633dbbf7c49dd6d5dcb2471ae2d5801b3c2e4dfb430c73f030eee3e83efa",
+        "reddit_validation": "8ae7536d1f2e7388b915038ca56fc1fd6ada648cf633bee4d2f14797038a4fd0",
+        "twitter_test": "c8c8068c29d525fb78e66ab9e4c17277f56c37f6db615ede6c2c4fae52e721bf"
+      },
+      "resolved_revision": "e2da8e2f811d1448a5b465c236feacd80ffbac7b",
+      "run_id": "roberta__twitter_full__seed1",
+      "seed": 1,
+      "validation_macro_f1": 0.5338881951381951
+    },
+    {
+      "backbone": "bert",
+      "elapsed_seconds": 1281.9,
+      "grid_position": 3,
+      "metadata_sha256": "4dea4980e38f36b8bd885966ffa97c18e55bcfa24ce3c52f498e1504bd433ed1",
+      "n_train": 25968,
+      "prediction_hashes": {
+        "native_validation": "d0a5ac4954ab23deabd4f5d681e713e78d398a204383e1e26e47ed292fb22cd8",
+        "reddit_test": "9bac2d09b3187586e97308743b6611acfb02eda1bc65af348542728a086e3ced",
+        "reddit_validation": "c3039fa9555fb92f1d2725e0594e9f94a03bafdd9e15502eeca40d0c89d71978",
+        "twitter_test": "d971f932f63d91a80587dc90cd1c2b36f16affe873c6b5eb700f43cb54210582"
+      },
+      "resolved_revision": "86b5e0934494bd15c9632b12f734a8a67f723594",
+      "run_id": "bert__combined_full__seed1",
+      "seed": 1,
+      "validation_macro_f1": 0.7053048524571275
+    },
+    {
+      "backbone": "roberta",
+      "elapsed_seconds": 1283.9,
+      "grid_position": 4,
+      "metadata_sha256": "4e4144b8a53076e9e4ee09895d00e3f9f8be453ea60b34ceb1a7778c4febec12",
+      "n_train": 25968,
+      "prediction_hashes": {
+        "native_validation": "89af9600baf43b6dbf2f21d824836da769edff5714f1c6107b811f3733a64ad0",
+        "reddit_test": "0db63866f957c474dd7dedd4ce2ee6bbe0cce980cdb9419e486886a7b224a6aa",
+        "reddit_validation": "5b01d15a35d1f1ba3c150bee5d5840425983a69a2058c4f7379b0a90f6eeb614",
+        "twitter_test": "43c824d5bbbe475bb6b81f6d47060dda8db5ec3cc8bcd854ecbe298ba4055725"
+      },
+      "resolved_revision": "e2da8e2f811d1448a5b465c236feacd80ffbac7b",
+      "run_id": "roberta__combined_full__seed1",
+      "seed": 1,
+      "validation_macro_f1": 0.6940944879043583
+    },
+    {
+      "backbone": "bert",
+      "elapsed_seconds": 130.7,
+      "grid_position": 5,
+      "metadata_sha256": "8ee60d7e827ce71000198b92779164daa43cd68fda7afc759a5628d38e0560cb",
+      "n_train": 1905,
+      "prediction_hashes": {
+        "native_validation": "6f3b503c59c8e924dbe38cf5d0f84458cbb415ca0cc9a9a596cad85dc4d6f2d7",
+        "reddit_test": "33a8d182f315b3b970fd44b7ccdde6cbeebff5b3cb6dbb87eeafd80ae109f45a",
+        "reddit_validation": "d10409057e2637d9a1868f2e99e9d020d2b2cd07dd1bc711b5d8fdcc276aa22b",
+        "twitter_test": "75bb0feaa47d75d6f59495578652a92fd31e25c14e322e37deaec825ed827a2d"
+      },
+      "resolved_revision": "86b5e0934494bd15c9632b12f734a8a67f723594",
+      "run_id": "bert__platform_T__seed2",
+      "seed": 2,
+      "validation_macro_f1": 0.36516103469745853
+    },
+    {
+      "backbone": "bert",
+      "elapsed_seconds": 133.1,
+      "grid_position": 6,
+      "metadata_sha256": "b191205e6808987ae1208904316fe9c4bdf317681dee35825b1fdeb4dd8939ef",
+      "n_train": 1905,
+      "prediction_hashes": {
+        "native_validation": "69626bc7ce45dda1054a46c8ae73275727e406ff8cd3a1c183ce737be0594824",
+        "reddit_test": "05d8adc7ff214a08fa4fa0de377a3b6b00a48d6bf58bf87f20fd737746b89db1",
+        "reddit_validation": "60ca6d76618499be6458198eea11f78dd278cb8b0cf256140b7f4bc7bdaf7460",
+        "twitter_test": "bbcc9ee68b29466b7c911b46efbdaa08053088aba0686664f82c8d28d6abf4ad"
+      },
+      "resolved_revision": "86b5e0934494bd15c9632b12f734a8a67f723594",
+      "run_id": "bert__platform_T__seed3",
+      "seed": 3,
+      "validation_macro_f1": 0.4659543430898929
+    },
+    {
+      "backbone": "bert",
+      "elapsed_seconds": 236.3,
+      "grid_position": 7,
+      "metadata_sha256": "30a51338716e0de6d234ce4a76a242f9663e74d6d7e818eebe6d8707156d7f5f",
+      "n_train": 1905,
+      "prediction_hashes": {
+        "native_validation": "d9e2d61fbe3a70671f99eb5bf76de3b9f9095d2680c8bdce3f7d16f73a3073b0",
+        "reddit_test": "0582b86a1c8334acd22c6e6f1606c7c2c796b140fe8b6f2d43cc60c4e69318bb",
+        "reddit_validation": "d9e2d61fbe3a70671f99eb5bf76de3b9f9095d2680c8bdce3f7d16f73a3073b0",
+        "twitter_test": "5a5dafd390925f14681b84995f87b997cb2fe98099d903e69263f98bf6b60c87"
+      },
+      "resolved_revision": "86b5e0934494bd15c9632b12f734a8a67f723594",
+      "run_id": "bert__platform_R__seed1",
+      "seed": 1,
+      "validation_macro_f1": 0.4466472870813068
+    },
+    {
+      "backbone": "bert",
+      "elapsed_seconds": 235.8,
+      "grid_position": 8,
+      "metadata_sha256": "3e37ac86517d49abf5b811193a3691dcd33d148069f9652d194a3298f5e2d4a6",
+      "n_train": 1905,
+      "prediction_hashes": {
+        "native_validation": "dd4979b169679c477af04d3984004edc5463d9671095bc6e92dbcd49f43852f9",
+        "reddit_test": "b550c93e028dd445c260bb497a08b7a299dee471c93f393b6587eac3d3b98f50",
+        "reddit_validation": "dd4979b169679c477af04d3984004edc5463d9671095bc6e92dbcd49f43852f9",
+        "twitter_test": "fc584267287c4fa935029912379cc4493273b7e2b2f42aa6184ec5000744e1fd"
+      },
+      "resolved_revision": "86b5e0934494bd15c9632b12f734a8a67f723594",
+      "run_id": "bert__platform_R__seed2",
+      "seed": 2,
+      "validation_macro_f1": 0.3742712828302182
+    },
+    {
+      "backbone": "bert",
+      "elapsed_seconds": 237.0,
+      "grid_position": 9,
+      "metadata_sha256": "eecac1d878b654f2554d14afb9647fa2c0a93bbb65d4e69a290a68d79c757f49",
+      "n_train": 1905,
+      "prediction_hashes": {
+        "native_validation": "96057768a2bcecbe4f6042776ba4b0aaf30aaecbde590264b936c4fa2e494028",
+        "reddit_test": "967d0b67433c1a3ad05ddc405d44e8ceec434e8cad3c4dde1b2fbb0950bfe8ac",
+        "reddit_validation": "96057768a2bcecbe4f6042776ba4b0aaf30aaecbde590264b936c4fa2e494028",
+        "twitter_test": "718a1cb4b28d6d8699a578346bbf92f1322e4b9071be1250ee870596692dbfa1"
+      },
+      "resolved_revision": "86b5e0934494bd15c9632b12f734a8a67f723594",
+      "run_id": "bert__platform_R__seed3",
+      "seed": 3,
+      "validation_macro_f1": 0.4185595308379286
+    },
+    {
+      "backbone": "bert",
+      "elapsed_seconds": 242.8,
+      "grid_position": 10,
+      "metadata_sha256": "be4ece0149b6d8b7af57f343711536884ff0be6b5c3efc838dfe5c6b12927102",
+      "n_train": 1905,
+      "prediction_hashes": {
+        "native_validation": "20434d56b2cf1c1ee2f344c6bed2c0dfbac1ee9e770758600c354f3290737146",
+        "reddit_test": "105cf195ffec1d45567e7bbd539eb8c1b1a046436f70b3b2fb3922564aa1a532",
+        "reddit_validation": "9f3c6c85b1ed6c0c0f16f8b7f8abb92d16fda0d9fd694c8908cb272f2c050979",
+        "twitter_test": "7f3bd2daf9398cd9c94cbadbe1a76ecc2a091c878d64b71e93c79c4a1ba29248"
+      },
+      "resolved_revision": "86b5e0934494bd15c9632b12f734a8a67f723594",
+      "run_id": "bert__platform_C__seed1",
+      "seed": 1,
+      "validation_macro_f1": 0.44526196653548644
+    },
+    {
+      "backbone": "bert",
+      "elapsed_seconds": 242.2,
+      "grid_position": 11,
+      "metadata_sha256": "46a52fddeac74ad7e8f7009dabbbc944aaf462dc09617e4fdab5e711fbe338b0",
+      "n_train": 1905,
+      "prediction_hashes": {
+        "native_validation": "8cc541a3a79a85192d33adcab149fbb8d402f8f93af13f0f6ed31fe64f80dcd9",
+        "reddit_test": "81623be566c2008be11adcae8142380c1355dd6102a3cae7be2507a1671af632",
+        "reddit_validation": "7ebd41a49fb1746ce6ed79213687b22733148d733513cda43b8b98c4beb53b9c",
+        "twitter_test": "4528053a471c22253098ee33f7012308172d1df7af3b81287125e73e98683957"
+      },
+      "resolved_revision": "86b5e0934494bd15c9632b12f734a8a67f723594",
+      "run_id": "bert__platform_C__seed2",
+      "seed": 2,
+      "validation_macro_f1": 0.3943439328093057
+    },
+    {
+      "backbone": "bert",
+      "elapsed_seconds": 243.2,
+      "grid_position": 12,
+      "metadata_sha256": "bbce30184c44be0ab502036b500638890bc86faf89e956990c5a9dd1c518a917",
+      "n_train": 1905,
+      "prediction_hashes": {
+        "native_validation": "4397c54dfc09ece94ce9e6193bd783b4655811058a79b8c0b3252c7f9477ac34",
+        "reddit_test": "8b132eecf6e736da42a6608f8ac424d48e34ce50dcfde06b54f86ae41d8d82d7",
+        "reddit_validation": "7d5fe4dc28d354c49bbf099c8b5bc56705ea90ec53f6c9da2c7997f926d9a968",
+        "twitter_test": "03e108d8b656dfc433174908fd3ed313a02b6c2aabbd6121ef43567b3f66b6fd"
+      },
+      "resolved_revision": "86b5e0934494bd15c9632b12f734a8a67f723594",
+      "run_id": "bert__platform_C__seed3",
+      "seed": 3,
+      "validation_macro_f1": 0.4256832219510194
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "analysis_bindings": {
+    "analysis_bindings_sha256": "dd420796777c76be8f0abe86e09ee03f06ecc3940ec75c1bc95d7b43ee81f252",
+    "analysis_freeze_sha256": "c828832207a54f375de378b65fb776f2670b24bbc70007abf8ac0d33ac9b32cd",
+    "analysis_spec_sha256": "99c3a5af801430525eb5f90187b9877c6eb97a1b33ed8e720d91388d606a4c5a"
+  },
+  "created_at_utc": "2026-09-01T22:11:04.910361+00:00",
+  "dataset_bindings": {
+    "freeze_sha256": "e82ca54cfab0be2a305af2fd27c2744581e6594b967769aefad9fada5b091dbc",
+    "manifest_sha256": "cf791772c0928236845af1c941c9ccbc487eaa3b62ffa079ac844b8f879e1599",
+    "run_grid_sha256": "d71803ddb306e08fca033dc803f3e7005dd1c4d86241bd9b23cf252e03589713"
+  },
+  "execution_complete": true,
+  "metadata_files": 12,
+  "next_permitted_step": "Execute the already-frozen Part-C analysis specification against this immutable results freeze.",
+  "no_post_result_adaptation": [
+    "no resampling",
+    "no seed replacement",
+    "no run replacement",
+    "no hyperparameter changes",
+    "no checkpoint reselection using test outcomes",
+    "no metric-definition changes",
+    "no jury aggregation-rule changes",
+    "no bootstrap-rule changes"
+  ],
+  "partC_status": "exploratory_secondary",
+  "prediction_files": 48,
+  "result_files": 60,
+  "runs": 12,
+  "status": "FROZEN_AFTER_ALL_12_PART_C_RUNS_AND_BEFORE_FIRST_PART_C_TEST_PERFORMANCE_ANALYSIS",
+  "test_performance_analysis_performed": false,
+  "training_bindings": {
+    "runner_sha256": "78aff347f3e0ae978ad2f1c6055f520e188045b71129c3b7126f574eb521a332",
+    "training_bindings_sha256": "78d307128efd86e3d74f8a3b7994677391462f97c8150cc6d642d23cfd800c4b",
+    "training_freeze_sha256": "46feb13652fa00380537875f51695715c3e3b9545355365338e81fb8ebc3ba69",
+    "training_spec_sha256": "c99f795e5e9ab6d00fd2e8f5c4734f35a262059bb64501e22637933d60f44be3"
+  }
+}

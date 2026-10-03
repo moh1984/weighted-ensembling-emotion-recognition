@@ -1,0 +1,97 @@
+{
+  "backbone": "bert",
+  "common_reddit_validation_macro_f1": 0.39414676103401103,
+  "effective_train_ids_sha256": "44b95613c741a5e8edf36ddfd3d9e197c7ec00f914f88b40af954d32e84a567d",
+  "elapsed_seconds": 242.2,
+  "environment": {
+    "cuda_runtime": "12.8",
+    "gpu": "Tesla T4",
+    "platform": "Linux-6.12.90+-x86_64-with-glibc2.35",
+    "python": "3.12.13 (main, Mar  4 2026, 09:23:07) [GCC 11.4.0]",
+    "torch": "2.10.0+cu128"
+  },
+  "metric_semantics": {
+    "label_space": "fixed_Ekman_6",
+    "undefined_class_f1": 0.0
+  },
+  "model_seed": 2,
+  "n_native_validation": 5445,
+  "n_train": 1905,
+  "native_validation_file_sha256": "c13861e9fdc782f6b91b1ba53441f0bff7e125a441045a645359e2ef4c3a4a8c",
+  "native_validation_set": "combined_validation_full.parquet",
+  "partC_dataset_freeze_sha256": "e82ca54cfab0be2a305af2fd27c2744581e6594b967769aefad9fada5b091dbc",
+  "partC_dataset_manifest_sha256": "cf791772c0928236845af1c941c9ccbc487eaa3b62ffa079ac844b8f879e1599",
+  "partC_run_grid_sha256": "d71803ddb306e08fca033dc803f3e7005dd1c4d86241bd9b23cf252e03589713",
+  "partC_runner_sha256": "78aff347f3e0ae978ad2f1c6055f520e188045b71129c3b7126f574eb521a332",
+  "partC_training_spec_sha256": "c99f795e5e9ab6d00fd2e8f5c4734f35a262059bb64501e22637933d60f44be3",
+  "prediction_files": {
+    "native_validation": {
+      "file": "bert__platform_C__seed2__native_validation.csv",
+      "macro_f1": 0.3943439328093057,
+      "per_class_f1": {
+        "anger": 0.5803814713896458,
+        "disgust": 0.0,
+        "fear": 0.0,
+        "joy": 0.8813401582131224,
+        "sadness": 0.2276707530647986,
+        "surprise": 0.6766712141882674
+      },
+      "rows": 5445,
+      "sha256": "8cc541a3a79a85192d33adcab149fbb8d402f8f93af13f0f6ed31fe64f80dcd9"
+    },
+    "reddit_test": {
+      "file": "bert__platform_C__seed2__reddit_test.csv",
+      "macro_f1": 0.3960916648263013,
+      "per_class_f1": {
+        "anger": 0.5731832139201638,
+        "disgust": 0.0,
+        "fear": 0.0,
+        "joy": 0.8784627702161729,
+        "sadness": 0.24667931688804554,
+        "surprise": 0.6782246879334258
+      },
+      "rows": 5157,
+      "sha256": "81623be566c2008be11adcae8142380c1355dd6102a3cae7be2507a1671af632"
+    },
+    "reddit_validation": {
+      "file": "bert__platform_C__seed2__reddit_validation.csv",
+      "macro_f1": 0.39414676103401103,
+      "per_class_f1": {
+        "anger": 0.5866543095458758,
+        "disgust": 0.0,
+        "fear": 0.0,
+        "joy": 0.8779836421298615,
+        "sadness": 0.2189239332096475,
+        "surprise": 0.6813186813186813
+      },
+      "rows": 5157,
+      "sha256": "7ebd41a49fb1746ce6ed79213687b22733148d733513cda43b8b98c4beb53b9c"
+    },
+    "twitter_test": {
+      "file": "bert__platform_C__seed2__twitter_test.csv",
+      "macro_f1": 0.28670084368306187,
+      "per_class_f1": {
+        "anger": 0.3511450381679389,
+        "disgust": 0.0,
+        "fear": 0.0,
+        "joy": 0.9327404113396331,
+        "sadness": 0.3220338983050847,
+        "surprise": 0.11428571428571428
+      },
+      "rows": 1082,
+      "sha256": "4528053a471c22253098ee33f7012308172d1df7af3b81287125e73e98683957"
+    }
+  },
+  "resolved_backbone_revision": "86b5e0934494bd15c9632b12f734a8a67f723594",
+  "roles": [
+    "platform_C_seed2"
+  ],
+  "run_id": "bert__platform_C__seed2",
+  "sampling_correction_freeze_sha256": "66625631ea90aa33cfc274c30ebe34dcdea7bac076e5044b37602a5166b562cc",
+  "source_runner_sha256": "b1768c3cce420c8ef6ee5d53db6584c836fa54f0288cef0de30ae83bed9f146b",
+  "source_training_config_sha256": "75eee2631e1a9d2e562d07cdca122e4f76a00387da7ac58d51a1a3bc2c16456c",
+  "train_file_sha256": "edb6b82848c234c144bcb92e149e2faf838ce34af55f9ef714b03ea65dab72b4",
+  "train_set": "platform_C_train.parquet",
+  "twitter_test_timing": "post-Part-B exploratory; gold outcomes known before Part-C execution",
+  "validation_macro_f1": 0.3943439328093057
+}

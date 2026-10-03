@@ -1,0 +1,160 @@
+{
+  "analysis_source": {
+    "metadata_required": true,
+    "model_weights_required": false,
+    "predictions_required": true
+  },
+  "checkpoint_selection": {
+    "Combined-trained": "combined_validation_full.parquet fixed-six-class macro-F1",
+    "Reddit-trained": "reddit_validation.parquet fixed-six-class macro-F1",
+    "Twitter-trained": "twitter_validation.parquet fixed-six-class macro-F1",
+    "source": "frozen training specification",
+    "test_outcomes_used": false
+  },
+  "diversity_analysis": {
+    "architecture_diversity": "not executed in Part C",
+    "correlation_significance_test": false,
+    "ensemble_gain": "weighted-soft macro-F1 minus best individual member macro-F1 on reddit_test",
+    "prediction_dependence": {
+      "domain": "reddit_test",
+      "measure": "Pearson correlation of paired binary correctness indicators",
+      "reported_for": "all T-R, T-C, R-C member pairs within each seed triplet"
+    },
+    "regression": false,
+    "relationship_assessment": "descriptive only",
+    "training_overlap": {
+      "O_ij": "|Si intersection Sj| / min(|Si|, |Sj|)",
+      "jaccard": "|Si intersection Sj| / |Si union Sj|",
+      "source": "frozen V2 dataset manifest"
+    }
+  },
+  "full_baselines": {
+    "also_report_on_reddit_test": true,
+    "comparisons": "descriptive only",
+    "initialization_variance_claim": false,
+    "native_test_reporting": {
+      "Combined-trained": "combined_test reconstructed from reddit_test + twitter_test",
+      "Twitter-trained": "twitter_test"
+    },
+    "runs": [
+      "bert__twitter_full__seed1",
+      "roberta__twitter_full__seed1",
+      "bert__combined_full__seed1",
+      "roberta__combined_full__seed1"
+    ]
+  },
+  "inferential_policy": {
+    "decision_threshold": null,
+    "hypothesis_tested": false,
+    "included_in_H2_H3_Holm_family": false,
+    "multiple_testing_adjustment": false,
+    "p_values": false
+  },
+  "labels": [
+    "anger",
+    "disgust",
+    "fear",
+    "joy",
+    "sadness",
+    "surprise"
+  ],
+  "metric_semantics": {
+    "accuracy": "fraction correctly classified",
+    "balanced_accuracy": "mean recall across the six fixed Ekman classes",
+    "fixed_label_space": true,
+    "macro_f1": "unweighted mean of six Ekman class F1 values",
+    "per_class_metrics": [
+      "precision",
+      "recall",
+      "f1",
+      "support"
+    ],
+    "undefined_class_f1": 0.0,
+    "weighted_f1": "class-support-weighted F1"
+  },
+  "no_outcome_adaptation": [
+    "no rerunning seeds because of observed performance",
+    "no changing aggregation rule because of observed performance",
+    "no changing metric definitions because of observed performance",
+    "no changing bootstrap seed or replicate count because of observed performance",
+    "no selecting among the three platform seed triplets"
+  ],
+  "platform_jury": {
+    "control_aggregation": "equal_soft",
+    "equal_soft_definition": "arithmetic mean of three six-class probability vectors followed by argmax",
+    "hard_vote_tie_break": [
+      "among tied classes choose the class with greatest equal-soft mean probability",
+      "if still tied choose earliest class in fixed EKMAN order"
+    ],
+    "member_weight_score": "fixed-six-class macro-F1",
+    "members": [
+      "T",
+      "R",
+      "C"
+    ],
+    "model_family": "BERT only",
+    "plain_hard_definition": "one vote per juror predicted class; choose majority class",
+    "primary_aggregation": "weighted_soft",
+    "primary_reported_outcomes": [
+      "jury macro_f1",
+      "jury accuracy",
+      "jury balanced_accuracy",
+      "jury weighted_f1",
+      "jury per_class_metrics",
+      "gain_in_macro_f1_over_best_member"
+    ],
+    "primary_test": "reddit_test",
+    "seed_triplets": [
+      [
+        "T1",
+        "R1",
+        "C1"
+      ],
+      [
+        "T2",
+        "R2",
+        "C2"
+      ],
+      [
+        "T3",
+        "R3",
+        "C3"
+      ]
+    ],
+    "sensitivity_aggregations": [
+      "weighted_hard",
+      "plain_hard"
+    ],
+    "temperature": 1.0,
+    "weight_formula": "w_i = exp(F1_i / 1.0) / sum_j exp(F1_j / 1.0)",
+    "weight_validation_domain": "reddit_validation",
+    "weighted_hard_definition": "sum each juror validation weight onto its predicted class; choose maximum class score",
+    "weighted_soft_definition": "weighted arithmetic mean of six-class probability vectors followed by argmax"
+  },
+  "status": "FROZEN_BEFORE_FIRST_PART_C_MODEL_TRAINING_AND_BEFORE_FIRST_PART_C_TEST_PREDICTION",
+  "study_status": "exploratory_secondary",
+  "timing_statement": "Part C was pre-specified in the original protocol. This execution-time analysis specification resolves remaining implementation details before any Part-C model-performance outcome is observed.",
+  "twitter_test_timing": {
+    "interpretation": "descriptive transfer evaluation only",
+    "may_be_used_for_checkpoint_selection": false,
+    "may_be_used_for_training": false,
+    "per_example_gold_known_before_partC": true,
+    "status": "post-Part-B exploratory"
+  },
+  "uncertainty": {
+    "bootstrap_replicates": 1000,
+    "bootstrap_seed": 20260901,
+    "ci_role": "descriptive uncertainty only",
+    "effect_sizes_with_ci": [
+      "weighted-soft jury macro-F1 gain over best member"
+    ],
+    "interval": "percentile 95%",
+    "paired_resampling": true,
+    "percentiles": [
+      2.5,
+      97.5
+    ],
+    "reddit_test_resampling_unit": "example; R_clean test contains one target example per test author, so example resampling is equivalent to author-cluster resampling for this test set"
+  },
+  "version": "partC-analysis-v1"
+}

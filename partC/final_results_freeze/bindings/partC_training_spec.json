@@ -1,0 +1,75 @@
+{
+  "checkpoint_metric": {
+    "all_six_classes_in_mean": true,
+    "label_space": "fixed_Ekman_6",
+    "name": "macro_f1",
+    "twitter_validation_surprise_support": 0,
+    "undefined_class_f1": 0.0
+  },
+  "checkpoint_selection": {
+    "Combined-trained": "combined_validation_full.parquet",
+    "Reddit-trained": "reddit_validation.parquet",
+    "Twitter-trained": "twitter_validation.parquet",
+    "metric": "fixed-six-class macro-F1",
+    "mode": "max",
+    "test_information_used_for_selection": false
+  },
+  "dataset_binding": {
+    "partC_dataset_freeze_sha256": "e82ca54cfab0be2a305af2fd27c2744581e6594b967769aefad9fada5b091dbc",
+    "partC_dataset_manifest_sha256": "cf791772c0928236845af1c941c9ccbc487eaa3b62ffa079ac844b8f879e1599",
+    "partC_run_grid_sha256": "d71803ddb306e08fca033dc803f3e7005dd1c4d86241bd9b23cf252e03589713",
+    "sampling_correction_freeze_sha256": "66625631ea90aa33cfc274c30ebe34dcdea7bac076e5044b37602a5166b562cc"
+  },
+  "labels": [
+    "anger",
+    "disgust",
+    "fear",
+    "joy",
+    "sadness",
+    "surprise"
+  ],
+  "partC_status": "exploratory_secondary",
+  "platform_jury_weighting": {
+    "common_validation_domain": "reddit_validation.parquet",
+    "control": "equal_soft",
+    "formula": "softmax(validation_macro_f1 / T)",
+    "primary": "weighted_soft",
+    "sensitivities": [
+      "weighted_hard",
+      "plain_hard"
+    ],
+    "temperature": 1.0,
+    "weight_source": "six-class macro-F1"
+  },
+  "post_checkpoint_evaluation": {
+    "common_reddit_validation": "reddit_validation.parquet",
+    "primary_platform_jury_test": "reddit_test.parquet",
+    "twitter_test": "post-Part-B exploratory evaluation only; gold outcomes were already known before Part C"
+  },
+  "required_outputs_per_run": [
+    "native_validation_predictions",
+    "reddit_validation_predictions",
+    "reddit_test_predictions",
+    "twitter_test_predictions",
+    "metadata"
+  ],
+  "run_grid": {
+    "sha256": "d71803ddb306e08fca033dc803f3e7005dd1c4d86241bd9b23cf252e03589713",
+    "unique_runs": 12
+  },
+  "saved_model_weights_required": false,
+  "status": "FROZEN_BEFORE_FIRST_PART_C_MODEL_TRAINING",
+  "training_implementation": {
+    "delegated_functions": [
+      "train_one",
+      "macro_f1",
+      "apply_determinism",
+      "load_config"
+    ],
+    "hyperparameter_changes": "none",
+    "source": "immutable Part-A run_experiments.py",
+    "source_runner_sha256": "b1768c3cce420c8ef6ee5d53db6584c836fa54f0288cef0de30ae83bed9f146b",
+    "source_training_config_sha256": "75eee2631e1a9d2e562d07cdca122e4f76a00387da7ac58d51a1a3bc2c16456c"
+  },
+  "version": "partC-training-v1"
+}

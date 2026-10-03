@@ -1,0 +1,97 @@
+{
+  "backbone": "roberta",
+  "common_reddit_validation_macro_f1": 0.6909218023217725,
+  "effective_train_ids_sha256": "15b7a6bc0edce1c9a51526f6acad8c815029f2fd9f4c17e4e7219ef453739c05",
+  "elapsed_seconds": 1283.9,
+  "environment": {
+    "cuda_runtime": "12.8",
+    "gpu": "Tesla T4",
+    "platform": "Linux-6.12.90+-x86_64-with-glibc2.35",
+    "python": "3.12.13 (main, Mar  4 2026, 09:23:07) [GCC 11.4.0]",
+    "torch": "2.10.0+cu128"
+  },
+  "metric_semantics": {
+    "label_space": "fixed_Ekman_6",
+    "undefined_class_f1": 0.0
+  },
+  "model_seed": 1,
+  "n_native_validation": 5445,
+  "n_train": 25968,
+  "native_validation_file_sha256": "c13861e9fdc782f6b91b1ba53441f0bff7e125a441045a645359e2ef4c3a4a8c",
+  "native_validation_set": "combined_validation_full.parquet",
+  "partC_dataset_freeze_sha256": "e82ca54cfab0be2a305af2fd27c2744581e6594b967769aefad9fada5b091dbc",
+  "partC_dataset_manifest_sha256": "cf791772c0928236845af1c941c9ccbc487eaa3b62ffa079ac844b8f879e1599",
+  "partC_run_grid_sha256": "d71803ddb306e08fca033dc803f3e7005dd1c4d86241bd9b23cf252e03589713",
+  "partC_runner_sha256": "78aff347f3e0ae978ad2f1c6055f520e188045b71129c3b7126f574eb521a332",
+  "partC_training_spec_sha256": "c99f795e5e9ab6d00fd2e8f5c4734f35a262059bb64501e22637933d60f44be3",
+  "prediction_files": {
+    "native_validation": {
+      "file": "roberta__combined_full__seed1__native_validation.csv",
+      "macro_f1": 0.6940944879043583,
+      "per_class_f1": {
+        "anger": 0.7023743787962452,
+        "disgust": 0.4247787610619469,
+        "fear": 0.6872586872586872,
+        "joy": 0.9104199066874028,
+        "sadness": 0.70625,
+        "surprise": 0.7334851936218679
+      },
+      "rows": 5445,
+      "sha256": "89af9600baf43b6dbf2f21d824836da769edff5714f1c6107b811f3733a64ad0"
+    },
+    "reddit_test": {
+      "file": "roberta__combined_full__seed1__reddit_test.csv",
+      "macro_f1": 0.7057390986673431,
+      "per_class_f1": {
+        "anger": 0.7190031152647975,
+        "disgust": 0.48739495798319327,
+        "fear": 0.6428571428571429,
+        "joy": 0.918111753371869,
+        "sadness": 0.7078651685393258,
+        "surprise": 0.75920245398773
+      },
+      "rows": 5157,
+      "sha256": "0db63866f957c474dd7dedd4ce2ee6bbe0cce980cdb9419e486886a7b224a6aa"
+    },
+    "reddit_validation": {
+      "file": "roberta__combined_full__seed1__reddit_validation.csv",
+      "macro_f1": 0.6909218023217725,
+      "per_class_f1": {
+        "anger": 0.7033090297251823,
+        "disgust": 0.4528301886792453,
+        "fear": 0.6445497630331753,
+        "joy": 0.9065373683330546,
+        "sadness": 0.7037037037037037,
+        "surprise": 0.7346007604562738
+      },
+      "rows": 5157,
+      "sha256": "5b01d15a35d1f1ba3c150bee5d5840425983a69a2058c4f7379b0a90f6eeb614"
+    },
+    "twitter_test": {
+      "file": "roberta__combined_full__seed1__twitter_test.csv",
+      "macro_f1": 0.5592230915584276,
+      "per_class_f1": {
+        "anger": 0.5454545454545454,
+        "disgust": 0.09090909090909091,
+        "fear": 0.8275862068965517,
+        "joy": 0.9664582148948266,
+        "sadness": 0.7710843373493976,
+        "surprise": 0.15384615384615385
+      },
+      "rows": 1082,
+      "sha256": "43c824d5bbbe475bb6b81f6d47060dda8db5ec3cc8bcd854ecbe298ba4055725"
+    }
+  },
+  "resolved_backbone_revision": "e2da8e2f811d1448a5b465c236feacd80ffbac7b",
+  "roles": [
+    "combined_baseline"
+  ],
+  "run_id": "roberta__combined_full__seed1",
+  "sampling_correction_freeze_sha256": "66625631ea90aa33cfc274c30ebe34dcdea7bac076e5044b37602a5166b562cc",
+  "source_runner_sha256": "b1768c3cce420c8ef6ee5d53db6584c836fa54f0288cef0de30ae83bed9f146b",
+  "source_training_config_sha256": "75eee2631e1a9d2e562d07cdca122e4f76a00387da7ac58d51a1a3bc2c16456c",
+  "train_file_sha256": "8c0f1d8cc3dc4e206034f5db1d9d12b578e0307d1bc077b22430963ab40f55d8",
+  "train_set": "combined_train_full.parquet",
+  "twitter_test_timing": "post-Part-B exploratory; gold outcomes known before Part-C execution",
+  "validation_macro_f1": 0.6940944879043583
+}
