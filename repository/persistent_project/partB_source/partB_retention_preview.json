@@ -1,0 +1,56 @@
+{
+  "final_dataset_created": false,
+  "mapping_spec_sha256": "06f74faf9eff689f644c367d9a44d4e5f057506de9e72f760fa62057c2f482dc",
+  "model_training_performed": false,
+  "results": {
+    "test.jsonl": {
+      "excluded": 3184,
+      "exclusion_reasons": {
+        "contains_unmapped_label": 3184
+      },
+      "multi_original_same_ekman_retained": 75,
+      "retained": 75,
+      "retention_pct": 2.301319423135931,
+      "target_distribution": {
+        "anger": 75
+      },
+      "total": 3259,
+      "unmapped_label_frequency": {
+        "anticipation": 7869
+      }
+    },
+    "train.jsonl": {
+      "excluded": 6634,
+      "exclusion_reasons": {
+        "contains_unmapped_label": 6634
+      },
+      "multi_original_same_ekman_retained": 204,
+      "retained": 204,
+      "retention_pct": 2.9833284586136295,
+      "target_distribution": {
+        "anger": 204
+      },
+      "total": 6838,
+      "unmapped_label_frequency": {
+        "anticipation": 16048
+      }
+    },
+    "validation.jsonl": {
+      "excluded": 872,
+      "exclusion_reasons": {
+        "contains_unmapped_label": 872
+      },
+      "multi_original_same_ekman_retained": 14,
+      "retained": 14,
+      "retention_pct": 1.580135440180587,
+      "target_distribution": {
+        "anger": 14
+      },
+      "total": 886,
+      "unmapped_label_frequency": {
+        "anticipation": 2161
+      }
+    }
+  },
+  "status": "PREVIEW_ONLY"
+}

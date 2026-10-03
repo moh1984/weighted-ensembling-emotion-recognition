@@ -1,0 +1,12 @@
+{
+  "hypothesis": "H1",
+  "from_status": "confirmatory",
+  "to_status": "exploratory",
+  "section0_report_sha256": "3970b5188aa3f12c79315819d2cbb29050011e489355ad18b5a8821a54d40076",
+  "corpus_content_sha256": "05343493a0e155c7e75325e0cda79ad64e60f98564af3dcad2b84a23554b615b",
+  "exploratory_dose_k": 1,
+  "h1_primary_metric": "accuracy",
+  "decision_text": "Before any model training, Section 0 showed that H1 did not satisfy the prespecified confirmatory feasibility criteria. H1 is therefore demoted to a structural corpus diagnosis plus an exploratory author-overlap stress test at dose k=1. The prespecified thresholds were not changed.",
+  "decided_by": "Name One; Name Two; Name Three",
+  "decided_at_utc": "2026-08-30T00:41:18Z"
+}

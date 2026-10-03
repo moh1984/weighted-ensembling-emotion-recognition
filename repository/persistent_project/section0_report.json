@@ -1,0 +1,577 @@
+{
+  "meta": {
+    "raw_file_sha256": {
+      "goemotions_1.csv": "cac049036bad5d68d1081f72b65f2cc51e4df82af05e3e22cfa747051cac1af3",
+      "goemotions_2.csv": "f699ecc5aa425c1720c1d02475f1e41815244b680bd75b282eb770d2c76cd84d",
+      "goemotions_3.csv": "467f1e7191af00f2e76cc7f425885c2dc304bea8aff284b10e8c460d22f2e1af"
+    },
+    "ekman_map_source": "official_file_verified",
+    "ekman_map_sha256": "d6b1fea382917c1685c42e1324a0344106be9390f52a3850ce032656d103a328",
+    "label_construction": {
+      "examples_total": 58009,
+      "min_agreement": 2,
+      "single_label": 36491,
+      "multi_label": 6255,
+      "below_agreement_dropped": 15263,
+      "rater_count_distribution": {
+        "3": 37145,
+        "5": 16171,
+        "4": 3135,
+        "2": 1426,
+        "1": 132
+      },
+      "by_rater_count": {
+        "1": {
+          "items": 132,
+          "single_label": 0,
+          "multi_label": 0,
+          "below_agreement": 132
+        },
+        "2": {
+          "items": 1426,
+          "single_label": 630,
+          "multi_label": 21,
+          "below_agreement": 775
+        },
+        "3": {
+          "items": 37145,
+          "single_label": 22976,
+          "multi_label": 2437,
+          "below_agreement": 11732
+        },
+        "4": {
+          "items": 3135,
+          "single_label": 1984,
+          "multi_label": 322,
+          "below_agreement": 829
+        },
+        "5": {
+          "items": 16171,
+          "single_label": 10901,
+          "multi_label": 3475,
+          "below_agreement": 1795
+        }
+      },
+      "sensitivity_strict_majority_rule": {
+        "rule": "votes > n_raters / 2",
+        "single_label": 33591,
+        "multi_label": 2818,
+        "below_threshold": 21600
+      }
+    },
+    "deduplication": {
+      "exact_removed": 606,
+      "near_removed": 271,
+      "near_pass_run": true,
+      "algorithm": "exact match on normalised text, then connected components over a 10-nearest-neighbour cosine graph with edges above 0.85; one item retained per component. Not an exhaustive all-pairs search.",
+      "threshold": 0.85,
+      "neighbors": 10,
+      "model": "sentence-transformers/all-MiniLM-L6-v2",
+      "model_revision_requested": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+      "model_revision_resolved": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+      "model_revision_verified": true
+    },
+    "agreement": {
+      "method": "Binary Fleiss-type kappa per emotion, with a variable number of raters per item. Not classical Fleiss' kappa, which assumes a fixed rater count. Item-level agreement is averaged equally across items (Pbar), while marginal category frequencies (p_j) are estimated from the pooled ratings and therefore reflect the differing numbers of ratings per item.",
+      "binary_per_emotion": {
+        "anger": {
+          "kappa": 0.363,
+          "n_items": 57877
+        },
+        "disgust": {
+          "kappa": 0.2736,
+          "n_items": 57877
+        },
+        "fear": {
+          "kappa": 0.3829,
+          "n_items": 57877
+        },
+        "joy": {
+          "kappa": 0.5211,
+          "n_items": 57877
+        },
+        "sadness": {
+          "kappa": 0.4128,
+          "n_items": 57877
+        },
+        "surprise": {
+          "kappa": 0.3511,
+          "n_items": 57877
+        }
+      },
+      "overall_categorical_kappa": null,
+      "overall_omitted_because": "Raters may select multiple emotions, so per-item votes can exceed the rater count; categorical Fleiss' kappa is undefined under multi-label annotation. Krippendorff's alpha with MASI distance is the defined alternative if an aggregate figure is wanted.",
+      "pct_rater_annotations_multi_select": 8.67,
+      "pct_items_with_any_multi_select": 23.59
+    },
+    "corpus_content_sha256": "05343493a0e155c7e75325e0cda79ad64e60f98564af3dcad2b84a23554b615b",
+    "corpus_ids_sha256": "9801d95a33bac6ee02cd45a6137813e7a89efefbd754562f686668f0dde3e148",
+    "fingerprint_columns": [
+      "id",
+      "text",
+      "label",
+      "author",
+      "subreddit",
+      "link_id",
+      "created_utc_int",
+      "len_bucket",
+      "ppa_bucket"
+    ]
+  },
+  "corpus": {
+    "n_examples": 34951,
+    "n_authors": 31618,
+    "pct_authors_ge2": 7.9,
+    "pct_authors_ge3": 1.57,
+    "pct_authors_ge5": 0.24,
+    "pct_posts_from_multipost_authors": 16.68,
+    "max_posts_single_author": 15,
+    "class_distribution": {
+      "joy": 20163,
+      "anger": 5835,
+      "surprise": 4954,
+      "sadness": 2915,
+      "fear": 609,
+      "disgust": 475
+    }
+  },
+  "splits": [
+    {
+      "seed": 42,
+      "split_hashes": {
+        "train": "e63a01a9fc3b7f1e5383b264041d1e960276a2cf26d8b3115424548cfca1ed49",
+        "val": "6a3354a734ef513bddaf2a2e7f841973bb058a28f03e9c476ad0ff4537db3be4",
+        "test": "db979779e1dd20edbd418d585d25274960c37ae52651b1796733b32b50e81a7b",
+        "reserve": "56101333fb6bc834d46893beddc32e1d8dd8c7936761186a41757685f48c9adb",
+        "excluded": "5748b166a4065e274a284c43563ee04257c3b7352d1f9de0ce7cdf1950d20a7d",
+        "eligible_test": "ebf06572ac9bb8c77014c79e5dd54a9f8d022e34126ddbb7f16cbd62f9ed8791"
+      },
+      "n_train": 24063,
+      "n_val": 5157,
+      "n_test": 5157,
+      "n_reserve": 533,
+      "realized_ratios_pct": {
+        "train": 70.0,
+        "val": 15.0,
+        "test": 15.0
+      },
+      "reserve_pct_of_corpus": 1.52,
+      "n_test_authors": 5157,
+      "n_eligible_authors": 391,
+      "eligibility": {
+        "strict_eligible": 391,
+        "loose_eligible": 419,
+        "excluded_same_thread": 41
+      },
+      "n_excluded_same_thread": 41,
+      "n_eligible_test_examples": 391,
+      "eligible_class_support": {
+        "anger": 64,
+        "disgust": 5,
+        "fear": 4,
+        "joy": 220,
+        "sadness": 37,
+        "surprise": 61
+      },
+      "min_eligible_class_support": 4,
+      "reserve_per_author_median": 1.0,
+      "dose_probe": {
+        "1": {
+          "injected_ids_sha256": "9badd17a003d96c20338e4472e3238bb765823637b23940c93a2fc50efcfcedf",
+          "removed_ids_sha256": "966c2c0e9fbd46e034fe3531382d415fa4ee4924abe83229e833de337d2b34e4",
+          "uniform_coverage_pct": 100.0,
+          "injected": 391,
+          "overlap_pct_of_training": 1.625,
+          "match_quality": {
+            "exact_4var": 173,
+            "no_ppa": 181,
+            "no_len": 30,
+            "label_only": 7,
+            "failed": 0,
+            "authors_short_of_dose": 0
+          },
+          "match_level_pct": {
+            "exact_4var": 44.2,
+            "no_ppa": 46.3,
+            "no_len": 7.7,
+            "label_only": 1.8
+          },
+          "exact_4var_match_pct": 44.2,
+          "label_only_pct": 1.8,
+          "invariants_ok": true,
+          "failed_invariants": []
+        },
+        "2": {
+          "injected_ids_sha256": "7b71992493c2cb5215b9c7d45dc59760e7a49c19a1e4b56b32ab0e1730758f7f",
+          "removed_ids_sha256": "102e32df44afabd9eb5531b19e3036b3ceae863e4251fdda9ace6715d938ed4c",
+          "uniform_coverage_pct": 21.74,
+          "injected": 170,
+          "overlap_pct_of_training": 0.706,
+          "match_quality": {
+            "exact_4var": 52,
+            "no_ppa": 102,
+            "no_len": 13,
+            "label_only": 3,
+            "failed": 0,
+            "authors_short_of_dose": 306
+          },
+          "match_level_pct": {
+            "exact_4var": 30.6,
+            "no_ppa": 60.0,
+            "no_len": 7.6,
+            "label_only": 1.8
+          },
+          "exact_4var_match_pct": 30.6,
+          "label_only_pct": 1.8,
+          "invariants_ok": false,
+          "failed_invariants": [
+            "uniform_author_coverage"
+          ]
+        },
+        "3": {
+          "injected_ids_sha256": "4310c6277363353c0df45571414190d16a31af82fc0286ecdea9e519b6770e55",
+          "removed_ids_sha256": "f909090cb8c86bfdc6b0eef2f1f3f9e8e2a5808654ca6cead7133acb7a4d8b69",
+          "uniform_coverage_pct": 8.18,
+          "injected": 96,
+          "overlap_pct_of_training": 0.399,
+          "match_quality": {
+            "exact_4var": 33,
+            "no_ppa": 57,
+            "no_len": 5,
+            "label_only": 1,
+            "failed": 0,
+            "authors_short_of_dose": 359
+          },
+          "match_level_pct": {
+            "exact_4var": 34.4,
+            "no_ppa": 59.4,
+            "no_len": 5.2,
+            "label_only": 1.0
+          },
+          "exact_4var_match_pct": 34.4,
+          "label_only_pct": 1.0,
+          "invariants_ok": false,
+          "failed_invariants": [
+            "uniform_author_coverage"
+          ]
+        }
+      }
+    },
+    {
+      "seed": 123,
+      "split_hashes": {
+        "train": "d312e6d4b6c4185c077b04e5934489099a86462b695a8d8d3993cd0e93fd04ce",
+        "val": "337db25df80a29d3c509d7a0c1a78cc1bd7e2083fa4e2f92b8b0eb3099b00526",
+        "test": "4f6f8b84c9c2dd9bbe9d31dafc2a9fee1316e432d34fd96bb52b30f54af753b0",
+        "reserve": "fd2d02e695bc54d61a6f64397d83d3304f8ec0596f4160538c2e17d8f1d7ac1b",
+        "excluded": "632c6bc0bd2124f2c04d5a2594124cd2de37ea712458422900e1d56657569b03",
+        "eligible_test": "bd4b70f251a4e527b24bfde271d50932091324ffab24802e12bdad6ff4e46ae5"
+      },
+      "n_train": 24125,
+      "n_val": 5171,
+      "n_test": 5171,
+      "n_reserve": 449,
+      "realized_ratios_pct": {
+        "train": 69.99,
+        "val": 15.0,
+        "test": 15.0
+      },
+      "reserve_pct_of_corpus": 1.28,
+      "n_test_authors": 5171,
+      "n_eligible_authors": 340,
+      "eligibility": {
+        "strict_eligible": 340,
+        "loose_eligible": 366,
+        "excluded_same_thread": 35
+      },
+      "n_excluded_same_thread": 35,
+      "n_eligible_test_examples": 340,
+      "eligible_class_support": {
+        "anger": 54,
+        "disgust": 4,
+        "fear": 6,
+        "joy": 192,
+        "sadness": 39,
+        "surprise": 45
+      },
+      "min_eligible_class_support": 4,
+      "reserve_per_author_median": 1.0,
+      "dose_probe": {
+        "1": {
+          "injected_ids_sha256": "8a24cca238964ee7e19f139a2fb6ad71edc5c5fd058a5ad4eaf9ddde305fd68b",
+          "removed_ids_sha256": "a9b5fbc9f10d55ce149882e1bf33eee5eca2e1f968ef2d6b30ea5ca0d1b0e82c",
+          "uniform_coverage_pct": 100.0,
+          "injected": 340,
+          "overlap_pct_of_training": 1.409,
+          "match_quality": {
+            "exact_4var": 160,
+            "no_ppa": 145,
+            "no_len": 30,
+            "label_only": 5,
+            "failed": 0,
+            "authors_short_of_dose": 0
+          },
+          "match_level_pct": {
+            "exact_4var": 47.1,
+            "no_ppa": 42.6,
+            "no_len": 8.8,
+            "label_only": 1.5
+          },
+          "exact_4var_match_pct": 47.1,
+          "label_only_pct": 1.5,
+          "invariants_ok": true,
+          "failed_invariants": []
+        },
+        "2": {
+          "injected_ids_sha256": "6cd1aafdb75d50f35ebf4164f15c323e2405ee0436fd98b6af8cf1527e324583",
+          "removed_ids_sha256": "936508eac3057fae69a976d49d044e0d793f48ca453af8a99a230c545a9d2fb1",
+          "uniform_coverage_pct": 19.41,
+          "injected": 132,
+          "overlap_pct_of_training": 0.547,
+          "match_quality": {
+            "exact_4var": 37,
+            "no_ppa": 81,
+            "no_len": 14,
+            "label_only": 0,
+            "failed": 0,
+            "authors_short_of_dose": 274
+          },
+          "match_level_pct": {
+            "exact_4var": 28.0,
+            "no_ppa": 61.4,
+            "no_len": 10.6,
+            "label_only": 0.0
+          },
+          "exact_4var_match_pct": 28.0,
+          "label_only_pct": 0.0,
+          "invariants_ok": false,
+          "failed_invariants": [
+            "uniform_author_coverage"
+          ]
+        },
+        "3": {
+          "injected_ids_sha256": "0a011e584e9968b51a4cc8ee55db104d45a437d28c35e7978369ddc917087031",
+          "removed_ids_sha256": "c2a521a94934a0d01f8fe8e76f20ca2a87eb511e2df20e17ae1dbdd36be72343",
+          "uniform_coverage_pct": 7.06,
+          "injected": 72,
+          "overlap_pct_of_training": 0.298,
+          "match_quality": {
+            "exact_4var": 19,
+            "no_ppa": 42,
+            "no_len": 11,
+            "label_only": 0,
+            "failed": 0,
+            "authors_short_of_dose": 316
+          },
+          "match_level_pct": {
+            "exact_4var": 26.4,
+            "no_ppa": 58.3,
+            "no_len": 15.3,
+            "label_only": 0.0
+          },
+          "exact_4var_match_pct": 26.4,
+          "label_only_pct": 0.0,
+          "invariants_ok": false,
+          "failed_invariants": [
+            "uniform_author_coverage"
+          ]
+        }
+      }
+    },
+    {
+      "seed": 2024,
+      "split_hashes": {
+        "train": "6fc1b065178738056042f05ba00f6845724d7d85445dbf1b10d1a839fb58eefc",
+        "val": "09e88f02c3c0ee5c3ce91ec7ca99d693423acac7a04d93d88e5b2ea3ee86274e",
+        "test": "f2b2d8edbe33ed4e7f1b9d367923eb87e474cdf23d048e0fd93ee8721b051106",
+        "reserve": "b7c4d6b2b66fd2fb9910f7d0515b2f09e6e41a906e32217b6e1aa09e926b7cab",
+        "excluded": "8bfed5c29685a04a5d57bbcd5810b018bbfbac72b8115347bea0e8daedc8b868",
+        "eligible_test": "34a949543f4af1ddf5876a356fb8733308057c5ebb93f5562dcdd35fdd81bd2a"
+      },
+      "n_train": 24060,
+      "n_val": 5156,
+      "n_test": 5156,
+      "n_reserve": 546,
+      "realized_ratios_pct": {
+        "train": 70.0,
+        "val": 15.0,
+        "test": 15.0
+      },
+      "reserve_pct_of_corpus": 1.56,
+      "n_test_authors": 5156,
+      "n_eligible_authors": 410,
+      "eligibility": {
+        "strict_eligible": 410,
+        "loose_eligible": 435,
+        "excluded_same_thread": 33
+      },
+      "n_excluded_same_thread": 33,
+      "n_eligible_test_examples": 410,
+      "eligible_class_support": {
+        "anger": 81,
+        "disgust": 4,
+        "fear": 9,
+        "joy": 207,
+        "sadness": 41,
+        "surprise": 68
+      },
+      "min_eligible_class_support": 4,
+      "reserve_per_author_median": 1.0,
+      "dose_probe": {
+        "1": {
+          "injected_ids_sha256": "f1fa92689baf51d1875e2a3fa9c24a0d974afbd7e9332c0053c77607729a0caa",
+          "removed_ids_sha256": "368fdff49e31107c906efbec3cb72194c9505528ef02a077199ac6487805a020",
+          "uniform_coverage_pct": 100.0,
+          "injected": 410,
+          "overlap_pct_of_training": 1.704,
+          "match_quality": {
+            "exact_4var": 172,
+            "no_ppa": 200,
+            "no_len": 28,
+            "label_only": 10,
+            "failed": 0,
+            "authors_short_of_dose": 0
+          },
+          "match_level_pct": {
+            "exact_4var": 42.0,
+            "no_ppa": 48.8,
+            "no_len": 6.8,
+            "label_only": 2.4
+          },
+          "exact_4var_match_pct": 42.0,
+          "label_only_pct": 2.4,
+          "invariants_ok": true,
+          "failed_invariants": []
+        },
+        "2": {
+          "injected_ids_sha256": "ea789d665532d0e17ca686db68538d405e072b4181c6c3607d6cc8a67d0dabb8",
+          "removed_ids_sha256": "bea542daf7250c9f85405c523f8964220d5b8aeb8bcb762ca653bd238f48d882",
+          "uniform_coverage_pct": 17.8,
+          "injected": 146,
+          "overlap_pct_of_training": 0.607,
+          "match_quality": {
+            "exact_4var": 38,
+            "no_ppa": 95,
+            "no_len": 9,
+            "label_only": 4,
+            "failed": 0,
+            "authors_short_of_dose": 337
+          },
+          "match_level_pct": {
+            "exact_4var": 26.0,
+            "no_ppa": 65.1,
+            "no_len": 6.2,
+            "label_only": 2.7
+          },
+          "exact_4var_match_pct": 26.0,
+          "label_only_pct": 2.7,
+          "invariants_ok": false,
+          "failed_invariants": [
+            "uniform_author_coverage"
+          ]
+        },
+        "3": {
+          "injected_ids_sha256": "f8b4ec9c7e80bc4ce96e1af78818db7d0f5008ba2e5beb58594929d5dc04f6be",
+          "removed_ids_sha256": "2ad280c90e691e6d00fc00af0c8f227caae7a45d5369a1fd90751ef1d217acee",
+          "uniform_coverage_pct": 7.8,
+          "injected": 96,
+          "overlap_pct_of_training": 0.399,
+          "match_quality": {
+            "exact_4var": 20,
+            "no_ppa": 68,
+            "no_len": 6,
+            "label_only": 2,
+            "failed": 0,
+            "authors_short_of_dose": 378
+          },
+          "match_level_pct": {
+            "exact_4var": 20.8,
+            "no_ppa": 70.8,
+            "no_len": 6.2,
+            "label_only": 2.1
+          },
+          "exact_4var_match_pct": 20.8,
+          "label_only_pct": 2.1,
+          "invariants_ok": false,
+          "failed_invariants": [
+            "uniform_author_coverage"
+          ]
+        }
+      }
+    }
+  ],
+  "structural_diagnosis": {
+    "posts_per_author_mean": 1.105,
+    "pct_authors_ge2": 7.9,
+    "pct_posts_from_multipost_authors": 16.68,
+    "min_reserve_pct_of_corpus": 1.28,
+    "max_achievable_overlap_pct_of_training": 1.409,
+    "mechanism_available": false,
+    "interpretation": "Author overlap is structurally near-absent in this corpus: the reserve pool - every post that could possibly be injected - is a small fraction of the corpus. A null stress-test result is therefore consistent with the absence of a mechanism and must NOT be read as evidence about the size of author leakage in emotion benchmarks generally."
+  },
+  "design_sensitivity": {
+    "assumed_discordance_rates": [
+      0.05,
+      0.1,
+      0.2,
+      0.5
+    ],
+    "note": "Normal-approximation DESIGN SENSITIVITY, not post-hoc achieved power. MDE is the smallest accuracy difference detectable at 80% power, alpha = 0.05 two-sided, for a paired test on the eligible test subset. It depends on the discordance rate between the two systems, which is unknown before the experiment, so a range of assumptions is reported rather than a single figure. High discordance means only large effects are detectable.",
+    "per_split": {
+      "42": {
+        "n_eligible_test": 391,
+        "mde_accuracy_points": {
+          "0.05": 3.17,
+          "0.1": 4.48,
+          "0.2": 6.33,
+          "0.5": 10.01
+        }
+      },
+      "123": {
+        "n_eligible_test": 340,
+        "mde_accuracy_points": {
+          "0.05": 3.4,
+          "0.1": 4.8,
+          "0.2": 6.79,
+          "0.5": 10.74
+        }
+      },
+      "2024": {
+        "n_eligible_test": 410,
+        "mde_accuracy_points": {
+          "0.05": 3.09,
+          "0.1": 4.37,
+          "0.2": 6.18,
+          "0.5": 9.78
+        }
+      }
+    }
+  },
+  "freeze_quality": true,
+  "freeze_quality_conditions": {
+    "official_ekman_map": true,
+    "near_dedup_ran": true,
+    "dedup_model_pinned": true,
+    "dedup_model_revision_verified": true,
+    "no_preview_overrides": true
+  },
+  "decision": {
+    "h1_confirmatory_feasible": false,
+    "h1_status": "requires_amendment",
+    "exploratory_dose_k": 1,
+    "fixed_dose_k": null,
+    "h1_primary_metric": "accuracy",
+    "min_eligible_test_examples": 340,
+    "min_class_support_eligible": 4,
+    "worst_exact_4var_match_pct": null,
+    "worst_label_only_pct": null,
+    "matching_note": "Hierarchical matching was fixed before model training. Training size and class composition are held exactly constant; subreddit, text length and author activity are matched hierarchically where feasible. The complete fallback distribution is reported and determines the strength of the descriptive claim - not whether the method is accepted post hoc.",
+    "verdict": "DO NOT FREEZE H1 AS CONFIRMATORY. Choose explicitly, before any training: (a) demote H1 to exploratory, or (b) re-specify the grouping unit as link_id - which changes the construct from author leakage to thread leakage and requires the title, central message and H1 wording to change accordingly."
+  },
+  "confirmatory_split_seed": 42,
+  "thresholds": {
+    "min_eligible_test": 1500,
+    "min_overlap_pct": 5.0,
+    "min_class_support": 50
+  }
+}

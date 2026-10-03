@@ -1,0 +1,100 @@
+{
+  "cross_split_normalized_overlap": {
+    "train__test": 0,
+    "train__validation": 0,
+    "validation__test": 0
+  },
+  "normalization": "NFKC + lowercase + strip + whitespace-collapse",
+  "within_split": {
+    "test": {
+      "conflicting_target_groups": 0,
+      "duplicate_groups": 0,
+      "extra_duplicate_rows": 0,
+      "groups": []
+    },
+    "train": {
+      "conflicting_target_groups": 0,
+      "duplicate_groups": 3,
+      "extra_duplicate_rows": 32,
+      "groups": [
+        {
+          "normalized_text_sha256": "1d630b070aa3773e34b53618f752c817e3d93f909ed6159796b4cf066e00bf3e",
+          "raw_text_sha256": [
+            "8bac143fea69a4b5cfbf511ea0ef55b3d70fca9e38272ec2ba3c056b0d9b9e35"
+          ],
+          "size": 2,
+          "source_rows": [
+            322,
+            5720
+          ],
+          "targets": [
+            "joy"
+          ]
+        },
+        {
+          "normalized_text_sha256": "2466b83189291de595cc9acbe8460a3265473085d1dfa5b3631e4b30bd7846a5",
+          "raw_text_sha256": [
+            "2b70eeb0377a2d5ae050affa54191b070a1370783f0386da4411792bd67a3194"
+          ],
+          "size": 22,
+          "source_rows": [
+            685,
+            1875,
+            1901,
+            2085,
+            2136,
+            2344,
+            2471,
+            2952,
+            3477,
+            4147,
+            4534,
+            4627,
+            5039,
+            5155,
+            5213,
+            5241,
+            5474,
+            5932,
+            6068,
+            6289,
+            6444,
+            6829
+          ],
+          "targets": [
+            "joy"
+          ]
+        },
+        {
+          "normalized_text_sha256": "7bcbc1213673859f3b365caf4caa367db703895f51538c7d0047ae5b5ae01b3d",
+          "raw_text_sha256": [
+            "a556ea1ba45675b43b7e71d959e3fed83328634d720fbf88d97ba04b08b34f43"
+          ],
+          "size": 11,
+          "source_rows": [
+            556,
+            891,
+            920,
+            1821,
+            2567,
+            3157,
+            3460,
+            3911,
+            4389,
+            4841,
+            6777
+          ],
+          "targets": [
+            "joy"
+          ]
+        }
+      ]
+    },
+    "validation": {
+      "conflicting_target_groups": 0,
+      "duplicate_groups": 0,
+      "extra_duplicate_rows": 0,
+      "groups": []
+    }
+  }
+}

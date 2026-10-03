@@ -1,0 +1,33 @@
+{
+  "method": "Binary Fleiss-type kappa per emotion, with a variable number of raters per item. Not classical Fleiss' kappa, which assumes a fixed rater count. Item-level agreement is averaged equally across items (Pbar), while marginal category frequencies (p_j) are estimated from the pooled ratings and therefore reflect the differing numbers of ratings per item.",
+  "binary_per_emotion": {
+    "anger": {
+      "kappa": 0.363,
+      "n_items": 57877
+    },
+    "disgust": {
+      "kappa": 0.2736,
+      "n_items": 57877
+    },
+    "fear": {
+      "kappa": 0.3829,
+      "n_items": 57877
+    },
+    "joy": {
+      "kappa": 0.5211,
+      "n_items": 57877
+    },
+    "sadness": {
+      "kappa": 0.4128,
+      "n_items": 57877
+    },
+    "surprise": {
+      "kappa": 0.3511,
+      "n_items": 57877
+    }
+  },
+  "overall_categorical_kappa": null,
+  "overall_omitted_because": "Raters may select multiple emotions, so per-item votes can exceed the rater count; categorical Fleiss' kappa is undefined under multi-label annotation. Krippendorff's alpha with MASI distance is the defined alternative if an aggregate figure is wanted.",
+  "pct_rater_annotations_multi_select": 8.67,
+  "pct_items_with_any_multi_select": 23.59
+}

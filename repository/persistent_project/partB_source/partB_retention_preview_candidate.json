@@ -1,0 +1,125 @@
+{
+  "final_dataset_created": false,
+  "mapping_spec_sha256": "06f74faf9eff689f644c367d9a44d4e5f057506de9e72f760fa62057c2f482dc",
+  "model_training_performed": false,
+  "parser": {
+    "source_field": "gold_label_list",
+    "version": "partB-gold-label-list-parser-v1"
+  },
+  "results": {
+    "test.jsonl": {
+      "excluded": 2177,
+      "exclusion_reasons": {
+        "contains_unmapped_label": 870,
+        "multiple_ekman_categories": 1232,
+        "no_active_label": 75
+      },
+      "multi_original_same_ekman_retained": 723,
+      "retained": 1082,
+      "retention_pct": 33.2003682111077,
+      "source_label_frequency": {
+        "anger": 1101,
+        "anticipation": 425,
+        "disgust": 1099,
+        "fear": 485,
+        "joy": 1442,
+        "love": 516,
+        "optimism": 1143,
+        "pessimism": 375,
+        "sadness": 960,
+        "surprise": 170,
+        "trust": 153
+      },
+      "target_distribution": {
+        "anger": 39,
+        "disgust": 19,
+        "fear": 62,
+        "joy": 876,
+        "sadness": 83,
+        "surprise": 3
+      },
+      "total": 3259,
+      "unmapped_label_frequency": {
+        "anticipation": 425,
+        "pessimism": 375,
+        "trust": 153
+      }
+    },
+    "train.jsonl": {
+      "excluded": 4933,
+      "exclusion_reasons": {
+        "contains_unmapped_label": 1943,
+        "multiple_ekman_categories": 2786,
+        "no_active_label": 204
+      },
+      "multi_original_same_ekman_retained": 1004,
+      "retained": 1905,
+      "retention_pct": 27.859023106171396,
+      "source_label_frequency": {
+        "anger": 2544,
+        "anticipation": 978,
+        "disgust": 2602,
+        "fear": 1242,
+        "joy": 2477,
+        "love": 700,
+        "optimism": 1984,
+        "pessimism": 795,
+        "sadness": 2008,
+        "surprise": 361,
+        "trust": 357
+      },
+      "target_distribution": {
+        "anger": 108,
+        "disgust": 55,
+        "fear": 175,
+        "joy": 1378,
+        "sadness": 172,
+        "surprise": 17
+      },
+      "total": 6838,
+      "unmapped_label_frequency": {
+        "anticipation": 978,
+        "pessimism": 795,
+        "trust": 357
+      }
+    },
+    "validation.jsonl": {
+      "excluded": 598,
+      "exclusion_reasons": {
+        "contains_unmapped_label": 245,
+        "multiple_ekman_categories": 339,
+        "no_active_label": 14
+      },
+      "multi_original_same_ekman_retained": 178,
+      "retained": 288,
+      "retention_pct": 32.50564334085779,
+      "source_label_frequency": {
+        "anger": 315,
+        "anticipation": 124,
+        "disgust": 319,
+        "fear": 121,
+        "joy": 400,
+        "love": 132,
+        "optimism": 307,
+        "pessimism": 100,
+        "sadness": 265,
+        "surprise": 35,
+        "trust": 43
+      },
+      "target_distribution": {
+        "anger": 11,
+        "disgust": 7,
+        "fear": 27,
+        "joy": 222,
+        "sadness": 21
+      },
+      "total": 886,
+      "unmapped_label_frequency": {
+        "anticipation": 124,
+        "pessimism": 100,
+        "trust": 43
+      }
+    }
+  },
+  "status": "PREVIEW_ONLY"
+}

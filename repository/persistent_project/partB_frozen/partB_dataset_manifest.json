@@ -1,0 +1,136 @@
+{
+  "authoritative_test_split": "test.retained.jsonl",
+  "dataset_name": "Part-B SemEval-derived conservative Ekman-6 subset",
+  "design_binding": {
+    "mapping_spec_file": "partB_ekman_mapping_spec.json",
+    "mapping_spec_sha256": "06f74faf9eff689f644c367d9a44d4e5f057506de9e72f760fa62057c2f482dc",
+    "verified_retention_preview_file": "partB_retention_preview_verified.json",
+    "verified_retention_preview_sha256": "6c00ab7b21d294729650ddb2189948f6f2aa9f6133c626f4ca6398c7fe4ee0b5"
+  },
+  "duplicate_policy": {
+    "action": "PRESERVE_SOURCE_ROWS",
+    "audit_file": "partB_duplicate_audit.json",
+    "audit_sha256": "457aad1f1a714cf40d564c8abae50967aa6cfbaa6d917895d0215ee03f4c64d2",
+    "reason": "The frozen subset preserves official source split membership and source order. No retained normalized-text duplicates occur across train/validation/test. Within-train duplicates are documented but not removed."
+  },
+  "legacy_preliminary_preview": {
+    "reason": "The preliminary preview incorrectly handled gold_label_list. Its anger-only retained counts (train=204, validation=14, test=75) exactly match the corrected no_active_label counts. It is preserved only as historical provenance.",
+    "sha256": "83d8619411ce633195df964f7fc9bfb6e867ab96071cc9b396884da9ad25d8c6",
+    "status": "SUPERSEDED_DO_NOT_USE"
+  },
+  "parser": {
+    "field": "gold_label_list",
+    "label_order": [
+      "anger",
+      "anticipation",
+      "disgust",
+      "fear",
+      "joy",
+      "love",
+      "optimism",
+      "pessimism",
+      "sadness",
+      "surprise",
+      "trust"
+    ],
+    "policy": "strict_fail_closed",
+    "representation": "11-dimensional binary multi-hot vector"
+  },
+  "retention_rule": {
+    "example_exclude_multi_ekman": "anger + sadness -> exclude",
+    "example_exclude_unmapped": "joy + trust -> exclude",
+    "example_keep": "joy + love -> joy",
+    "multiple_original_labels_mapping_to_same_ekman_category": "retain",
+    "require_all_active_original_labels_mapped": true,
+    "require_at_least_one_active_original_label": true,
+    "require_exactly_one_distinct_ekman_category_after_mapping": true
+  },
+  "schema_version": "partB-freeze-manifest-v1",
+  "scientific_constraints": {
+    "augmentation_performed": false,
+    "cross_split_normalized_text_overlap": 0,
+    "deduplication_performed": false,
+    "model_training_performed_during_build": false,
+    "partB_for_hyperparameter_selection": false,
+    "partB_for_primary_model_selection": false,
+    "resampling_performed": false,
+    "source_order_preserved": true,
+    "test_surprise_support": 3,
+    "validation_missing_surprise": true,
+    "validation_surprise_support": 0
+  },
+  "scientific_role": "EXTERNAL_ROBUSTNESS_EVALUATION_ONLY",
+  "source": {
+    "dataset_component": "tweet_emotion",
+    "repository": "cardiffnlp/super_tweeteval",
+    "revision": "a10ac3d27a3499e870b6371df64c14e5a656131a",
+    "source_type": "SemEval-2018-Task1-E-c-derived-access-mirror"
+  },
+  "splits": {
+    "test": {
+      "class_support": {
+        "anger": 39,
+        "disgust": 19,
+        "fear": 62,
+        "joy": 876,
+        "sadness": 83,
+        "surprise": 3
+      },
+      "file": "test.retained.jsonl",
+      "missing_classes": [],
+      "retained_records": 1082,
+      "sha256": "b05b4d382d1c9a902a4c8a448ef863b1af97641d118405e7653ddfb329150d79",
+      "source_file": "test.jsonl",
+      "source_file_sha256": "26ea6a23eff402cb67e88580f895d324f77b6f1e6a37131bba40381a5cbc088a"
+    },
+    "train": {
+      "class_support": {
+        "anger": 108,
+        "disgust": 55,
+        "fear": 175,
+        "joy": 1378,
+        "sadness": 172,
+        "surprise": 17
+      },
+      "file": "train.retained.jsonl",
+      "missing_classes": [],
+      "retained_records": 1905,
+      "sha256": "62cad7e39e178e937ad476f634159225d91ed480526ad9ac38750cc1cd2a4208",
+      "source_file": "train.jsonl",
+      "source_file_sha256": "1c4daa84eb1a2a672ef482a62afa43ff986fc2233e96e6b087c2ea9150e08f96"
+    },
+    "validation": {
+      "class_support": {
+        "anger": 11,
+        "disgust": 7,
+        "fear": 27,
+        "joy": 222,
+        "sadness": 21,
+        "surprise": 0
+      },
+      "file": "validation.retained.jsonl",
+      "missing_classes": [
+        "surprise"
+      ],
+      "retained_records": 288,
+      "sha256": "df607c4399b21a8be1ae7d6507fa150e9a3a622fc3cd84fca98cce33038f3048",
+      "source_file": "validation.jsonl",
+      "source_file_sha256": "3367700bd402a039d6e9fe7f5041939521be58f18dbf20d3f87d71d1d7fbbad4"
+    }
+  },
+  "status": "FROZEN",
+  "target_taxonomy": [
+    "anger",
+    "disgust",
+    "fear",
+    "joy",
+    "sadness",
+    "surprise"
+  ],
+  "usage_policy": {
+    "primary_allowed_use": "Evaluate already-selected/frozen models for external robustness on the retained Part-B test split.",
+    "test_split": "External robustness evaluation. Report class support explicitly; Surprise has n=3 and class-specific estimates are highly unstable.",
+    "train_split": "Preserved for provenance and secondary analysis; not used for primary model training.",
+    "validation_split": "Preserved for provenance only in the primary six-class protocol; it contains zero Surprise examples and must not be used for six-class model selection."
+  }
+}

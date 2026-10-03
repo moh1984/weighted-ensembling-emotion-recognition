@@ -1,0 +1,15 @@
+{
+  "analysis_config_sha256": "3751576124daa427dec2890ed77abf87eb8c347b857649122f253eaaf07cfc8f",
+  "analysis_script_sha256": "5c66664b4c84d79326a71eb0128884eb48d2e36c7fc3a9ccfd8403980e5b8b08",
+  "checkpoint_checksums_sha256": "64148923cf64054870ea14bd9bd041ca2e99dfee50abf4a246183d28630c2192",
+  "checkpoint_completed_runs": 45,
+  "checkpoint_manifest_sha256": "6463453c42bd0c310a15fd6acdedbc5012eff021e67de69e08420f3903840b05",
+  "corpus_content_sha256": "05343493a0e155c7e75325e0cda79ad64e60f98564af3dcad2b84a23554b615b",
+  "created_at_utc": "2026-08-31T17:35:38Z",
+  "dataset_manifest_sha256": "ca2955a568846fe669b0125c016ca945b2a05fc3e6241b02a7c454fa81d36341",
+  "freeze_type": "PART_A_ANALYSIS_PRE_TEST_FREEZE",
+  "real_test_analysis_performed_before_freeze": false,
+  "run_experiments_sha256": "b1768c3cce420c8ef6ee5d53db6584c836fa54f0288cef0de30ae83bed9f146b",
+  "status": "FROZEN_BEFORE_FIRST_REAL_TEST_ANALYSIS",
+  "training_config_sha256": "75eee2631e1a9d2e562d07cdca122e4f76a00387da7ac58d51a1a3bc2c16456c"
+}
