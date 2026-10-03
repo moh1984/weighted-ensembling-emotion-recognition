@@ -1,0 +1,22 @@
+{
+  "checkpoint": "pre-Part-C repository preservation checkpoint",
+  "created_at_utc": "2026-09-01T06:37:05.489359+00:00",
+  "critical_hashes": {
+    "partA_manifest": "ca2955a568846fe669b0125c016ca945b2a05fc3e6241b02a7c454fa81d36341",
+    "partB_final_eval_zip": "f309209f14187820d61f34e91274d666f72c8e421f308acd265b2d5a7728897e",
+    "partB_manifest": "dece660f6b8550a0335fc8fd48f0a7a9da68d2625470eb695a8a5bd3f1e536b2",
+    "partC_execution_freeze": "8b34a36bcde6dfc61b291a653e888dbce9d386a4e6cb5f62e62c8a87947cfbfb",
+    "partC_transfer_bundle": "214731c6fa4be6dedcef05226008151f176500cab32543a329bddd48b418d0dc",
+    "protocol_v7": "d3a3f5dfe5c12ab1b3c620dffc53c77bda8cb4e7df26eb3b5516085a5e968b48",
+    "training_config": "75eee2631e1a9d2e562d07cdca122e4f76a00387da7ac58d51a1a3bc2c16456c"
+  },
+  "manifest_entries": 360,
+  "purpose": "Preserve repository-relevant artifacts before closing the original Kaggle session and executing Part C on a second account.",
+  "study_state": {
+    "partA_completed": true,
+    "partB_external_evaluation_completed": true,
+    "partC_dataset_sampling_completed": false,
+    "partC_execution_decisions_frozen": true,
+    "partC_model_training_completed": false
+  }
+}

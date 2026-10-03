@@ -1,0 +1,16 @@
+{
+  "blind_prediction_input_sha256": "d6920bfea38a1a445fa92e39310a1612e86cde30987a2e7494ce610636c5301a",
+  "checkpoint_manifest_sha256": "5c3e0ed6c0c310786c899e11b478da3e778a0fae19ceb8db7337d4e5b2e571c3",
+  "checkpoint_seal_sha256": "a6c92ad4ac1ef2d9745f8bcda0b5c75309bcee6d43954d93c9303dff4f95309d",
+  "evaluation_config_sha256": "1bbfc0b0f7611da9c68b6b9ca894e7dce4e80798b08ffdeec6e62aec91ce8d0a",
+  "event": "PART_B_GOLD_OPENED_FOR_FINAL_EVALUATION",
+  "opened_at_utc": "2026-09-01T04:04:46.717864+00:00",
+  "partB_gold_test_sha256": "b05b4d382d1c9a902a4c8a448ef863b1af97641d118405e7653ddfb329150d79",
+  "scientific_state_before_opening": {
+    "completed_reconstructions": 15,
+    "locked_runs": 15,
+    "models_selected_using_partA_validation_only": true,
+    "partB_metrics_previously_computed": false
+  },
+  "statement": "This receipt marks the start of the pre-specified final Part-B outcome evaluation. No model, checkpoint, threshold, training configuration, or locked run may be changed based on the results observed after this point."
+}

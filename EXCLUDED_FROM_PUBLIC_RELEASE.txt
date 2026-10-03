@@ -1,0 +1,304 @@
+Files withheld from the public release
+======================================
+
+The manuscript states that corpus text is not redistributed. The following
+files were therefore removed from this package. Every reported number
+remains verifiable from the per-sample predictions and recorded validation
+scores that are included here; the corpus and splits can be rebuilt exactly
+by obtaining the original sources and running the included build script,
+whose output is checked against the published content hashes.
+
+    4.04 MB  handoff/partC_transfer_bundle.zip
+            reason: corpus text / author identifiers
+    0.47 MB  partB/partB_frozen/test.retained.jsonl
+            reason: partB_frozen/.*\.retained\.jsonl$
+    0.83 MB  partB/partB_frozen/train.retained.jsonl
+            reason: partB_frozen/.*\.retained\.jsonl$
+    0.13 MB  partB/partB_frozen/validation.retained.jsonl
+            reason: partB_frozen/.*\.retained\.jsonl$
+    0.59 MB  partC/frozen_v2/combined_test_full.parquet
+            reason: partC/frozen_v2/.*\.parquet$
+    2.04 MB  partC/frozen_v2/combined_train_full.parquet
+            reason: partC/frozen_v2/.*\.parquet$
+    0.42 MB  partC/frozen_v2/combined_validation_full.parquet
+            reason: partC/frozen_v2/.*\.parquet$
+    0.16 MB  partC/frozen_v2/platform_C_train.parquet
+            reason: partC/frozen_v2/.*\.parquet$
+    0.14 MB  partC/frozen_v2/platform_R_train.parquet
+            reason: partC/frozen_v2/.*\.parquet$
+    0.38 MB  partC/frozen_v2/platform_T_train.parquet
+            reason: partC/frozen_v2/.*\.parquet$
+    0.36 MB  partC/frozen_v2/reddit_test.parquet
+            reason: partC/frozen_v2/.*\.parquet$
+    1.66 MB  partC/frozen_v2/reddit_train.parquet
+            reason: partC/frozen_v2/.*\.parquet$
+    0.36 MB  partC/frozen_v2/reddit_validation.parquet
+            reason: partC/frozen_v2/.*\.parquet$
+    0.23 MB  partC/frozen_v2/twitter_test.parquet
+            reason: partC/frozen_v2/.*\.parquet$
+    0.38 MB  partC/frozen_v2/twitter_train.parquet
+            reason: partC/frozen_v2/.*\.parquet$
+    0.06 MB  partC/frozen_v2/twitter_validation.parquet
+            reason: partC/frozen_v2/.*\.parquet$
+    0.00 MB  repository/current_working_project/FROZEN.sha256
+            reason: ^repository/current_working_project/(?!partA_analysis/|partC_preparation/)
+    0.01 MB  repository/current_working_project/README.md
+            reason: ^repository/current_working_project/(?!partA_analysis/|partC_preparation/)
+    0.02 MB  repository/current_working_project/build_dataset.py
+            reason: ^repository/current_working_project/(?!partA_analysis/|partC_preparation/)
+    0.04 MB  repository/current_working_project/corpus.py
+            reason: ^repository/current_working_project/(?!partA_analysis/|partC_preparation/)
+    0.00 MB  repository/current_working_project/h1_amendment.json
+            reason: ^repository/current_working_project/(?!partA_analysis/|partC_preparation/)
+    0.06 MB  repository/current_working_project/research_protocol_v6.md
+            reason: ^repository/current_working_project/(?!partA_analysis/|partC_preparation/)
+    0.02 MB  repository/current_working_project/research_protocol_v7_frozen.md
+            reason: ^repository/current_working_project/(?!partA_analysis/|partC_preparation/)
+    0.03 MB  repository/current_working_project/run_experiments.py
+            reason: ^repository/current_working_project/(?!partA_analysis/|partC_preparation/)
+    0.02 MB  repository/current_working_project/section0_feasibility.py
+            reason: ^repository/current_working_project/(?!partA_analysis/|partC_preparation/)
+    0.02 MB  repository/current_working_project/section0_report.json
+            reason: ^repository/current_working_project/(?!partA_analysis/|partC_preparation/)
+    0.01 MB  repository/current_working_project/section0_report.md
+            reason: ^repository/current_working_project/(?!partA_analysis/|partC_preparation/)
+    0.00 MB  repository/current_working_project/splits/agreement_report.json
+            reason: ^repository/current_working_project/(?!partA_analysis/|partC_preparation/)
+    3.42 MB  repository/current_working_project/splits/corpus.parquet
+            reason: corpus text / author identifiers
+    0.02 MB  repository/current_working_project/splits/dataset_manifest.json
+            reason: ^repository/current_working_project/(?!partA_analysis/|partC_preparation/)
+    0.63 MB  repository/current_working_project/splits/multilabel_reference.parquet
+            reason: corpus text / author identifiers
+    0.00 MB  repository/current_working_project/splits/seed123/eligible_test.txt
+            reason: ^repository/current_working_project/(?!partA_analysis/|partC_preparation/)
+    0.00 MB  repository/current_working_project/splits/seed123/excluded_same_thread.txt
+            reason: ^repository/current_working_project/(?!partA_analysis/|partC_preparation/)
+    0.47 MB  repository/current_working_project/splits/seed123/jury_blocks.json
+            reason: ^repository/current_working_project/(?!partA_analysis/|partC_preparation/)
+    0.00 MB  repository/current_working_project/splits/seed123/manifest.json
+            reason: ^repository/current_working_project/(?!partA_analysis/|partC_preparation/)
+    0.04 MB  repository/current_working_project/splits/seed123/r_clean_test.txt
+            reason: ^repository/current_working_project/(?!partA_analysis/|partC_preparation/)
+    0.19 MB  repository/current_working_project/splits/seed123/r_clean_train.txt
+            reason: ^repository/current_working_project/(?!partA_analysis/|partC_preparation/)
+    0.04 MB  repository/current_working_project/splits/seed123/r_clean_val.txt
+            reason: ^repository/current_working_project/(?!partA_analysis/|partC_preparation/)
+    0.00 MB  repository/current_working_project/splits/seed123/r_overlap_injected.txt
+            reason: ^repository/current_working_project/(?!partA_analysis/|partC_preparation/)
+    0.00 MB  repository/current_working_project/splits/seed123/r_overlap_removed.txt
+            reason: ^repository/current_working_project/(?!partA_analysis/|partC_preparation/)
+    0.19 MB  repository/current_working_project/splits/seed123/r_overlap_train.txt
+            reason: ^repository/current_working_project/(?!partA_analysis/|partC_preparation/)
+    0.04 MB  repository/current_working_project/splits/seed123/r_random_full_test.txt
+            reason: ^repository/current_working_project/(?!partA_analysis/|partC_preparation/)
+    0.20 MB  repository/current_working_project/splits/seed123/r_random_full_train.txt
+            reason: ^repository/current_working_project/(?!partA_analysis/|partC_preparation/)
+    0.04 MB  repository/current_working_project/splits/seed123/r_random_full_val.txt
+            reason: ^repository/current_working_project/(?!partA_analysis/|partC_preparation/)
+    0.04 MB  repository/current_working_project/splits/seed123/r_random_test.txt
+            reason: ^repository/current_working_project/(?!partA_analysis/|partC_preparation/)
+    0.19 MB  repository/current_working_project/splits/seed123/r_random_train.txt
+            reason: ^repository/current_working_project/(?!partA_analysis/|partC_preparation/)
+    0.04 MB  repository/current_working_project/splits/seed123/r_random_val.txt
+            reason: ^repository/current_working_project/(?!partA_analysis/|partC_preparation/)
+    0.00 MB  repository/current_working_project/splits/seed123/reserve.txt
+            reason: ^repository/current_working_project/(?!partA_analysis/|partC_preparation/)
+    0.00 MB  repository/current_working_project/splits/seed2024/eligible_test.txt
+            reason: ^repository/current_working_project/(?!partA_analysis/|partC_preparation/)
+    0.00 MB  repository/current_working_project/splits/seed2024/excluded_same_thread.txt
+            reason: ^repository/current_working_project/(?!partA_analysis/|partC_preparation/)
+    0.47 MB  repository/current_working_project/splits/seed2024/jury_blocks.json
+            reason: ^repository/current_working_project/(?!partA_analysis/|partC_preparation/)
+    0.00 MB  repository/current_working_project/splits/seed2024/manifest.json
+            reason: ^repository/current_working_project/(?!partA_analysis/|partC_preparation/)
+    0.04 MB  repository/current_working_project/splits/seed2024/r_clean_test.txt
+            reason: ^repository/current_working_project/(?!partA_analysis/|partC_preparation/)
+    0.19 MB  repository/current_working_project/splits/seed2024/r_clean_train.txt
+            reason: ^repository/current_working_project/(?!partA_analysis/|partC_preparation/)
+    0.04 MB  repository/current_working_project/splits/seed2024/r_clean_val.txt
+            reason: ^repository/current_working_project/(?!partA_analysis/|partC_preparation/)
+    0.00 MB  repository/current_working_project/splits/seed2024/r_overlap_injected.txt
+            reason: ^repository/current_working_project/(?!partA_analysis/|partC_preparation/)
+    0.00 MB  repository/current_working_project/splits/seed2024/r_overlap_removed.txt
+            reason: ^repository/current_working_project/(?!partA_analysis/|partC_preparation/)
+    0.19 MB  repository/current_working_project/splits/seed2024/r_overlap_train.txt
+            reason: ^repository/current_working_project/(?!partA_analysis/|partC_preparation/)
+    0.04 MB  repository/current_working_project/splits/seed2024/r_random_full_test.txt
+            reason: ^repository/current_working_project/(?!partA_analysis/|partC_preparation/)
+    0.20 MB  repository/current_working_project/splits/seed2024/r_random_full_train.txt
+            reason: ^repository/current_working_project/(?!partA_analysis/|partC_preparation/)
+    0.04 MB  repository/current_working_project/splits/seed2024/r_random_full_val.txt
+            reason: ^repository/current_working_project/(?!partA_analysis/|partC_preparation/)
+    0.04 MB  repository/current_working_project/splits/seed2024/r_random_test.txt
+            reason: ^repository/current_working_project/(?!partA_analysis/|partC_preparation/)
+    0.19 MB  repository/current_working_project/splits/seed2024/r_random_train.txt
+            reason: ^repository/current_working_project/(?!partA_analysis/|partC_preparation/)
+    0.04 MB  repository/current_working_project/splits/seed2024/r_random_val.txt
+            reason: ^repository/current_working_project/(?!partA_analysis/|partC_preparation/)
+    0.00 MB  repository/current_working_project/splits/seed2024/reserve.txt
+            reason: ^repository/current_working_project/(?!partA_analysis/|partC_preparation/)
+    0.00 MB  repository/current_working_project/splits/seed42/eligible_test.txt
+            reason: ^repository/current_working_project/(?!partA_analysis/|partC_preparation/)
+    0.00 MB  repository/current_working_project/splits/seed42/excluded_same_thread.txt
+            reason: ^repository/current_working_project/(?!partA_analysis/|partC_preparation/)
+    0.47 MB  repository/current_working_project/splits/seed42/jury_blocks.json
+            reason: ^repository/current_working_project/(?!partA_analysis/|partC_preparation/)
+    0.00 MB  repository/current_working_project/splits/seed42/manifest.json
+            reason: ^repository/current_working_project/(?!partA_analysis/|partC_preparation/)
+    0.04 MB  repository/current_working_project/splits/seed42/r_clean_test.txt
+            reason: ^repository/current_working_project/(?!partA_analysis/|partC_preparation/)
+    0.19 MB  repository/current_working_project/splits/seed42/r_clean_train.txt
+            reason: ^repository/current_working_project/(?!partA_analysis/|partC_preparation/)
+    0.04 MB  repository/current_working_project/splits/seed42/r_clean_val.txt
+            reason: ^repository/current_working_project/(?!partA_analysis/|partC_preparation/)
+    0.00 MB  repository/current_working_project/splits/seed42/r_overlap_injected.txt
+            reason: ^repository/current_working_project/(?!partA_analysis/|partC_preparation/)
+    0.00 MB  repository/current_working_project/splits/seed42/r_overlap_removed.txt
+            reason: ^repository/current_working_project/(?!partA_analysis/|partC_preparation/)
+    0.19 MB  repository/current_working_project/splits/seed42/r_overlap_train.txt
+            reason: ^repository/current_working_project/(?!partA_analysis/|partC_preparation/)
+    0.04 MB  repository/current_working_project/splits/seed42/r_random_full_test.txt
+            reason: ^repository/current_working_project/(?!partA_analysis/|partC_preparation/)
+    0.20 MB  repository/current_working_project/splits/seed42/r_random_full_train.txt
+            reason: ^repository/current_working_project/(?!partA_analysis/|partC_preparation/)
+    0.04 MB  repository/current_working_project/splits/seed42/r_random_full_val.txt
+            reason: ^repository/current_working_project/(?!partA_analysis/|partC_preparation/)
+    0.04 MB  repository/current_working_project/splits/seed42/r_random_test.txt
+            reason: ^repository/current_working_project/(?!partA_analysis/|partC_preparation/)
+    0.19 MB  repository/current_working_project/splits/seed42/r_random_train.txt
+            reason: ^repository/current_working_project/(?!partA_analysis/|partC_preparation/)
+    0.04 MB  repository/current_working_project/splits/seed42/r_random_val.txt
+            reason: ^repository/current_working_project/(?!partA_analysis/|partC_preparation/)
+    0.00 MB  repository/current_working_project/splits/seed42/reserve.txt
+            reason: ^repository/current_working_project/(?!partA_analysis/|partC_preparation/)
+    0.01 MB  repository/current_working_project/training_config.json
+            reason: ^repository/current_working_project/(?!partA_analysis/|partC_preparation/)
+    0.01 MB  repository/current_working_project/verify_splits.py
+            reason: ^repository/current_working_project/(?!partA_analysis/|partC_preparation/)
+    0.71 MB  repository/persistent_project/partB_evaluation/batch01_bert_r_clean_split42/bert__r_clean__split42__seed1/tokenizer/tokenizer.json
+            reason: tokenizer/(tokenizer\.json|vocab\.json|merges\.txt|tokenizer_config\.json|special_tokens_map\.json)$
+    0.00 MB  repository/persistent_project/partB_evaluation/batch01_bert_r_clean_split42/bert__r_clean__split42__seed1/tokenizer/tokenizer_config.json
+            reason: tokenizer/(tokenizer\.json|vocab\.json|merges\.txt|tokenizer_config\.json|special_tokens_map\.json)$
+    0.71 MB  repository/persistent_project/partB_evaluation/batch01_bert_r_clean_split42/bert__r_clean__split42__seed2/tokenizer/tokenizer.json
+            reason: tokenizer/(tokenizer\.json|vocab\.json|merges\.txt|tokenizer_config\.json|special_tokens_map\.json)$
+    0.00 MB  repository/persistent_project/partB_evaluation/batch01_bert_r_clean_split42/bert__r_clean__split42__seed2/tokenizer/tokenizer_config.json
+            reason: tokenizer/(tokenizer\.json|vocab\.json|merges\.txt|tokenizer_config\.json|special_tokens_map\.json)$
+    0.71 MB  repository/persistent_project/partB_evaluation/batch01_bert_r_clean_split42/bert__r_clean__split42__seed3/tokenizer/tokenizer.json
+            reason: tokenizer/(tokenizer\.json|vocab\.json|merges\.txt|tokenizer_config\.json|special_tokens_map\.json)$
+    0.00 MB  repository/persistent_project/partB_evaluation/batch01_bert_r_clean_split42/bert__r_clean__split42__seed3/tokenizer/tokenizer_config.json
+            reason: tokenizer/(tokenizer\.json|vocab\.json|merges\.txt|tokenizer_config\.json|special_tokens_map\.json)$
+    3.56 MB  repository/persistent_project/partB_evaluation/batch02_roberta_r_clean_split42/roberta__r_clean__split42__seed1/tokenizer/tokenizer.json
+            reason: tokenizer/(tokenizer\.json|vocab\.json|merges\.txt|tokenizer_config\.json|special_tokens_map\.json)$
+    0.00 MB  repository/persistent_project/partB_evaluation/batch02_roberta_r_clean_split42/roberta__r_clean__split42__seed1/tokenizer/tokenizer_config.json
+            reason: tokenizer/(tokenizer\.json|vocab\.json|merges\.txt|tokenizer_config\.json|special_tokens_map\.json)$
+    3.56 MB  repository/persistent_project/partB_evaluation/batch02_roberta_r_clean_split42/roberta__r_clean__split42__seed2/tokenizer/tokenizer.json
+            reason: tokenizer/(tokenizer\.json|vocab\.json|merges\.txt|tokenizer_config\.json|special_tokens_map\.json)$
+    0.00 MB  repository/persistent_project/partB_evaluation/batch02_roberta_r_clean_split42/roberta__r_clean__split42__seed2/tokenizer/tokenizer_config.json
+            reason: tokenizer/(tokenizer\.json|vocab\.json|merges\.txt|tokenizer_config\.json|special_tokens_map\.json)$
+    3.56 MB  repository/persistent_project/partB_evaluation/batch02_roberta_r_clean_split42/roberta__r_clean__split42__seed3/tokenizer/tokenizer.json
+            reason: tokenizer/(tokenizer\.json|vocab\.json|merges\.txt|tokenizer_config\.json|special_tokens_map\.json)$
+    0.00 MB  repository/persistent_project/partB_evaluation/batch02_roberta_r_clean_split42/roberta__r_clean__split42__seed3/tokenizer/tokenizer_config.json
+            reason: tokenizer/(tokenizer\.json|vocab\.json|merges\.txt|tokenizer_config\.json|special_tokens_map\.json)$
+    3.56 MB  repository/persistent_project/partB_evaluation/batch03_roberta_r_overlap_split42/roberta__r_overlap__split42__seed1/tokenizer/tokenizer.json
+            reason: tokenizer/(tokenizer\.json|vocab\.json|merges\.txt|tokenizer_config\.json|special_tokens_map\.json)$
+    0.00 MB  repository/persistent_project/partB_evaluation/batch03_roberta_r_overlap_split42/roberta__r_overlap__split42__seed1/tokenizer/tokenizer_config.json
+            reason: tokenizer/(tokenizer\.json|vocab\.json|merges\.txt|tokenizer_config\.json|special_tokens_map\.json)$
+    3.56 MB  repository/persistent_project/partB_evaluation/batch03_roberta_r_overlap_split42/roberta__r_overlap__split42__seed2/tokenizer/tokenizer.json
+            reason: tokenizer/(tokenizer\.json|vocab\.json|merges\.txt|tokenizer_config\.json|special_tokens_map\.json)$
+    0.00 MB  repository/persistent_project/partB_evaluation/batch03_roberta_r_overlap_split42/roberta__r_overlap__split42__seed2/tokenizer/tokenizer_config.json
+            reason: tokenizer/(tokenizer\.json|vocab\.json|merges\.txt|tokenizer_config\.json|special_tokens_map\.json)$
+    3.56 MB  repository/persistent_project/partB_evaluation/batch03_roberta_r_overlap_split42/roberta__r_overlap__split42__seed3/tokenizer/tokenizer.json
+            reason: tokenizer/(tokenizer\.json|vocab\.json|merges\.txt|tokenizer_config\.json|special_tokens_map\.json)$
+    0.00 MB  repository/persistent_project/partB_evaluation/batch03_roberta_r_overlap_split42/roberta__r_overlap__split42__seed3/tokenizer/tokenizer_config.json
+            reason: tokenizer/(tokenizer\.json|vocab\.json|merges\.txt|tokenizer_config\.json|special_tokens_map\.json)$
+    0.71 MB  repository/persistent_project/partB_evaluation/batch04_bert_complementary_split42/bert__complementary_J1__split42__seed1/tokenizer/tokenizer.json
+            reason: tokenizer/(tokenizer\.json|vocab\.json|merges\.txt|tokenizer_config\.json|special_tokens_map\.json)$
+    0.00 MB  repository/persistent_project/partB_evaluation/batch04_bert_complementary_split42/bert__complementary_J1__split42__seed1/tokenizer/tokenizer_config.json
+            reason: tokenizer/(tokenizer\.json|vocab\.json|merges\.txt|tokenizer_config\.json|special_tokens_map\.json)$
+    0.71 MB  repository/persistent_project/partB_evaluation/batch04_bert_complementary_split42/bert__complementary_J2__split42__seed1/tokenizer/tokenizer.json
+            reason: tokenizer/(tokenizer\.json|vocab\.json|merges\.txt|tokenizer_config\.json|special_tokens_map\.json)$
+    0.00 MB  repository/persistent_project/partB_evaluation/batch04_bert_complementary_split42/bert__complementary_J2__split42__seed1/tokenizer/tokenizer_config.json
+            reason: tokenizer/(tokenizer\.json|vocab\.json|merges\.txt|tokenizer_config\.json|special_tokens_map\.json)$
+    0.71 MB  repository/persistent_project/partB_evaluation/batch04_bert_complementary_split42/bert__complementary_J3__split42__seed1/tokenizer/tokenizer.json
+            reason: tokenizer/(tokenizer\.json|vocab\.json|merges\.txt|tokenizer_config\.json|special_tokens_map\.json)$
+    0.00 MB  repository/persistent_project/partB_evaluation/batch04_bert_complementary_split42/bert__complementary_J3__split42__seed1/tokenizer/tokenizer_config.json
+            reason: tokenizer/(tokenizer\.json|vocab\.json|merges\.txt|tokenizer_config\.json|special_tokens_map\.json)$
+    0.71 MB  repository/persistent_project/partB_evaluation/batch05_bert_disjoint_split42/bert__disjoint_A__split42__seed1/tokenizer/tokenizer.json
+            reason: tokenizer/(tokenizer\.json|vocab\.json|merges\.txt|tokenizer_config\.json|special_tokens_map\.json)$
+    0.00 MB  repository/persistent_project/partB_evaluation/batch05_bert_disjoint_split42/bert__disjoint_A__split42__seed1/tokenizer/tokenizer_config.json
+            reason: tokenizer/(tokenizer\.json|vocab\.json|merges\.txt|tokenizer_config\.json|special_tokens_map\.json)$
+    0.71 MB  repository/persistent_project/partB_evaluation/batch05_bert_disjoint_split42/bert__disjoint_B__split42__seed1/tokenizer/tokenizer.json
+            reason: tokenizer/(tokenizer\.json|vocab\.json|merges\.txt|tokenizer_config\.json|special_tokens_map\.json)$
+    0.00 MB  repository/persistent_project/partB_evaluation/batch05_bert_disjoint_split42/bert__disjoint_B__split42__seed1/tokenizer/tokenizer_config.json
+            reason: tokenizer/(tokenizer\.json|vocab\.json|merges\.txt|tokenizer_config\.json|special_tokens_map\.json)$
+    0.71 MB  repository/persistent_project/partB_evaluation/batch05_bert_disjoint_split42/bert__disjoint_C__split42__seed1/tokenizer/tokenizer.json
+            reason: tokenizer/(tokenizer\.json|vocab\.json|merges\.txt|tokenizer_config\.json|special_tokens_map\.json)$
+    0.00 MB  repository/persistent_project/partB_evaluation/batch05_bert_disjoint_split42/bert__disjoint_C__split42__seed1/tokenizer/tokenizer_config.json
+            reason: tokenizer/(tokenizer\.json|vocab\.json|merges\.txt|tokenizer_config\.json|special_tokens_map\.json)$
+    0.28 MB  repository/persistent_project/partB_evaluation/partB_blind_test.jsonl
+            reason: partB_evaluation/partB_blind_test\.jsonl$
+    0.47 MB  repository/persistent_project/partB_frozen/test.retained.jsonl
+            reason: partB_frozen/.*\.retained\.jsonl$
+    0.83 MB  repository/persistent_project/partB_frozen/train.retained.jsonl
+            reason: partB_frozen/.*\.retained\.jsonl$
+    0.13 MB  repository/persistent_project/partB_frozen/validation.retained.jsonl
+            reason: partB_frozen/.*\.retained\.jsonl$
+    0.49 MB  repository/persistent_project/partB_source/cardiff_tweet_emotion/test.jsonl
+            reason: partB_source/cardiff_tweet_emotion/.*\.jsonl$
+    1.02 MB  repository/persistent_project/partB_source/cardiff_tweet_emotion/train.jsonl
+            reason: partB_source/cardiff_tweet_emotion/.*\.jsonl$
+    0.13 MB  repository/persistent_project/partB_source/cardiff_tweet_emotion/validation.jsonl
+            reason: partB_source/cardiff_tweet_emotion/.*\.jsonl$
+    3.42 MB  repository/persistent_project/splits/corpus.parquet
+            reason: corpus text / author identifiers
+    0.63 MB  repository/persistent_project/splits/multilabel_reference.parquet
+            reason: corpus text / author identifiers
+    3.42 MB  repository/splits/corpus.parquet
+            reason: corpus text / author identifiers
+    0.63 MB  repository/splits/multilabel_reference.parquet
+            reason: corpus text / author identifiers
+
+    5.17 MB  git/emotion_project_all_refs.bundle
+            reason: the Git history tracks splits/corpus.parquet and
+            splits/multilabel_reference.parquet in the pre-training freeze
+            commit, so the bundle would redistribute corpus text and author
+            identifiers indirectly. Commit hashes, dates and messages are
+            preserved in git/COMMIT_HISTORY.txt.
+
+   0.467 MB  repository/persistent_project/splits/seed123/jury_blocks.json
+            reason: contains source author identifiers (Reddit usernames) in the
+            A/B/C block assignments. The block structure is regenerated by the
+            included construction pipeline from the rebuilt corpus; the published
+            results do not depend on these files, since the per-sample predictions
+            and the effective-training-identifier hashes are retained.
+   0.469 MB  repository/persistent_project/splits/seed2024/jury_blocks.json
+            reason: contains source author identifiers (Reddit usernames) in the
+            A/B/C block assignments. The block structure is regenerated by the
+            included construction pipeline from the rebuilt corpus; the published
+            results do not depend on these files, since the per-sample predictions
+            and the effective-training-identifier hashes are retained.
+   0.468 MB  repository/persistent_project/splits/seed42/jury_blocks.json
+            reason: contains source author identifiers (Reddit usernames) in the
+            A/B/C block assignments. The block structure is regenerated by the
+            included construction pipeline from the rebuilt corpus; the published
+            results do not depend on these files, since the per-sample predictions
+            and the effective-training-identifier hashes are retained.
+   0.467 MB  repository/splits/seed123/jury_blocks.json
+            reason: contains source author identifiers (Reddit usernames) in the
+            A/B/C block assignments. The block structure is regenerated by the
+            included construction pipeline from the rebuilt corpus; the published
+            results do not depend on these files, since the per-sample predictions
+            and the effective-training-identifier hashes are retained.
+   0.469 MB  repository/splits/seed2024/jury_blocks.json
+            reason: contains source author identifiers (Reddit usernames) in the
+            A/B/C block assignments. The block structure is regenerated by the
+            included construction pipeline from the rebuilt corpus; the published
+            results do not depend on these files, since the per-sample predictions
+            and the effective-training-identifier hashes are retained.
+   0.468 MB  repository/splits/seed42/jury_blocks.json
+            reason: contains source author identifiers (Reddit usernames) in the
+            A/B/C block assignments. The block structure is regenerated by the
+            included construction pipeline from the rebuilt corpus; the published
+            results do not depend on these files, since the per-sample predictions
+            and the effective-training-identifier hashes are retained.

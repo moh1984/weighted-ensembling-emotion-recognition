@@ -1,0 +1,70 @@
+{
+  "class_support": {
+    "anger": 39,
+    "disgust": 19,
+    "fear": 62,
+    "joy": 876,
+    "sadness": 83,
+    "surprise": 3
+  },
+  "completed_at_utc": "2026-09-01T04:04:50.890639+00:00",
+  "frozen_bindings": {
+    "blind_test_sha256": "d6920bfea38a1a445fa92e39310a1612e86cde30987a2e7494ce610636c5301a",
+    "checkpoint_manifest_sha256": "5c3e0ed6c0c310786c899e11b478da3e778a0fae19ceb8db7337d4e5b2e571c3",
+    "checkpoint_seal_sha256": "a6c92ad4ac1ef2d9745f8bcda0b5c75309bcee6d43954d93c9303dff4f95309d",
+    "evaluation_config_sha256": "1bbfc0b0f7611da9c68b6b9ca894e7dce4e80798b08ffdeec6e62aec91ce8d0a",
+    "gold_test_sha256": "b05b4d382d1c9a902a4c8a448ef863b1af97641d118405e7653ddfb329150d79"
+  },
+  "generated_files": {
+    "GOLD_OPENING_RECEIPT.json": "bc06063d0cc8638bde3c181df1f5d2e94c701b5e0e5d3ca2f228bfc8061af2b6",
+    "partB_bootstrap_ci_per_run.csv": "b7c29343e578cee8c93baa6d68c645778d13257960805f7c02c87c565c56538d",
+    "partB_confusion_matrices_long.csv": "1c7628b69f7b1a51a40cf3c86647acb0e42d9f5e8fdda817f1cbb2727267dc3f",
+    "partB_descriptive_family_summary.csv": "5faa19bd01813fd37325046b642edb506f24064b49b3cea9ec0d2ce73b546e83",
+    "partB_gold_binding_report.json": "11acb9bff41c60d0ddf2dab4a723f3e02f6e06b5cd445befba30749183a68233",
+    "partB_main_results_with_95CI.csv": "8a36279df71ed768b85515249a97e9bc440306c4d3ebbbe54cab69dfc476db6d",
+    "partB_per_class_metrics.csv": "b68642c3c629cf72e1a8f82f4519034e91304ef7a77328b9b1a9a6b39be60597",
+    "partB_point_metrics_per_run.csv": "d4feb81d8ab10d4e7f1e4f4e83bc7a484edb4699dfc30754ec9516076680c898",
+    "partB_prediction_distributions.csv": "38ea1aad28f064524a5adb532fd86164fcbca8f822da9bd6215cc31122591d00"
+  },
+  "inference_policy": {
+    "family_summaries": "DESCRIPTIVE_ONLY",
+    "hypothesis_tests": false,
+    "model_seeds_treated_as_independent_units": false,
+    "multiple_comparison_tests": false
+  },
+  "labels": [
+    "anger",
+    "disgust",
+    "fear",
+    "joy",
+    "sadness",
+    "surprise"
+  ],
+  "metrics": {
+    "per_class": [
+      "precision",
+      "recall",
+      "f1"
+    ],
+    "primary": "six_class_macro_f1",
+    "secondary": [
+      "accuracy",
+      "balanced_accuracy",
+      "weighted_f1"
+    ],
+    "sensitivity": "five_class_macro_f1_excluding_true_surprise_rows"
+  },
+  "n_locked_runs": 15,
+  "n_test": 1082,
+  "schema_version": "partB-final-evaluation-v1",
+  "scientific_role": "EXTERNAL_ROBUSTNESS_EVALUATION_ONLY",
+  "status": "COMPLETE",
+  "uncertainty": {
+    "common_resamples_across_models": true,
+    "confidence_level": 0.95,
+    "method": "stratified_percentile_bootstrap",
+    "replicates": 2000,
+    "seed": 20260831,
+    "stratification": "true_label"
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "design_status": "FROZEN_BEFORE_RETENTION_COUNTS",
+  "mapping": {
+    "anger": "anger",
+    "anticipation": null,
+    "disgust": "disgust",
+    "fear": "fear",
+    "joy": "joy",
+    "love": "joy",
+    "optimism": "joy",
+    "pessimism": null,
+    "sadness": "sadness",
+    "surprise": "surprise",
+    "trust": null
+  },
+  "notes": [
+    "Direct Ekman labels retain their corresponding target class.",
+    "love and optimism map to joy to maintain harmonization with the official GoEmotions Ekman mapping used in Part A.",
+    "anticipation, pessimism, and trust are left unmapped rather than assigned to an Ekman category post hoc.",
+    "The resulting Part-B subset is a conservative single-Ekman subset of the SemEval-derived multi-label corpus."
+  ],
+  "original_label_index": {
+    "anger": 0,
+    "anticipation": 1,
+    "disgust": 2,
+    "fear": 3,
+    "joy": 4,
+    "love": 5,
+    "optimism": 6,
+    "pessimism": 7,
+    "sadness": 8,
+    "surprise": 9,
+    "trust": 10
+  },
+  "retention_rule": {
+    "example_exclude_multi_ekman": "anger + sadness -> exclude",
+    "example_exclude_unmapped": "joy + trust -> exclude",
+    "example_keep": "joy + love -> joy",
+    "multiple_original_labels_mapping_to_same_ekman_category": "retain",
+    "require_all_active_original_labels_mapped": true,
+    "require_at_least_one_active_original_label": true,
+    "require_exactly_one_distinct_ekman_category_after_mapping": true
+  },
+  "source": {
+    "dataset_component": "tweet_emotion",
+    "repository": "cardiffnlp/super_tweeteval",
+    "revision": "a10ac3d27a3499e870b6371df64c14e5a656131a",
+    "source_file_sha256": {
+      "map.txt": "f9cbb526cdae36177442d022ba1c73d660480459fa6f6ed4c5c434a04f1f4168",
+      "test.jsonl": "26ea6a23eff402cb67e88580f895d324f77b6f1e6a37131bba40381a5cbc088a",
+      "train.jsonl": "1c4daa84eb1a2a672ef482a62afa43ff986fc2233e96e6b087c2ea9150e08f96",
+      "validation.jsonl": "3367700bd402a039d6e9fe7f5041939521be58f18dbf20d3f87d71d1d7fbbad4"
+    },
+    "source_type": "SemEval-2018-Task1-E-c-derived-access-mirror"
+  },
+  "target_taxonomy": [
+    "anger",
+    "disgust",
+    "fear",
+    "joy",
+    "sadness",
+    "surprise"
+  ],
+  "unmapped_labels": [
+    "anticipation",
+    "pessimism",
+    "trust"
+  ],
+  "version": "partB-ekman6-mapping-v1"
+}

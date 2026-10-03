@@ -1,0 +1,145 @@
+{
+  "aggregation": {
+    "control": "equal-weight soft voting",
+    "primary": "validation-weighted soft voting",
+    "sensitivities": [
+      "weighted hard voting",
+      "plain hard majority"
+    ]
+  },
+  "checkpoint_selection": {
+    "Combined-trained": "Combined validation macro-F1",
+    "Reddit-trained": "Reddit R_clean validation macro-F1",
+    "Twitter-trained": "Twitter validation macro-F1",
+    "test_information_used": false
+  },
+  "combined_rule": {
+    "augmentation": false,
+    "class_balancing": false,
+    "report_realized_source_and_class_composition": true,
+    "source_balancing": false
+  },
+  "cross_source_duplicate_policy": {
+    "audit_before_training": true,
+    "cross_partition_overlap": "fail closed if normalized duplicate spans train/validation/test boundaries",
+    "normalization": "lowercase; remove [NAME]/[RELIGION]; remove URLs; collapse non-alphanumeric",
+    "train_train_overlap": "report, do not silently delete"
+  },
+  "data_sources": {
+    "combined": "union of corresponding Reddit-derived and Twitter-derived partitions",
+    "reddit": "Part-A split42 R_clean frozen train/validation/test",
+    "twitter": "Part-B frozen retained train/validation/test"
+  },
+  "frozen_at_utc": "2026-09-01T06:19:23.998818+00:00",
+  "interpretation": {
+    "architecture_diversity_claim_allowed": false,
+    "corpus_diversity_claim_allowed_after_execution": true,
+    "cross_corpus_confound": "platform/source, annotation scheme, label harmonisation and preprocessing are not separable",
+    "partC_results_descriptive": true
+  },
+  "platform_jury": {
+    "backbone": "BERT",
+    "matched_seed_triplets": [
+      [
+        "T1",
+        "R1",
+        "C1"
+      ],
+      [
+        "T2",
+        "R2",
+        "C2"
+      ],
+      [
+        "T3",
+        "R3",
+        "C3"
+      ]
+    ],
+    "meaning": {
+      "C": "Combined Reddit-derived + Twitter-derived",
+      "R": "Reddit-derived R_clean",
+      "T": "Twitter-derived"
+    },
+    "members": [
+      "T",
+      "R",
+      "C"
+    ],
+    "model_seeds": [
+      1,
+      2,
+      3
+    ],
+    "sampling": {
+      "C": "sample without replacement from full Combined train",
+      "R": "sample without replacement from Reddit R_clean train",
+      "T": "full frozen Twitter training set",
+      "class_balanced": false,
+      "method": "deterministic SHA256 ranking of example identifiers",
+      "same_subset_reused_across_model_seeds": true,
+      "seed": 20260901,
+      "stratified": false
+    },
+    "size_target_reason": "full frozen Twitter-derived training set defines the size target",
+    "training_size_each": 1905
+  },
+  "platform_jury_primary_test_domain": "Reddit R_clean author-disjoint test",
+  "platform_jury_weights": {
+    "common_validation_domain": "Reddit R_clean validation",
+    "metric": "macro-F1",
+    "reason": "all T/R/C competence weights must be derived on the same evaluation domain",
+    "rule": "softmax(validation_macro_f1 / T)",
+    "temperature": 1.0
+  },
+  "run_grid": {
+    "full_baselines": [
+      "BERT Twitter full seed1",
+      "RoBERTa Twitter full seed1",
+      "BERT Combined full seed1",
+      "RoBERTa Combined full seed1"
+    ],
+    "platform_jury": {
+      "C": [
+        1,
+        2,
+        3
+      ],
+      "R": [
+        1,
+        2,
+        3
+      ],
+      "T": [
+        1,
+        2,
+        3
+      ]
+    },
+    "shared_run": "BERT Twitter full seed1 == Platform Jury T seed1",
+    "unique_runs": 12
+  },
+  "scope": {
+    "confirmatory_claim_allowed": false,
+    "holm_family_member": false,
+    "hypothesis_tests": false,
+    "partC_status": "exploratory_secondary"
+  },
+  "status": "FROZEN_IMPLEMENTATION_DECISIONS_BEFORE_PART_C_DATASET_BUILD_AND_MODEL_TRAINING",
+  "temporal_status": {
+    "partA_completed": true,
+    "partB_external_evaluation_completed": true,
+    "partC_dataset_sampling_performed": false,
+    "partC_model_performance_observed": false,
+    "partC_model_training_performed": false
+  },
+  "training_settings": "reuse frozen Part-A training configuration unless a dataset-interface adaptation is required; no hyperparameter tuning based on Part-C outcomes",
+  "upstream_hashes": {
+    "partA_manifest": "ca2955a568846fe669b0125c016ca945b2a05fc3e6241b02a7c454fa81d36341",
+    "partB_manifest": "dece660f6b8550a0335fc8fd48f0a7a9da68d2625470eb695a8a5bd3f1e536b2",
+    "partB_mapping": "06f74faf9eff689f644c367d9a44d4e5f057506de9e72f760fa62057c2f482dc",
+    "protocol_v7": "d3a3f5dfe5c12ab1b3c620dffc53c77bda8cb4e7df26eb3b5516085a5e968b48",
+    "training_config": "75eee2631e1a9d2e562d07cdca122e4f76a00387da7ac58d51a1a3bc2c16456c",
+    "upstream_bindings": "2f7b9127fee7c05dc1a5064e8c3261c280329266057eff0983aaca1a6be57225"
+  }
+}

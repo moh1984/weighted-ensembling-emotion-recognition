@@ -1,0 +1,11 @@
+Git commit history of the project
+=================================
+
+The full Git bundle is NOT included in this public release: the pre-training
+freeze commit tracks splits/corpus.parquet and splits/multilabel_reference.parquet,
+which carry corpus text and author identifiers, and this package does not
+redistribute those. The commit hashes, dates and messages below preserve the
+timeline evidence; the pre-training freeze is commit a07dbad6a803f4d85cd7f79ba0570fbe0079218e.
+
+hash	date	subject
+a07dbad6a803f4d85cd7f79ba0570fbe0079218e	2026-08-30 03:37:30 +0000	FROZEN before Part-A model training

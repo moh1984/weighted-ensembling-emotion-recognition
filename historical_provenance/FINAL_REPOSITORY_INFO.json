@@ -1,0 +1,63 @@
+{
+  "assembled_at_utc": "2026-09-02T05:04:13.725045+00:00",
+  "critical_hashes": {
+    "git_all_refs_bundle": "fbb905e2c719f2805ad290af67402a4624befa4dcd149ab24bec6c0d7e42d705",
+    "partA_checkpoint_archive": "32fcf084de1d762dfe3e6eabf1f00daf5f2419595e8a4ff2b673742697eb0da3",
+    "partA_checkpoint_checksums": "64148923cf64054870ea14bd9bd041ca2e99dfee50abf4a246183d28630c2192",
+    "partA_checkpoint_manifest": "6463453c42bd0c310a15fd6acdedbc5012eff021e67de69e08420f3903840b05",
+    "partA_dataset_manifest": "ca2955a568846fe669b0125c016ca945b2a05fc3e6241b02a7c454fa81d36341",
+    "partB_final_evaluation_zip": "f309209f14187820d61f34e91274d666f72c8e421f308acd265b2d5a7728897e",
+    "partC_analysis_freeze": "c828832207a54f375de378b65fb776f2670b24bbc70007abf8ac0d33ac9b32cd",
+    "partC_analysis_results_freeze": "200d78ef289f16e9d5dac6aba073d3826e338fcbfd1519e34e3f62531b960635",
+    "partC_final_results_freeze": "7220bd320310d3e795065e9cd73a93dde92eb663a57427856dd3267798e06215",
+    "partC_training_freeze": "46feb13652fa00380537875f51695715c3e3b9545355365338e81fb8ebc3ba69",
+    "partC_v2_freeze": "e82ca54cfab0be2a305af2fd27c2744581e6594b967769aefad9fada5b091dbc",
+    "protocol_v7": "d3a3f5dfe5c12ab1b3c620dffc53c77bda8cb4e7df26eb3b5516085a5e968b48"
+  },
+  "final_repository_file_count_including_manifest": 598,
+  "final_repository_manifest_entries": 597,
+  "final_repository_uncompressed_bytes": 120477906,
+  "notes": [
+    "Historical frozen artifacts are retained unchanged; new top-level README/manifest/info/verification files describe the assembled repository only.",
+    "The pre-Part-C checkpoint contains both working and persistent snapshots by design; they are retained for provenance rather than deduplicated.",
+    "Intermediate Part-C 3/12, 4/12, 8/12 and 12/12 checkpoint ZIPs are not duplicated because the final-results freeze contains the complete 12-run prediction/metadata set.",
+    "Completion update: embedded the exact Part-A 45-run prediction checkpoint (45 CSV + 45 metadata files) so Part-A H1/H2/H3/H4 are locally recomputable from retained per-sample predictions without the former external Kaggle mount.",
+    "The embedded Part-A checkpoint was verified against its 90-entry CHECKPOINT.sha256 and against the checkpoint hashes bound into the frozen Part-A analysis configuration.",
+    "Temporal provenance update: root README now documents git/emotion_project_all_refs.bundle; git bundle verification confirms a complete history containing frozen pre-training commit a07dbad6a803f4d85cd7f79ba0570fbe0079218e as HEAD/master."
+  ],
+  "partA_checkpoint_entry_counts": {
+    "checkpoint_control_files": 2,
+    "metadata_json": 45,
+    "partA_readme": 1,
+    "prediction_csv": 45
+  },
+  "partC_nested_freeze_entry_counts": {
+    "partC_analysis_freeze": 4,
+    "partC_analysis_results_freeze": 17,
+    "partC_final_results_freeze": 68,
+    "partC_frozen_v2": 31,
+    "partC_training_freeze": 10
+  },
+  "purpose": "Complete self-contained preservation package combining the verified pre-Part-C repository, the exact 45-run Part-A prediction checkpoint, final Part-B artifacts, and all final Part-C frozen data/results/analysis artifacts.",
+  "repository_name": "emotion_recognition_replication_repository_FINAL",
+  "source_archive_sha256": {
+    "partA_predictions_checkpoint45.zip": "32fcf084de1d762dfe3e6eabf1f00daf5f2419595e8a4ff2b673742697eb0da3",
+    "partC_analysis_freeze_bundle.zip": "ed68d0c3b4fae98439c2ad69a89687cfd10388fa3d296add2804b8841f85175b",
+    "partC_analysis_results_freeze_bundle.zip": "7369b6999c80b4354ccf16b824480b6281fb991ce7c0765ba6f75999c39f5500",
+    "partC_final_results_freeze_bundle.zip": "04fac37213043ddd6c5ce4469ad612d9d2e9721a480a1bad275e7feff1fd4ffe",
+    "partC_frozen_v2_bundle.zip": "0c2090c28d86031cad18d9ba3a550adc0233c0160ae449f08d785fa85c5afb6c",
+    "partC_training_freeze_bundle.zip": "61266e87ec4f2e88a436aaba97c6a216b0fefd2e971b2a14144d9e096a36315d",
+    "pre_partC_repository_checkpoint.zip": "729798ac6daa3dae9dd085b7c036f10b5dc21519b6fb87e84ebc065d4fbb3391"
+  },
+  "study_state": {
+    "architecture_diversity_phase2_executed": false,
+    "partA_completed": true,
+    "partA_prediction_checkpoint_embedded": true,
+    "partA_prediction_runs_embedded": 45,
+    "partB_external_evaluation_completed": true,
+    "partC_final_results_frozen": true,
+    "partC_frozen_analysis_completed": true,
+    "partC_status": "exploratory_secondary",
+    "partC_training_runs_completed": 12
+  }
+}

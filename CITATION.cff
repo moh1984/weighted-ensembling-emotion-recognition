@@ -1,0 +1,57 @@
+cff-version: 1.2.0
+message: "If you use these artifacts, please cite the accompanying article."
+title: "When Does Weighted Ensembling Help? A Leakage-Aware Evaluation of Transformer Juries for Emotion Recognition in Social Media Text — study artifacts"
+abstract: >-
+  Frozen protocol, split identifiers, per-sample predictions for all runs,
+  training and analysis configurations, code and hash manifests supporting the
+  article. Corpus text is not redistributed; the corpus and splits are rebuilt
+  from the original sources with the included build script and checked against
+  the published content hashes.
+type: dataset
+license: MIT
+authors:
+  - family-names: Alkhazaleh
+    given-names: Mohammad
+    affiliation: "Isra University, Amman, Jordan"
+    email: m.alkhazaleh@iu.edu.jo
+  - family-names: Baklizi
+    given-names: Mahmoud
+    affiliation: "University of Petra, Amman, Jordan"
+  - family-names: Zghoul
+    given-names: Musab
+    affiliation: "Isra University, Amman, Jordan"
+  - family-names: Atoum
+    given-names: Issa
+    affiliation: "Philadelphia University, Amman, Jordan"
+  - family-names: Qtaish
+    given-names: Osama
+    affiliation: "Isra University, Amman, Jordan"
+  - family-names: Alshawabkeh
+    given-names: Hamza
+    affiliation: "Isra University, Amman, Jordan"
+keywords:
+  - emotion recognition
+  - ensemble learning
+  - Condorcet jury theorem
+  - data leakage
+  - author-disjoint evaluation
+  - reproducibility
+  - GoEmotions
+preferred-citation:
+  type: article
+  title: "When Does Weighted Ensembling Help? A Leakage-Aware Evaluation of Transformer Juries for Emotion Recognition in Social Media Text"
+  journal: "International Journal of Online and Biomedical Engineering (iJOE)"
+  year: 2026
+  authors:
+    - family-names: Alkhazaleh
+      given-names: Mohammad
+    - family-names: Baklizi
+      given-names: Mahmoud
+    - family-names: Zghoul
+      given-names: Musab
+    - family-names: Atoum
+      given-names: Issa
+    - family-names: Qtaish
+      given-names: Osama
+    - family-names: Alshawabkeh
+      given-names: Hamza
