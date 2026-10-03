@@ -1,0 +1,109 @@
+{
+  "backbone": {
+    "repo": "google-bert/bert-base-uncased",
+    "revision_requested": "86b5e0934494bd15c9632b12f734a8a67f723594",
+    "revision_resolved": "86b5e0934494bd15c9632b12f734a8a67f723594"
+  },
+  "checkpoint_selection": {
+    "best_epoch": 3,
+    "difference_reconstructed_minus_original": 0.0,
+    "epoch_history": [
+      {
+        "elapsed_seconds": 198.8,
+        "epoch": 1,
+        "validation_macro_f1": 0.5979107578991146,
+        "validation_per_class_f1": {
+          "anger": 0.7023278850916295,
+          "disgust": 0.0,
+          "fear": 0.5680473372781065,
+          "joy": 0.906107257655219,
+          "sadness": 0.6767676767676768,
+          "surprise": 0.7342143906020558
+        }
+      },
+      {
+        "elapsed_seconds": 198.46,
+        "epoch": 2,
+        "validation_macro_f1": 0.6749966938932181,
+        "validation_per_class_f1": {
+          "anger": 0.7051070840197694,
+          "disgust": 0.3617021276595745,
+          "fear": 0.6470588235294118,
+          "joy": 0.906385824139084,
+          "sadness": 0.6901579586877278,
+          "surprise": 0.739568345323741
+        }
+      },
+      {
+        "elapsed_seconds": 198.73,
+        "epoch": 3,
+        "validation_macro_f1": 0.6941667172633612,
+        "validation_per_class_f1": {
+          "anger": 0.7118074986010072,
+          "disgust": 0.46938775510204084,
+          "fear": 0.6297872340425532,
+          "joy": 0.9069886073796973,
+          "sadness": 0.7022016222479722,
+          "surprise": 0.7448275862068966
+        }
+      },
+      {
+        "elapsed_seconds": 198.3,
+        "epoch": 4,
+        "validation_macro_f1": 0.6894210690303327,
+        "validation_per_class_f1": {
+          "anger": 0.7073307218802463,
+          "disgust": 0.45045045045045046,
+          "fear": 0.6355140186915887,
+          "joy": 0.9069130732375086,
+          "sadness": 0.6993318485523385,
+          "surprise": 0.736986301369863
+        }
+      }
+    ],
+    "metric": "macro_f1",
+    "original_archived_validation_macro_f1": 0.6941667172633612,
+    "reconstructed_validation_macro_f1": 0.6941667172633612,
+    "source": "PART_A_VALIDATION_ONLY"
+  },
+  "determinism_applied": {
+    "cudnn_benchmark": true,
+    "torch_use_deterministic_algorithms": false
+  },
+  "elapsed_seconds": 820.82,
+  "environment": {
+    "device": "Tesla T4",
+    "python": "3.12.13",
+    "torch": "2.10.0+cu128",
+    "transformers": "5.0.0"
+  },
+  "model": "bert",
+  "model_seed": 1,
+  "n_train": 16040,
+  "n_validation": 5157,
+  "original_partA_meta_sha256": "8e60d60a0996bc95550427be050715ccf1e7d65bd3b77bc665525e7b810bc9f9",
+  "partA_dataset_manifest_sha256": "ca2955a568846fe669b0125c016ca945b2a05fc3e6241b02a7c454fa81d36341",
+  "partA_training_config_sha256": "75eee2631e1a9d2e562d07cdca122e4f76a00387da7ac58d51a1a3bc2c16456c",
+  "partB": {
+    "blind_test_sha256": "d6920bfea38a1a445fa92e39310a1612e86cde30987a2e7494ce610636c5301a",
+    "dataset_manifest_sha256": "dece660f6b8550a0335fc8fd48f0a7a9da68d2625470eb695a8a5bd3f1e536b2",
+    "frozen_test_sha256": "b05b4d382d1c9a902a4c8a448ef863b1af97641d118405e7653ddfb329150d79",
+    "gold_targets_present_in_prediction_file": false,
+    "gold_targets_used_for_selection": false,
+    "gold_targets_used_for_training": false,
+    "n_predictions": 1082,
+    "text_loaded_only_after_model_checkpoint_fixed": true
+  },
+  "partB_metrics_computed": false,
+  "partB_prediction_file": "partB_predictions.csv",
+  "partB_prediction_file_sha256": "358eadc1a2cf5faf319ffc7a018539ac0dd262d592e55b745b80735717941bfa",
+  "reconstruction_type": "PROTOCOL_CONSISTENT_NOT_BITWISE_CLAIMED",
+  "regime": "complementary_J2",
+  "run_id": "bert__complementary_J2__split42__seed1",
+  "schema_version": "partB-reconstruction-run-v2",
+  "scientific_role": "EXTERNAL_ROBUSTNESS_EVALUATION_ONLY",
+  "split_seed": 42,
+  "status": "COMPLETE",
+  "train_file": "bert__complementary_J2__split42__seed1.effective_train.txt",
+  "train_index_sha256": "bc4508f3cf04ca24ce66f9f5d889f59bcbb96a2c1d739777569dd230c89f325d"
+}

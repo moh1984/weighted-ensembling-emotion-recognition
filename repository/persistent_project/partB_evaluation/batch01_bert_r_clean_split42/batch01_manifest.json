@@ -1,0 +1,56 @@
+{
+  "batch": 1,
+  "bindings": {
+    "partA_dataset_manifest_sha256": "ca2955a568846fe669b0125c016ca945b2a05fc3e6241b02a7c454fa81d36341",
+    "partA_training_config_sha256": "75eee2631e1a9d2e562d07cdca122e4f76a00387da7ac58d51a1a3bc2c16456c",
+    "partB_blind_test_sha256": "d6920bfea38a1a445fa92e39310a1612e86cde30987a2e7494ce610636c5301a",
+    "partB_dataset_manifest_sha256": "dece660f6b8550a0335fc8fd48f0a7a9da68d2625470eb695a8a5bd3f1e536b2",
+    "partB_evaluation_config_sha256": "1bbfc0b0f7611da9c68b6b9ca894e7dce4e80798b08ffdeec6e62aec91ce8d0a",
+    "partB_frozen_test_sha256": "b05b4d382d1c9a902a4c8a448ef863b1af97641d118405e7653ddfb329150d79"
+  },
+  "description": "BERT R_clean split42 seeds 1-3",
+  "n_runs": 3,
+  "partB_gold_in_prediction_files": false,
+  "partB_metrics_computed": false,
+  "partB_text_policy": "LOADED_ONLY_AFTER_EACH_MODEL_CHECKPOINT_FIXED",
+  "run_summaries": {
+    "bert__r_clean__split42__seed1": {
+      "best_epoch": 3,
+      "n_saved_weight_files": 1,
+      "original_validation_macro_f1": 0.7019164094781288,
+      "prediction_sha256": "c89c39fe75ed0ae039335121a6a953c132368b24935de83d1b316f45aaaeb50f",
+      "reconstructed_validation_macro_f1": 0.7019164094781288,
+      "reconstruction_meta_sha256": "70df5ec4e9e0acd511b3af8174842e27317d44744acca294d741ca83008cd2fb",
+      "run_seal_sha256": "cb20adcb06bb2449997a26e93ecca859e9e42f1ce14e4fce7c50b80073f1ba35",
+      "validation_difference": 0.0
+    },
+    "bert__r_clean__split42__seed2": {
+      "best_epoch": 3,
+      "n_saved_weight_files": 1,
+      "original_validation_macro_f1": 0.691154699481695,
+      "prediction_sha256": "113dcf60620235a1e861f3972d205f1c921e4bbce61cc8a4460ca5e58573952a",
+      "reconstructed_validation_macro_f1": 0.691154699481695,
+      "reconstruction_meta_sha256": "e1c08f49feb6d4cd2b8d129a0b171fed87afe72a3c652d9af275ac9f5e004737",
+      "run_seal_sha256": "7d31084bcba8107ab113de38ce93f5e8e386eb8aaaf24b2950b788b4f33606e0",
+      "validation_difference": 0.0
+    },
+    "bert__r_clean__split42__seed3": {
+      "best_epoch": 3,
+      "n_saved_weight_files": 1,
+      "original_validation_macro_f1": 0.7047559116764756,
+      "prediction_sha256": "01df9c9bc5505fe64d7bd410a4c0532c81048816bed7d55200b6b9f71f69ee07",
+      "reconstructed_validation_macro_f1": 0.7047559116764756,
+      "reconstruction_meta_sha256": "d80e8351dc6b5d13a90167aab3ba131ce9f7f509bac8898d7d13349bb3df1881",
+      "run_seal_sha256": "f977846bbb0654a0d644e3875d454f5ebef9602b198cd0e6a3539e0d39ea4362",
+      "validation_difference": 0.0
+    }
+  },
+  "runs": [
+    "bert__r_clean__split42__seed1",
+    "bert__r_clean__split42__seed2",
+    "bert__r_clean__split42__seed3"
+  ],
+  "schema_version": "partB-reconstruction-batch-v2",
+  "scientific_statement": "These are protocol-consistent reconstructions of the three locked BERT R_clean split42 configurations. Original model weights were unavailable, so byte-identical fitted-model reproduction is not claimed. For each run, the best checkpoint was fixed using Part-A validation only before Part-B text was loaded. No Part-B performance metric was computed during this batch.",
+  "status": "COMPLETE"
+}

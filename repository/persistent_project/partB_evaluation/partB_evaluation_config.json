@@ -1,0 +1,290 @@
+{
+  "interpretation_policy": {
+    "class_imbalance_note": "Accuracy is secondary because Part B is strongly dominated by Joy.",
+    "confirmatory_split": 42,
+    "hypothesis_testing": "NONE_FOR_PART_B_PRIMARY_EXTERNAL_EVALUATION",
+    "model_seed_testing": "NO_INFERENTIAL_TESTS_ACROSS_MODEL_SEEDS",
+    "multiple_comparison_testing": "NONE",
+    "replication_splits_used_for_primary_partB_evaluation": [],
+    "scientific_role": "EXTERNAL_ROBUSTNESS_EVALUATION_ONLY",
+    "selection_rule": "No model/configuration may be added, removed, or selected based on Part-B performance.",
+    "surprise_interpretation": "Per-class Surprise performance is descriptive only because test support is n=3."
+  },
+  "metric_protocol": {
+    "descriptive": {
+      "class_support": true,
+      "confusion_matrix": true,
+      "per_class_precision_recall_f1": true,
+      "prediction_distribution": true
+    },
+    "primary": {
+      "labels": [
+        "anger",
+        "disgust",
+        "fear",
+        "joy",
+        "sadness",
+        "surprise"
+      ],
+      "metric": "macro_f1_6class",
+      "note": "Primary external robustness metric. Surprise has only n=3 and therefore contributes substantial instability.",
+      "zero_division": 0
+    },
+    "secondary": [
+      {
+        "metric": "accuracy"
+      },
+      {
+        "metric": "balanced_accuracy"
+      },
+      {
+        "metric": "weighted_f1",
+        "zero_division": 0
+      }
+    ],
+    "sensitivity": {
+      "labels": [
+        "anger",
+        "disgust",
+        "fear",
+        "joy",
+        "sadness"
+      ],
+      "metric": "macro_f1_5class_excluding_surprise",
+      "reason": "Part-B test contains only three Surprise examples.",
+      "status": "PRESPECIFIED_SUPPORT_SENSITIVITY",
+      "zero_division": 0
+    },
+    "uncertainty": {
+      "confidence_level": 0.95,
+      "method": "stratified_nonparametric_bootstrap",
+      "note": "Intervals are descriptive external-evaluation uncertainty intervals. Surprise remains weakly identified because n=3.",
+      "replicates": 2000,
+      "seed": 20260831,
+      "stratify_by": "true_label"
+    }
+  },
+  "model_set": {
+    "locked_runs": [
+      "bert__r_clean__split42__seed1",
+      "bert__r_clean__split42__seed2",
+      "bert__r_clean__split42__seed3",
+      "roberta__r_clean__split42__seed1",
+      "roberta__r_clean__split42__seed2",
+      "roberta__r_clean__split42__seed3",
+      "roberta__r_overlap__split42__seed1",
+      "roberta__r_overlap__split42__seed2",
+      "roberta__r_overlap__split42__seed3",
+      "bert__complementary_J1__split42__seed1",
+      "bert__complementary_J2__split42__seed1",
+      "bert__complementary_J3__split42__seed1",
+      "bert__disjoint_A__split42__seed1",
+      "bert__disjoint_B__split42__seed1",
+      "bert__disjoint_C__split42__seed1"
+    ],
+    "n_locked_runs": 15,
+    "original_partA_metadata": {
+      "bert__complementary_J1__split42__seed1": {
+        "backbone_repo": "google-bert/bert-base-uncased",
+        "backbone_revision_requested": "86b5e0934494bd15c9632b12f734a8a67f723594",
+        "backbone_revision_resolved": "86b5e0934494bd15c9632b12f734a8a67f723594",
+        "model": "bert",
+        "model_seed": 1,
+        "n_train": 16043,
+        "regime": "complementary_J1",
+        "validation_macro_f1": 0.6907845594401025
+      },
+      "bert__complementary_J2__split42__seed1": {
+        "backbone_repo": "google-bert/bert-base-uncased",
+        "backbone_revision_requested": "86b5e0934494bd15c9632b12f734a8a67f723594",
+        "backbone_revision_resolved": "86b5e0934494bd15c9632b12f734a8a67f723594",
+        "model": "bert",
+        "model_seed": 1,
+        "n_train": 16040,
+        "regime": "complementary_J2",
+        "validation_macro_f1": 0.6941667172633612
+      },
+      "bert__complementary_J3__split42__seed1": {
+        "backbone_repo": "google-bert/bert-base-uncased",
+        "backbone_revision_requested": "86b5e0934494bd15c9632b12f734a8a67f723594",
+        "backbone_revision_resolved": "86b5e0934494bd15c9632b12f734a8a67f723594",
+        "model": "bert",
+        "model_seed": 1,
+        "n_train": 16043,
+        "regime": "complementary_J3",
+        "validation_macro_f1": 0.6964914916369215
+      },
+      "bert__disjoint_A__split42__seed1": {
+        "backbone_repo": "google-bert/bert-base-uncased",
+        "backbone_revision_requested": "86b5e0934494bd15c9632b12f734a8a67f723594",
+        "backbone_revision_resolved": "86b5e0934494bd15c9632b12f734a8a67f723594",
+        "model": "bert",
+        "model_seed": 1,
+        "n_train": 8020,
+        "regime": "disjoint_A",
+        "validation_macro_f1": 0.6575248251530847
+      },
+      "bert__disjoint_B__split42__seed1": {
+        "backbone_repo": "google-bert/bert-base-uncased",
+        "backbone_revision_requested": "86b5e0934494bd15c9632b12f734a8a67f723594",
+        "backbone_revision_resolved": "86b5e0934494bd15c9632b12f734a8a67f723594",
+        "model": "bert",
+        "model_seed": 1,
+        "n_train": 8023,
+        "regime": "disjoint_B",
+        "validation_macro_f1": 0.6598384069175559
+      },
+      "bert__disjoint_C__split42__seed1": {
+        "backbone_repo": "google-bert/bert-base-uncased",
+        "backbone_revision_requested": "86b5e0934494bd15c9632b12f734a8a67f723594",
+        "backbone_revision_resolved": "86b5e0934494bd15c9632b12f734a8a67f723594",
+        "model": "bert",
+        "model_seed": 1,
+        "n_train": 8020,
+        "regime": "disjoint_C",
+        "validation_macro_f1": 0.6684356004628501
+      },
+      "bert__r_clean__split42__seed1": {
+        "backbone_repo": "google-bert/bert-base-uncased",
+        "backbone_revision_requested": "86b5e0934494bd15c9632b12f734a8a67f723594",
+        "backbone_revision_resolved": "86b5e0934494bd15c9632b12f734a8a67f723594",
+        "model": "bert",
+        "model_seed": 1,
+        "n_train": 24063,
+        "regime": "r_clean",
+        "validation_macro_f1": 0.7019164094781288
+      },
+      "bert__r_clean__split42__seed2": {
+        "backbone_repo": "google-bert/bert-base-uncased",
+        "backbone_revision_requested": "86b5e0934494bd15c9632b12f734a8a67f723594",
+        "backbone_revision_resolved": "86b5e0934494bd15c9632b12f734a8a67f723594",
+        "model": "bert",
+        "model_seed": 2,
+        "n_train": 24063,
+        "regime": "r_clean",
+        "validation_macro_f1": 0.691154699481695
+      },
+      "bert__r_clean__split42__seed3": {
+        "backbone_repo": "google-bert/bert-base-uncased",
+        "backbone_revision_requested": "86b5e0934494bd15c9632b12f734a8a67f723594",
+        "backbone_revision_resolved": "86b5e0934494bd15c9632b12f734a8a67f723594",
+        "model": "bert",
+        "model_seed": 3,
+        "n_train": 24063,
+        "regime": "r_clean",
+        "validation_macro_f1": 0.7047559116764756
+      },
+      "roberta__r_clean__split42__seed1": {
+        "backbone_repo": "FacebookAI/roberta-base",
+        "backbone_revision_requested": "e2da8e2f811d1448a5b465c236feacd80ffbac7b",
+        "backbone_revision_resolved": "e2da8e2f811d1448a5b465c236feacd80ffbac7b",
+        "model": "roberta",
+        "model_seed": 1,
+        "n_train": 24063,
+        "regime": "r_clean",
+        "validation_macro_f1": 0.6984238675219093
+      },
+      "roberta__r_clean__split42__seed2": {
+        "backbone_repo": "FacebookAI/roberta-base",
+        "backbone_revision_requested": "e2da8e2f811d1448a5b465c236feacd80ffbac7b",
+        "backbone_revision_resolved": "e2da8e2f811d1448a5b465c236feacd80ffbac7b",
+        "model": "roberta",
+        "model_seed": 2,
+        "n_train": 24063,
+        "regime": "r_clean",
+        "validation_macro_f1": 0.7005387824611292
+      },
+      "roberta__r_clean__split42__seed3": {
+        "backbone_repo": "FacebookAI/roberta-base",
+        "backbone_revision_requested": "e2da8e2f811d1448a5b465c236feacd80ffbac7b",
+        "backbone_revision_resolved": "e2da8e2f811d1448a5b465c236feacd80ffbac7b",
+        "model": "roberta",
+        "model_seed": 3,
+        "n_train": 24063,
+        "regime": "r_clean",
+        "validation_macro_f1": 0.6905846173010445
+      },
+      "roberta__r_overlap__split42__seed1": {
+        "backbone_repo": "FacebookAI/roberta-base",
+        "backbone_revision_requested": "e2da8e2f811d1448a5b465c236feacd80ffbac7b",
+        "backbone_revision_resolved": "e2da8e2f811d1448a5b465c236feacd80ffbac7b",
+        "model": "roberta",
+        "model_seed": 1,
+        "n_train": 24063,
+        "regime": "r_overlap",
+        "validation_macro_f1": 0.6973216636875401
+      },
+      "roberta__r_overlap__split42__seed2": {
+        "backbone_repo": "FacebookAI/roberta-base",
+        "backbone_revision_requested": "e2da8e2f811d1448a5b465c236feacd80ffbac7b",
+        "backbone_revision_resolved": "e2da8e2f811d1448a5b465c236feacd80ffbac7b",
+        "model": "roberta",
+        "model_seed": 2,
+        "n_train": 24063,
+        "regime": "r_overlap",
+        "validation_macro_f1": 0.6913461131109212
+      },
+      "roberta__r_overlap__split42__seed3": {
+        "backbone_repo": "FacebookAI/roberta-base",
+        "backbone_revision_requested": "e2da8e2f811d1448a5b465c236feacd80ffbac7b",
+        "backbone_revision_resolved": "e2da8e2f811d1448a5b465c236feacd80ffbac7b",
+        "model": "roberta",
+        "model_seed": 3,
+        "n_train": 24063,
+        "regime": "r_overlap",
+        "validation_macro_f1": 0.7001890974552962
+      }
+    },
+    "selection_basis": "All 15 configurations belonging to the pre-specified Part-A confirmatory split42; no Part-B performance used."
+  },
+  "model_training_performed_in_this_step": false,
+  "partA_binding": {
+    "analysis_config_sha256": "3751576124daa427dec2890ed77abf87eb8c347b857649122f253eaaf07cfc8f",
+    "checkpoint_checksum_file_sha256": "64148923cf64054870ea14bd9bd041ca2e99dfee50abf4a246183d28630c2192",
+    "checkpoint_manifest_sha256": "6463453c42bd0c310a15fd6acdedbc5012eff021e67de69e08420f3903840b05",
+    "dataset_manifest_sha256": "ca2955a568846fe669b0125c016ca945b2a05fc3e6241b02a7c454fa81d36341",
+    "run_experiments_sha256": "b1768c3cce420c8ef6ee5d53db6584c836fa54f0288cef0de30ae83bed9f146b",
+    "training_config_sha256": "75eee2631e1a9d2e562d07cdca122e4f76a00387da7ac58d51a1a3bc2c16456c"
+  },
+  "partB_binding": {
+    "dataset_manifest": "/kaggle/working/emotion_project/partB_frozen/partB_dataset_manifest.json",
+    "dataset_manifest_sha256": "dece660f6b8550a0335fc8fd48f0a7a9da68d2625470eb695a8a5bd3f1e536b2",
+    "freeze_seal_sha256": "56fa2d58d0296391f424a5a34aebe3c59264077cd585d424ba23402e215187a7",
+    "target_taxonomy": [
+      "anger",
+      "disgust",
+      "fear",
+      "joy",
+      "sadness",
+      "surprise"
+    ],
+    "test_file": "test.retained.jsonl",
+    "test_n": 1082
+  },
+  "partB_performance_observed": false,
+  "reconstruction_policy": {
+    "epoch_selection_source": "PART_A_VALIDATION_ONLY",
+    "external_inference_split": "partB_frozen/test.retained.jsonl",
+    "model_seed_interpretation": "Computational variability only; model seeds are not independent statistical units.",
+    "partA_training_only": true,
+    "partB_augmentation_allowed": false,
+    "partB_hyperparameter_tuning_allowed": false,
+    "partB_labels_may_be_used_during_training": false,
+    "partB_model_selection_allowed": false,
+    "partB_resampling_for_training_allowed": false,
+    "partB_text_may_be_loaded_before_model_is_fixed": false,
+    "partB_threshold_selection_allowed": false,
+    "partB_training_allowed": false,
+    "partB_validation_allowed": false,
+    "preserve_backbone": true,
+    "preserve_model_seed": true,
+    "preserve_partA_training_data": true,
+    "preserve_regime": true,
+    "preserve_training_config": true,
+    "reason": "The final Part-A checkpoint45 archive contains predictions and metadata but does not contain model-weight checkpoints.",
+    "required_split_seed": 42,
+    "status": "PROTOCOL_CONSISTENT_RECONSTRUCTION_REQUIRED"
+  },
+  "schema_version": "partB-external-evaluation-v1",
+  "status": "FROZEN_BEFORE_ANY_PARTB_MODEL_PREDICTION"
+}

@@ -1,0 +1,109 @@
+{
+  "backbone": {
+    "repo": "google-bert/bert-base-uncased",
+    "revision_requested": "86b5e0934494bd15c9632b12f734a8a67f723594",
+    "revision_resolved": "86b5e0934494bd15c9632b12f734a8a67f723594"
+  },
+  "checkpoint_selection": {
+    "best_epoch": 3,
+    "difference_reconstructed_minus_original": 0.0,
+    "epoch_history": [
+      {
+        "elapsed_seconds": 191.19,
+        "epoch": 1,
+        "validation_macro_f1": 0.6118749392255345,
+        "validation_per_class_f1": {
+          "anger": 0.6579881656804734,
+          "disgust": 0.11764705882352941,
+          "fear": 0.6067415730337079,
+          "joy": 0.9061543692621558,
+          "sadness": 0.6588235294117647,
+          "surprise": 0.7238949391415759
+        }
+      },
+      {
+        "elapsed_seconds": 198.4,
+        "epoch": 2,
+        "validation_macro_f1": 0.6869498951672669,
+        "validation_per_class_f1": {
+          "anger": 0.7161290322580646,
+          "disgust": 0.425531914893617,
+          "fear": 0.6439024390243903,
+          "joy": 0.9080459770114943,
+          "sadness": 0.7005405405405405,
+          "surprise": 0.7275494672754946
+        }
+      },
+      {
+        "elapsed_seconds": 198.61,
+        "epoch": 3,
+        "validation_macro_f1": 0.6907845594401025,
+        "validation_per_class_f1": {
+          "anger": 0.7038216560509554,
+          "disgust": 0.45454545454545453,
+          "fear": 0.6439024390243903,
+          "joy": 0.9089341152121421,
+          "sadness": 0.6974595842956121,
+          "surprise": 0.7360441075120606
+        }
+      },
+      {
+        "elapsed_seconds": 198.59,
+        "epoch": 4,
+        "validation_macro_f1": 0.6855150154470149,
+        "validation_per_class_f1": {
+          "anger": 0.7051835853131749,
+          "disgust": 0.44642857142857145,
+          "fear": 0.6346153846153846,
+          "joy": 0.9057698873335609,
+          "sadness": 0.6948356807511737,
+          "surprise": 0.7262569832402235
+        }
+      }
+    ],
+    "metric": "macro_f1",
+    "original_archived_validation_macro_f1": 0.6907845594401025,
+    "reconstructed_validation_macro_f1": 0.6907845594401025,
+    "source": "PART_A_VALIDATION_ONLY"
+  },
+  "determinism_applied": {
+    "cudnn_benchmark": true,
+    "torch_use_deterministic_algorithms": false
+  },
+  "elapsed_seconds": 813.44,
+  "environment": {
+    "device": "Tesla T4",
+    "python": "3.12.13",
+    "torch": "2.10.0+cu128",
+    "transformers": "5.0.0"
+  },
+  "model": "bert",
+  "model_seed": 1,
+  "n_train": 16043,
+  "n_validation": 5157,
+  "original_partA_meta_sha256": "90d0afc94ef8663f70133cd3403681369633f8360dd118f8a37b7aefc55c7e25",
+  "partA_dataset_manifest_sha256": "ca2955a568846fe669b0125c016ca945b2a05fc3e6241b02a7c454fa81d36341",
+  "partA_training_config_sha256": "75eee2631e1a9d2e562d07cdca122e4f76a00387da7ac58d51a1a3bc2c16456c",
+  "partB": {
+    "blind_test_sha256": "d6920bfea38a1a445fa92e39310a1612e86cde30987a2e7494ce610636c5301a",
+    "dataset_manifest_sha256": "dece660f6b8550a0335fc8fd48f0a7a9da68d2625470eb695a8a5bd3f1e536b2",
+    "frozen_test_sha256": "b05b4d382d1c9a902a4c8a448ef863b1af97641d118405e7653ddfb329150d79",
+    "gold_targets_present_in_prediction_file": false,
+    "gold_targets_used_for_selection": false,
+    "gold_targets_used_for_training": false,
+    "n_predictions": 1082,
+    "text_loaded_only_after_model_checkpoint_fixed": true
+  },
+  "partB_metrics_computed": false,
+  "partB_prediction_file": "partB_predictions.csv",
+  "partB_prediction_file_sha256": "27a44ef239645561e45adf04e74f75c88df53ad9b866f1c0512392a7f140682e",
+  "reconstruction_type": "PROTOCOL_CONSISTENT_NOT_BITWISE_CLAIMED",
+  "regime": "complementary_J1",
+  "run_id": "bert__complementary_J1__split42__seed1",
+  "schema_version": "partB-reconstruction-run-v2",
+  "scientific_role": "EXTERNAL_ROBUSTNESS_EVALUATION_ONLY",
+  "split_seed": 42,
+  "status": "COMPLETE",
+  "train_file": "bert__complementary_J1__split42__seed1.effective_train.txt",
+  "train_index_sha256": "f5eb120646d51f344c07f7d383a058f467e2b493d24927b2a8659b4a303b2488"
+}

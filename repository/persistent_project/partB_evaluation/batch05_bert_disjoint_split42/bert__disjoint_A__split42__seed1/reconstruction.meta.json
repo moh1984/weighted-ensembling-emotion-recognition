@@ -1,0 +1,130 @@
+{
+  "archived_effective_train_ids_sha256": "caeb7540edad995116295dd211b9f7c48e9f35b115bf060765b189c1e364ce0f",
+  "backbone": {
+    "repo": "google-bert/bert-base-uncased",
+    "revision_requested": "86b5e0934494bd15c9632b12f734a8a67f723594",
+    "revision_resolved": "86b5e0934494bd15c9632b12f734a8a67f723594"
+  },
+  "base_train_file": "r_clean_train.txt",
+  "base_train_file_sha256": "7050a6387096e70127c76cafb0381df2958d5b1a8bec54f9e8adf25d8a45b48e",
+  "checkpoint_selection": {
+    "best_epoch": 4,
+    "difference_reconstructed_minus_original": 0.0,
+    "early_stopping_patience": 2,
+    "epoch_history": [
+      {
+        "elapsed_seconds": 109.31,
+        "epoch": 1,
+        "validation_macro_f1": 0.4836797283080135,
+        "validation_per_class_f1": {
+          "anger": 0.6626806178375685,
+          "disgust": 0.0,
+          "fear": 0.0,
+          "joy": 0.9009352268791133,
+          "sadness": 0.6082365364308342,
+          "surprise": 0.730225988700565
+        }
+      },
+      {
+        "elapsed_seconds": 109.29,
+        "epoch": 2,
+        "validation_macro_f1": 0.5776556119683278,
+        "validation_per_class_f1": {
+          "anger": 0.6688524590163935,
+          "disgust": 0.0,
+          "fear": 0.5066666666666667,
+          "joy": 0.8968018463567425,
+          "sadness": 0.6641509433962264,
+          "surprise": 0.7294617563739377
+        }
+      },
+      {
+        "elapsed_seconds": 109.1,
+        "epoch": 3,
+        "validation_macro_f1": 0.6489786290397599,
+        "validation_per_class_f1": {
+          "anger": 0.6861702127659575,
+          "disgust": 0.2988505747126437,
+          "fear": 0.6105263157894737,
+          "joy": 0.9032369742080665,
+          "sadness": 0.6643437862950058,
+          "surprise": 0.7307439104674127
+        }
+      },
+      {
+        "elapsed_seconds": 109.11,
+        "epoch": 4,
+        "validation_macro_f1": 0.6575248251530847,
+        "validation_per_class_f1": {
+          "anger": 0.6873661670235546,
+          "disgust": 0.35051546391752575,
+          "fear": 0.6217616580310881,
+          "joy": 0.9032699880157508,
+          "sadness": 0.6595238095238095,
+          "surprise": 0.7227118644067797
+        }
+      }
+    ],
+    "metric": "macro_f1",
+    "original_archived_validation_macro_f1": 0.6575248251530847,
+    "reconstructed_validation_macro_f1": 0.6575248251530847,
+    "selection_mode": "max",
+    "source": "PART_A_VALIDATION_ONLY"
+  },
+  "determinism_applied": {
+    "cudnn_benchmark": true,
+    "torch_use_deterministic_algorithms": false
+  },
+  "disjoint_block": "A",
+  "effective_train_file": "bert__disjoint_A__split42__seed1.effective_train.txt",
+  "effective_train_ids_sha256": "caeb7540edad995116295dd211b9f7c48e9f35b115bf060765b189c1e364ce0f",
+  "elapsed_seconds": 464.85,
+  "environment": {
+    "device": "Tesla T4",
+    "numpy": "2.0.2",
+    "pandas": "2.3.3",
+    "python": "3.12.13",
+    "torch": "2.10.0+cu128",
+    "transformers": "5.0.0"
+  },
+  "model": "bert",
+  "model_seed": 1,
+  "n_train": 8020,
+  "n_validation": 5157,
+  "partA": {
+    "dataset_manifest_sha256": "ca2955a568846fe669b0125c016ca945b2a05fc3e6241b02a7c454fa81d36341",
+    "jury_blocks_sha256": "1d62b72b3fee975f02e7f558f76c05ff31cbf523ed9feb6c9e2540c178d43152",
+    "original_metadata_sha256": "41d8d41f2d1b475cdda8cc223edd75b9930fbfa42af5de583654aa8fb81dc3bb",
+    "training_config_sha256": "75eee2631e1a9d2e562d07cdca122e4f76a00387da7ac58d51a1a3bc2c16456c"
+  },
+  "partB": {
+    "blind_test_sha256": "d6920bfea38a1a445fa92e39310a1612e86cde30987a2e7494ce610636c5301a",
+    "dataset_manifest_sha256": "dece660f6b8550a0335fc8fd48f0a7a9da68d2625470eb695a8a5bd3f1e536b2",
+    "frozen_test_sha256": "b05b4d382d1c9a902a4c8a448ef863b1af97641d118405e7653ddfb329150d79",
+    "gold_targets_present_in_prediction_file": false,
+    "gold_targets_used_for_selection": false,
+    "gold_targets_used_for_training": false,
+    "gold_targets_used_for_tuning": false,
+    "n_predictions": 1082,
+    "text_loaded_only_after_model_checkpoint_fixed": true
+  },
+  "partB_metrics_computed": false,
+  "partB_prediction_file": "partB_predictions.csv",
+  "partB_prediction_file_sha256": "318cb1955343855af08695d29b9bd382d52cbbcdee7b4a8b8b4240c4ae29f887",
+  "reconstruction_type": "PROTOCOL_CONSISTENT_NOT_BITWISE_CLAIMED",
+  "regime": "disjoint_A",
+  "run_id": "bert__disjoint_A__split42__seed1",
+  "saved_model_artifacts": {
+    "model/config.json": "22a68e388ae5b749d2fa2434888dfe767904440c399eba934479aaf704190c28",
+    "model/model.safetensors": "a88735fb9166146ecae7f9b7255d2f0ff524b7ef553fa6833219ee4621e8ca18"
+  },
+  "saved_tokenizer_artifacts": {
+    "tokenizer/tokenizer.json": "d241a60d5e8f04cc1b2b3e9ef7a4921b27bf526d9f6050ab90f9267a1f9e5c66",
+    "tokenizer/tokenizer_config.json": "797ed9ba72b500001971b827b0040b8743def8ec38f9cd4cda4c4945734d3596"
+  },
+  "schema_version": "partB-reconstruction-run-v3",
+  "scientific_role": "EXTERNAL_ROBUSTNESS_EVALUATION_ONLY",
+  "split_seed": 42,
+  "status": "COMPLETE",
+  "uses_author_blocks": true
+}

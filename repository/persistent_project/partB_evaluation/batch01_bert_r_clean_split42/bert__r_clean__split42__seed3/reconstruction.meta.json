@@ -1,0 +1,133 @@
+{
+  "attempt_policy": "Protocol-consistent reconstruction of the locked run. No retries may be selected using Part-B performance.",
+  "backbone": {
+    "repo": "google-bert/bert-base-uncased",
+    "revision_requested": "86b5e0934494bd15c9632b12f734a8a67f723594",
+    "revision_resolved": "86b5e0934494bd15c9632b12f734a8a67f723594"
+  },
+  "checkpoint_selection": {
+    "best_epoch": 3,
+    "difference_reconstructed_minus_original": 0.0,
+    "early_stopping_patience": 2,
+    "epoch_history": [
+      {
+        "elapsed_seconds": 287.78,
+        "epoch": 1,
+        "validation_macro_f1": 0.693405238573758,
+        "validation_per_class_f1": {
+          "anger": 0.7111853088480802,
+          "disgust": 0.42718446601941745,
+          "fear": 0.639344262295082,
+          "joy": 0.9056858444406951,
+          "sadness": 0.718078381795196,
+          "surprise": 0.7589531680440771
+        }
+      },
+      {
+        "elapsed_seconds": 287.42,
+        "epoch": 2,
+        "validation_macro_f1": 0.6903263501510323,
+        "validation_per_class_f1": {
+          "anger": 0.7160356347438753,
+          "disgust": 0.42857142857142855,
+          "fear": 0.6161616161616161,
+          "joy": 0.9129540781357094,
+          "sadness": 0.7057522123893806,
+          "surprise": 0.7624831309041835
+        }
+      },
+      {
+        "elapsed_seconds": 287.03,
+        "epoch": 3,
+        "validation_macro_f1": 0.7047559116764756,
+        "validation_per_class_f1": {
+          "anger": 0.7098214285714286,
+          "disgust": 0.4897959183673469,
+          "fear": 0.6605504587155964,
+          "joy": 0.9098120365580272,
+          "sadness": 0.7103448275862069,
+          "surprise": 0.7482108002602472
+        }
+      },
+      {
+        "elapsed_seconds": 287.46,
+        "epoch": 4,
+        "validation_macro_f1": 0.6934335228274625,
+        "validation_per_class_f1": {
+          "anger": 0.712882096069869,
+          "disgust": 0.45045045045045046,
+          "fear": 0.6325581395348837,
+          "joy": 0.9103353867214237,
+          "sadness": 0.7126168224299065,
+          "surprise": 0.7417582417582418
+        }
+      }
+    ],
+    "metric": "macro_f1",
+    "original_archived_validation_macro_f1": 0.7047559116764756,
+    "reconstructed_validation_macro_f1": 0.7047559116764756,
+    "selection_mode": "max",
+    "source": "PART_A_VALIDATION_ONLY"
+  },
+  "determinism_applied": {
+    "cudnn_benchmark": true,
+    "torch_use_deterministic_algorithms": false
+  },
+  "elapsed_seconds": 1177.03,
+  "environment": {
+    "device": "Tesla T4",
+    "numpy": "2.0.2",
+    "pandas": "2.3.3",
+    "python": "3.12.13",
+    "torch": "2.10.0+cu128",
+    "transformers": "5.0.0"
+  },
+  "model": "bert",
+  "model_seed": 3,
+  "original_partA_metadata": {
+    "effective_train_ids_sha256": "e5a2f7f69cdfe5dd1ca4428e24e8aee57b0adf8dd60ba081c66d226d9aa46866",
+    "file_sha256": "306491fa4d6460263332ed48fbbf210bece19b16dc780dcdf1da2494ae7f6a20",
+    "validation_macro_f1": 0.7047559116764756
+  },
+  "partA_training": {
+    "dataset_manifest_sha256": "ca2955a568846fe669b0125c016ca945b2a05fc3e6241b02a7c454fa81d36341",
+    "n_train": 24063,
+    "n_validation": 5157,
+    "train_index_file": "r_clean_train.txt",
+    "train_index_sha256": "7050a6387096e70127c76cafb0381df2958d5b1a8bec54f9e8adf25d8a45b48e",
+    "training_config_sha256": "75eee2631e1a9d2e562d07cdca122e4f76a00387da7ac58d51a1a3bc2c16456c",
+    "validation_index_file": "r_clean_val.txt",
+    "validation_index_sha256": "be3fa920259c58d668bf68d3c643e03869ac336b31a26524710bf9a495ccf85a"
+  },
+  "partB": {
+    "blind_test_file": "partB_blind_test.jsonl",
+    "blind_test_sha256": "d6920bfea38a1a445fa92e39310a1612e86cde30987a2e7494ce610636c5301a",
+    "dataset_manifest_sha256": "dece660f6b8550a0335fc8fd48f0a7a9da68d2625470eb695a8a5bd3f1e536b2",
+    "evaluation_config_sha256": "1bbfc0b0f7611da9c68b6b9ca894e7dce4e80798b08ffdeec6e62aec91ce8d0a",
+    "frozen_test_sha256": "b05b4d382d1c9a902a4c8a448ef863b1af97641d118405e7653ddfb329150d79",
+    "gold_targets_present_in_prediction_file": false,
+    "gold_targets_used_for_checkpoint_selection": false,
+    "gold_targets_used_for_hyperparameter_tuning": false,
+    "gold_targets_used_for_training": false,
+    "n_predictions": 1082,
+    "text_loaded_only_after_model_checkpoint_fixed": true
+  },
+  "partB_metrics_computed": false,
+  "partB_prediction_file": "partB_predictions.csv",
+  "partB_prediction_file_sha256": "01df9c9bc5505fe64d7bd410a4c0532c81048816bed7d55200b6b9f71f69ee07",
+  "reconstruction_type": "PROTOCOL_CONSISTENT_NOT_BITWISE_CLAIMED",
+  "regime": "r_clean",
+  "run_id": "bert__r_clean__split42__seed3",
+  "saved_model_artifacts": {
+    "model/config.json": "22a68e388ae5b749d2fa2434888dfe767904440c399eba934479aaf704190c28",
+    "model/model.safetensors": "316c14fa4f76af4fac383beb03a6e01b34b6cbe03bd7785482002c33b2033df6"
+  },
+  "saved_tokenizer_artifacts": {
+    "tokenizer/tokenizer.json": "d241a60d5e8f04cc1b2b3e9ef7a4921b27bf526d9f6050ab90f9267a1f9e5c66",
+    "tokenizer/tokenizer_config.json": "797ed9ba72b500001971b827b0040b8743def8ec38f9cd4cda4c4945734d3596"
+  },
+  "schema_version": "partB-reconstruction-run-v2",
+  "scientific_role": "EXTERNAL_ROBUSTNESS_EVALUATION_ONLY",
+  "split_seed": 42,
+  "status": "COMPLETE"
+}

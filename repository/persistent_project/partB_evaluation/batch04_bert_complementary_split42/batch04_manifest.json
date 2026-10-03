@@ -1,0 +1,77 @@
+{
+  "batch": 4,
+  "bindings": {
+    "jury_blocks_sha256": "1d62b72b3fee975f02e7f558f76c05ff31cbf523ed9feb6c9e2540c178d43152",
+    "partA_dataset_manifest_sha256": "ca2955a568846fe669b0125c016ca945b2a05fc3e6241b02a7c454fa81d36341",
+    "partA_training_config_sha256": "75eee2631e1a9d2e562d07cdca122e4f76a00387da7ac58d51a1a3bc2c16456c",
+    "partB_dataset_manifest_sha256": "dece660f6b8550a0335fc8fd48f0a7a9da68d2625470eb695a8a5bd3f1e536b2",
+    "partB_evaluation_config_sha256": "1bbfc0b0f7611da9c68b6b9ca894e7dce4e80798b08ffdeec6e62aec91ce8d0a",
+    "partB_frozen_test_sha256": "b05b4d382d1c9a902a4c8a448ef863b1af97641d118405e7653ddfb329150d79"
+  },
+  "description": "BERT complementary J1/J2/J3 split42 seed1",
+  "jury_design": {
+    "blocks": {
+      "A": 8020,
+      "B": 8023,
+      "C": 8020
+    },
+    "effective_id_hash_method": "sorted_newline_trailing",
+    "jurors": {
+      "J1": [
+        "A",
+        "B"
+      ],
+      "J2": [
+        "A",
+        "C"
+      ],
+      "J3": [
+        "B",
+        "C"
+      ]
+    }
+  },
+  "n_runs": 3,
+  "partB_blind_test_sha256": "d6920bfea38a1a445fa92e39310a1612e86cde30987a2e7494ce610636c5301a",
+  "partB_gold_in_prediction_files": false,
+  "partB_metrics_computed": false,
+  "run_summaries": {
+    "bert__complementary_J1__split42__seed1": {
+      "best_epoch": 3,
+      "effective_train_ids_sha256": "c0ca0f870e9474fb5af0e6e59d0430fba85a09e5d574cb4136433fe70495c1b4",
+      "n_train": 16043,
+      "original_validation_macro_f1": 0.6907845594401025,
+      "prediction_sha256": "27a44ef239645561e45adf04e74f75c88df53ad9b866f1c0512392a7f140682e",
+      "reconstructed_validation_macro_f1": 0.6907845594401025,
+      "run_seal_sha256": "67d77af3c214c79535703ab88db348c4f040bd3b0e79bb7bdda77f34472a3a3b",
+      "validation_difference": 0.0
+    },
+    "bert__complementary_J2__split42__seed1": {
+      "best_epoch": 3,
+      "effective_train_ids_sha256": "954978e154b081ec21e5e9075854825fd2a6b8fd3cfe2a56494cf08ca1e17f4e",
+      "n_train": 16040,
+      "original_validation_macro_f1": 0.6941667172633612,
+      "prediction_sha256": "358eadc1a2cf5faf319ffc7a018539ac0dd262d592e55b745b80735717941bfa",
+      "reconstructed_validation_macro_f1": 0.6941667172633612,
+      "run_seal_sha256": "d4565c0f98114c9ffbb0b9f690310051ea8126e1f9a681722df098cf49019da0",
+      "validation_difference": 0.0
+    },
+    "bert__complementary_J3__split42__seed1": {
+      "best_epoch": 3,
+      "effective_train_ids_sha256": "7e90a10dbc0b76b3a0bdb4c32727de56e7ce4780900a7c34178ea8523a42e6de",
+      "n_train": 16043,
+      "original_validation_macro_f1": 0.6964914916369215,
+      "prediction_sha256": "5dbc41d8f07fbceffdb6364a2e1a24a12b6b715dfac753d2ed9696765337399c",
+      "reconstructed_validation_macro_f1": 0.6964914916369215,
+      "run_seal_sha256": "77df56c164ea104976845768b48aac9a779341ddeea34d7b1c045c79af440f19",
+      "validation_difference": 0.0
+    }
+  },
+  "runs": [
+    "bert__complementary_J1__split42__seed1",
+    "bert__complementary_J2__split42__seed1",
+    "bert__complementary_J3__split42__seed1"
+  ],
+  "schema_version": "partB-reconstruction-batch-v3",
+  "status": "COMPLETE"
+}

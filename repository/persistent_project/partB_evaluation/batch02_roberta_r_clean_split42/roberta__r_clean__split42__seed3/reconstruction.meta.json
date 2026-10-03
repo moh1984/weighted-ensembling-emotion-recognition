@@ -1,0 +1,113 @@
+{
+  "backbone": {
+    "repo": "FacebookAI/roberta-base",
+    "revision_requested": "e2da8e2f811d1448a5b465c236feacd80ffbac7b",
+    "revision_resolved": "e2da8e2f811d1448a5b465c236feacd80ffbac7b"
+  },
+  "checkpoint_selection": {
+    "best_epoch": 2,
+    "difference_reconstructed_minus_original": 0.0,
+    "epoch_history": [
+      {
+        "elapsed_seconds": 284.09,
+        "epoch": 1,
+        "validation_macro_f1": 0.6403411970264142,
+        "validation_per_class_f1": {
+          "anger": 0.6961149547631719,
+          "disgust": 0.17391304347826086,
+          "fear": 0.6421052631578947,
+          "joy": 0.9021962937542897,
+          "sadness": 0.6835978835978836,
+          "surprise": 0.7441197434069851
+        }
+      },
+      {
+        "elapsed_seconds": 285.38,
+        "epoch": 2,
+        "validation_macro_f1": 0.6905846173010445,
+        "validation_per_class_f1": {
+          "anger": 0.7128205128205128,
+          "disgust": 0.411214953271028,
+          "fear": 0.6567164179104478,
+          "joy": 0.9088444595052525,
+          "sadness": 0.7196969696969697,
+          "surprise": 0.7342143906020558
+        }
+      },
+      {
+        "elapsed_seconds": 284.46,
+        "epoch": 3,
+        "validation_macro_f1": 0.6815822104297085,
+        "validation_per_class_f1": {
+          "anger": 0.6978335233751425,
+          "disgust": 0.36363636363636365,
+          "fear": 0.6488888888888888,
+          "joy": 0.905256109809173,
+          "sadness": 0.7236994219653179,
+          "surprise": 0.7501789549033644
+        }
+      },
+      {
+        "elapsed_seconds": 285.8,
+        "epoch": 4,
+        "validation_macro_f1": 0.6860712675797581,
+        "validation_per_class_f1": {
+          "anger": 0.7038058466629895,
+          "disgust": 0.4074074074074074,
+          "fear": 0.6448598130841121,
+          "joy": 0.9052237536157903,
+          "sadness": 0.7142857142857143,
+          "surprise": 0.7408450704225352
+        }
+      }
+    ],
+    "metric": "macro_f1",
+    "original_archived_validation_macro_f1": 0.6905846173010445,
+    "reconstructed_validation_macro_f1": 0.6905846173010445,
+    "source": "PART_A_VALIDATION_ONLY"
+  },
+  "determinism_applied": {
+    "cudnn_benchmark": true,
+    "torch_use_deterministic_algorithms": false
+  },
+  "elapsed_seconds": 1165.11,
+  "environment": {
+    "device": "Tesla T4",
+    "python": "3.12.13",
+    "torch": "2.10.0+cu128",
+    "transformers": "5.0.0"
+  },
+  "model": "roberta",
+  "model_seed": 3,
+  "original_partA_meta_sha256": "f97b5401f5c53f55eb4717f140fcbab4a4738fd16eea28e10febe0cf87aaf385",
+  "partA_dataset_manifest_sha256": "ca2955a568846fe669b0125c016ca945b2a05fc3e6241b02a7c454fa81d36341",
+  "partA_training_config_sha256": "75eee2631e1a9d2e562d07cdca122e4f76a00387da7ac58d51a1a3bc2c16456c",
+  "partB": {
+    "blind_test_sha256": "d6920bfea38a1a445fa92e39310a1612e86cde30987a2e7494ce610636c5301a",
+    "dataset_manifest_sha256": "dece660f6b8550a0335fc8fd48f0a7a9da68d2625470eb695a8a5bd3f1e536b2",
+    "frozen_test_sha256": "b05b4d382d1c9a902a4c8a448ef863b1af97641d118405e7653ddfb329150d79",
+    "gold_targets_present_in_prediction_file": false,
+    "gold_targets_used_for_selection": false,
+    "gold_targets_used_for_training": false,
+    "n_predictions": 1082,
+    "text_loaded_only_after_model_checkpoint_fixed": true
+  },
+  "partB_metrics_computed": false,
+  "partB_prediction_file": "partB_predictions.csv",
+  "partB_prediction_file_sha256": "b3c0d4fcc96c6c9a101b2f974ea8e8d65d5416e6508466c1de00e387f553ab4f",
+  "reconstruction_type": "PROTOCOL_CONSISTENT_NOT_BITWISE_CLAIMED",
+  "regime": "r_clean",
+  "run_id": "roberta__r_clean__split42__seed3",
+  "saved_model_artifacts": {
+    "model/config.json": "cd915cb2f64a482cf84baed06dff242845f5a7f9e60f30a7ffdcf95fc7db6447",
+    "model/model.safetensors": "1468d97f5621593da90f7cb7025e97f8f0a7f6d2cc38da61b0e8d59facf3d9b2"
+  },
+  "saved_tokenizer_artifacts": {
+    "tokenizer/tokenizer.json": "2bb1a22cfbe25b8e5a232b7fc4d7fc5073923b45724a5f813b00811bb6620f66",
+    "tokenizer/tokenizer_config.json": "4903bcd294e8ff8b840eb9c21909d2f910b466d250ac6e298a7438a7da63ef0d"
+  },
+  "schema_version": "partB-reconstruction-run-v2",
+  "scientific_role": "EXTERNAL_ROBUSTNESS_EVALUATION_ONLY",
+  "split_seed": 42,
+  "status": "COMPLETE"
+}

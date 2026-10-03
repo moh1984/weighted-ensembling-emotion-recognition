@@ -1,0 +1,68 @@
+{
+  "batch": 5,
+  "bindings": {
+    "jury_blocks_sha256": "1d62b72b3fee975f02e7f558f76c05ff31cbf523ed9feb6c9e2540c178d43152",
+    "partA_dataset_manifest_sha256": "ca2955a568846fe669b0125c016ca945b2a05fc3e6241b02a7c454fa81d36341",
+    "partA_training_config_sha256": "75eee2631e1a9d2e562d07cdca122e4f76a00387da7ac58d51a1a3bc2c16456c",
+    "partB_dataset_manifest_sha256": "dece660f6b8550a0335fc8fd48f0a7a9da68d2625470eb695a8a5bd3f1e536b2",
+    "partB_evaluation_config_sha256": "1bbfc0b0f7611da9c68b6b9ca894e7dce4e80798b08ffdeec6e62aec91ce8d0a",
+    "partB_frozen_test_sha256": "b05b4d382d1c9a902a4c8a448ef863b1af97641d118405e7653ddfb329150d79"
+  },
+  "description": "BERT disjoint A/B/C split42 seed1",
+  "disjoint_block_sizes": {
+    "A": 8020,
+    "B": 8023,
+    "C": 8020
+  },
+  "effective_id_hash_method": "sorted_newline_trailing",
+  "n_runs": 3,
+  "partB_blind_test_sha256": "d6920bfea38a1a445fa92e39310a1612e86cde30987a2e7494ce610636c5301a",
+  "partB_gold_in_prediction_files": false,
+  "partB_metrics_computed": false,
+  "run_summaries": {
+    "bert__disjoint_A__split42__seed1": {
+      "best_epoch": 4,
+      "block": "A",
+      "effective_train_ids_sha256": "caeb7540edad995116295dd211b9f7c48e9f35b115bf060765b189c1e364ce0f",
+      "n_saved_weight_files": 1,
+      "n_train": 8020,
+      "original_validation_macro_f1": 0.6575248251530847,
+      "prediction_sha256": "318cb1955343855af08695d29b9bd382d52cbbcdee7b4a8b8b4240c4ae29f887",
+      "reconstructed_validation_macro_f1": 0.6575248251530847,
+      "run_seal_sha256": "89aea2f67adbe29597ead09d14700cf29a6541085facaec33761cd279a9a3bee",
+      "validation_difference": 0.0
+    },
+    "bert__disjoint_B__split42__seed1": {
+      "best_epoch": 4,
+      "block": "B",
+      "effective_train_ids_sha256": "0fe9a9b5679e9336bb8b2616dbb34266557c072e7ed9c70b747476fd9865e366",
+      "n_saved_weight_files": 1,
+      "n_train": 8023,
+      "original_validation_macro_f1": 0.6598384069175559,
+      "prediction_sha256": "9ccc6ee6e5cf3fc5eea5971e46670dce9a4ec7395a8735f28d54d3b10bfa5966",
+      "reconstructed_validation_macro_f1": 0.6598384069175559,
+      "run_seal_sha256": "ec5aa0273e210cfb026e7f00f2592941fbbacbad067a1cab63c478ec77e1174e",
+      "validation_difference": 0.0
+    },
+    "bert__disjoint_C__split42__seed1": {
+      "best_epoch": 3,
+      "block": "C",
+      "effective_train_ids_sha256": "c4f6d0950248018e8b9dfb797a1b91c78e4a780825d667ff6ebb4831fdf4e5b4",
+      "n_saved_weight_files": 1,
+      "n_train": 8020,
+      "original_validation_macro_f1": 0.6684356004628501,
+      "prediction_sha256": "e4000c325b73b71759d652dd903e4945954c9771261935422e7730f8c3653744",
+      "reconstructed_validation_macro_f1": 0.6684356004628501,
+      "run_seal_sha256": "926b9601a14229a82ff1017b069b4729ba162c4671b5352a2a9a7fca709989c8",
+      "validation_difference": 0.0
+    }
+  },
+  "runs": [
+    "bert__disjoint_A__split42__seed1",
+    "bert__disjoint_B__split42__seed1",
+    "bert__disjoint_C__split42__seed1"
+  ],
+  "schema_version": "partB-reconstruction-batch-v3",
+  "scientific_statement": "The three locked disjoint Part-A configurations were reconstructed using the exact frozen author blocks. Effective training-ID hashes were verified against archived Part-A metadata. Checkpoints were selected using Part-A validation only. Part-B predictions were generated only after the selected model checkpoint was fixed. No Part-B performance metric was computed during reconstruction.",
+  "status": "COMPLETE"
+}

@@ -1,0 +1,107 @@
+{
+  "backbone": {
+    "repo": "FacebookAI/roberta-base",
+    "revision_requested": "e2da8e2f811d1448a5b465c236feacd80ffbac7b",
+    "revision_resolved": "e2da8e2f811d1448a5b465c236feacd80ffbac7b"
+  },
+  "checkpoint_selection": {
+    "best_epoch": 4,
+    "difference_reconstructed_minus_original": 0.0,
+    "epoch_history": [
+      {
+        "elapsed_seconds": 289.95,
+        "epoch": 1,
+        "validation_macro_f1": 0.6560567218080156,
+        "validation_per_class_f1": {
+          "anger": 0.6751207729468599,
+          "disgust": 0.25316455696202533,
+          "fear": 0.6666666666666666,
+          "joy": 0.9019348437241608,
+          "sadness": 0.6958637469586375,
+          "surprise": 0.7435897435897436
+        }
+      },
+      {
+        "elapsed_seconds": 289.76,
+        "epoch": 2,
+        "validation_macro_f1": 0.6862541499807232,
+        "validation_per_class_f1": {
+          "anger": 0.7071269487750557,
+          "disgust": 0.4,
+          "fear": 0.6432160804020101,
+          "joy": 0.9069533087000335,
+          "sadness": 0.7187864644107351,
+          "surprise": 0.741442097596504
+        }
+      },
+      {
+        "elapsed_seconds": 290.12,
+        "epoch": 3,
+        "validation_macro_f1": 0.6976217202076084,
+        "validation_per_class_f1": {
+          "anger": 0.7113866967305524,
+          "disgust": 0.42735042735042733,
+          "fear": 0.6701030927835051,
+          "joy": 0.9111338100102145,
+          "sadness": 0.7167630057803468,
+          "surprise": 0.748993288590604
+        }
+      },
+      {
+        "elapsed_seconds": 289.75,
+        "epoch": 4,
+        "validation_macro_f1": 0.7001890974552962,
+        "validation_per_class_f1": {
+          "anger": 0.7060755336617406,
+          "disgust": 0.4482758620689655,
+          "fear": 0.6859903381642513,
+          "joy": 0.9101123595505618,
+          "sadness": 0.71280276816609,
+          "surprise": 0.7378777231201686
+        }
+      }
+    ],
+    "metric": "macro_f1",
+    "original_archived_validation_macro_f1": 0.7001890974552962,
+    "reconstructed_validation_macro_f1": 0.7001890974552962,
+    "source": "PART_A_VALIDATION_ONLY"
+  },
+  "determinism_applied": {
+    "cudnn_benchmark": true,
+    "torch_use_deterministic_algorithms": false
+  },
+  "elapsed_seconds": 1184.84,
+  "environment": {
+    "device": "Tesla T4",
+    "python": "3.12.13",
+    "torch": "2.10.0+cu128",
+    "transformers": "5.0.0"
+  },
+  "model": "roberta",
+  "model_seed": 3,
+  "original_partA_meta_sha256": "075d07d8baf66fe955fa5087b2e6bc5f3cfa71384664275e5225e93d1644c48e",
+  "partA_dataset_manifest_sha256": "ca2955a568846fe669b0125c016ca945b2a05fc3e6241b02a7c454fa81d36341",
+  "partA_training_config_sha256": "75eee2631e1a9d2e562d07cdca122e4f76a00387da7ac58d51a1a3bc2c16456c",
+  "partB": {
+    "blind_test_sha256": "d6920bfea38a1a445fa92e39310a1612e86cde30987a2e7494ce610636c5301a",
+    "dataset_manifest_sha256": "dece660f6b8550a0335fc8fd48f0a7a9da68d2625470eb695a8a5bd3f1e536b2",
+    "frozen_test_sha256": "b05b4d382d1c9a902a4c8a448ef863b1af97641d118405e7653ddfb329150d79",
+    "gold_targets_present_in_prediction_file": false,
+    "gold_targets_used_for_selection": false,
+    "gold_targets_used_for_training": false,
+    "n_predictions": 1082,
+    "text_loaded_only_after_model_checkpoint_fixed": true
+  },
+  "partB_metrics_computed": false,
+  "partB_prediction_file": "partB_predictions.csv",
+  "partB_prediction_file_sha256": "23ae5cb3181ae75b58133190d51d52dd06ac63661dd347e2f7fa02a6cee10fae",
+  "reconstruction_type": "PROTOCOL_CONSISTENT_NOT_BITWISE_CLAIMED",
+  "regime": "r_overlap",
+  "run_id": "roberta__r_overlap__split42__seed3",
+  "schema_version": "partB-reconstruction-run-v2",
+  "scientific_role": "EXTERNAL_ROBUSTNESS_EVALUATION_ONLY",
+  "split_seed": 42,
+  "status": "COMPLETE",
+  "train_file": "r_overlap_train.txt",
+  "train_index_sha256": "613bd1bebbc5fbfe944d1a47512420e74c8ef5bd345fc96c82f80cbf7ca86827"
+}

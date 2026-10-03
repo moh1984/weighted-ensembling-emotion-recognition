@@ -1,0 +1,48 @@
+{
+  "batch": 3,
+  "bindings": {
+    "partA_dataset_manifest_sha256": "ca2955a568846fe669b0125c016ca945b2a05fc3e6241b02a7c454fa81d36341",
+    "partA_training_config_sha256": "75eee2631e1a9d2e562d07cdca122e4f76a00387da7ac58d51a1a3bc2c16456c",
+    "partB_dataset_manifest_sha256": "dece660f6b8550a0335fc8fd48f0a7a9da68d2625470eb695a8a5bd3f1e536b2",
+    "partB_evaluation_config_sha256": "1bbfc0b0f7611da9c68b6b9ca894e7dce4e80798b08ffdeec6e62aec91ce8d0a",
+    "partB_frozen_test_sha256": "b05b4d382d1c9a902a4c8a448ef863b1af97641d118405e7653ddfb329150d79"
+  },
+  "description": "RoBERTa R_overlap split42 seeds 1-3",
+  "n_runs": 3,
+  "partB_blind_test_sha256": "d6920bfea38a1a445fa92e39310a1612e86cde30987a2e7494ce610636c5301a",
+  "partB_gold_in_prediction_files": false,
+  "partB_metrics_computed": false,
+  "run_summaries": {
+    "roberta__r_overlap__split42__seed1": {
+      "best_epoch": 4,
+      "original_validation_macro_f1": 0.6973216636875401,
+      "prediction_sha256": "d2cc32d08a34c634e85914943fa3b9c9e8ac228237b0a688f8b03c8a5e2783e7",
+      "reconstructed_validation_macro_f1": 0.6973216636875401,
+      "run_seal_sha256": "3e4f1ac4a4c21667f050da50903af4d21a19a8550e015738563e5eb602971d70",
+      "validation_difference": 0.0
+    },
+    "roberta__r_overlap__split42__seed2": {
+      "best_epoch": 3,
+      "original_validation_macro_f1": 0.6913461131109212,
+      "prediction_sha256": "c20160f45adbfd007535dde115b2d0a902c6b845c9f58790ac9eb5752b939055",
+      "reconstructed_validation_macro_f1": 0.6913461131109212,
+      "run_seal_sha256": "2319dea6e99e290dc4bbe2b5cf92c250963c9ef180283baf047727550198f0cc",
+      "validation_difference": 0.0
+    },
+    "roberta__r_overlap__split42__seed3": {
+      "best_epoch": 4,
+      "original_validation_macro_f1": 0.7001890974552962,
+      "prediction_sha256": "23ae5cb3181ae75b58133190d51d52dd06ac63661dd347e2f7fa02a6cee10fae",
+      "reconstructed_validation_macro_f1": 0.7001890974552962,
+      "run_seal_sha256": "759dac7f344ac31139b391d321db843be762f8c26644ba61bd853f671d3182b6",
+      "validation_difference": 0.0
+    }
+  },
+  "runs": [
+    "roberta__r_overlap__split42__seed1",
+    "roberta__r_overlap__split42__seed2",
+    "roberta__r_overlap__split42__seed3"
+  ],
+  "schema_version": "partB-reconstruction-batch-v2",
+  "status": "COMPLETE"
+}
